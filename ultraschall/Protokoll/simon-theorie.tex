@@ -1,5 +1,5 @@
-\subsection{Ultraschallzelle}
-Die Ultraschallzelle nach Karolus und Helmberger \cite{Karolus} besteht aus zwei Schwingquarzen, welche entgegengesetz schwingen und dadurch eine stehende Welle erzeugen. Diese wird dann von Isooktan übertragen, wobei sich dessen Dichte periodisch ändert. Dadurch ändert sich der Brechungsindex lokal \cite{Raman}: 
+\subsection{Raman-Nath-Theorie}
+Für das Experiment wird eine Ultraschallzelle nach Karolus und Fries \cite{Karolus} verwendet. Diese besteht aus zwei Schwingquarzen, welche entgegengesetz schwingen und dadurch eine stehende Welle erzeugen. Die Schwingungsamplitude ist dabei proportional zum Quadrat der Spannung ( $S \sim U^2$). Die Schallwelle wird dann von Isooktan übertragen, wobei sich dessen Dichte periodisch ändert. Dadurch ändert sich der Brechungsindex lokal \cite{Raman}: 
 \begin{equation}
  \mu \left( x \right) = \mu_0 - \mu sin \frac{2 \pi x}{ \lambda^*}
 \end{equation}
@@ -47,12 +47,21 @@ Die Maxima treten also auf, wenn die einzelnen Terme maximal werden, also bei
 \end{equation}
 Für den Winkel zwischen solchen Stellen maximaler Intensität und dem Wellenvektor des einfallenden Lichts erhalten wir also
 \begin{equation}
- \sin \theta = \pm \frac{n \lambda}{\lambda^*}
+  \sin \theta = \pm \frac{n \lambda}{\lambda^*} 
 \end{equation}
+Die relative Intensität der m-ten zur n-ten Ordnung erhalten wir über
+\begin{equation}
+  \frac{J_m^2(v)}{J_m^2(v)}  \; \text{mit} \; v = 2 \pi \mu L / \lambda
+\end{equation}
+Im ungestörten Fall gibt es keine Variation der Dichte, also $\mu = 0$ und somit auch $v=0$. Die Besselfunktionen verschwinden damit bis auf die 0-te Ordnung
+\begin{align}
+ J_m(0) & = 0 \forall m \neq 0 \\
+ J_0(0) & = 1
+\end{align}
+ 
 
+\begin{figure}
+ \centering \includegraphics{Bilder/bessel-funktionen.jpg}
+ \caption{Relative Intensitäten in Abhängigkeit von $v$ nach \cite{Raman}}
+\end{figure}
 
-
-
-
-
-Raman-Nath-Theorie(Besselfunktionen)
