@@ -1,6 +1,6 @@
 \section{Theorie}
 
-%Was ist Beugung(Einzelspalt, Gitter, Aperturfunktion, Sinusgitter, Fouriertrafo)
+%Was ist Beugung(Sinusgitter, Fouriertrafo)
 %Laser (nur Eigenschaften)
 
 \subsection{Beugung}
@@ -40,7 +40,7 @@ Somit folgt f\"ur die Intensit\"at:
 $$I \sim |E|^2 = \iint g(x,y)\cdot e^{ikr} dxdy$$
 
 
-\subsubsection{Anwendungen}
+\subsubsection{Beugung an Amplitudengittern}
 
 \begin{enumerate}
  
@@ -48,7 +48,7 @@ $$I \sim |E|^2 = \iint g(x,y)\cdot e^{ikr} dxdy$$
 
 
 \begin{minipage}{0.6\textwidth}
-Die Aperturfunktion am Einzelspalt (unter Vernachl\"assigung der Begrenzung in y-Richtung) lautet
+Die Aperturfunktion am Einzelspalt (unter Vernachl\"assigung der Begrenzung in y-Richtung) lautet:
 $$ g(x) = \begin{cases} 
 	1 & \text{, falls} -\frac{b}{2}<x<\frac{b}{2}\\
 	0 & \text{, sonst}
@@ -67,7 +67,13 @@ Hier ist $\beta = \frac{k}{2b}\sin(\theta)$ und $\theta$ der Einfallswinkel auf 
 \item Beugung am Gitter
 
 \begin{minipage}{0.6\textwidth}
-Ein Gitter besteht aus N Einzelspalten nebeneinander angeordnet. Alle Spalten haben idealerweise die Breite $b$ und die Distanz $K$ voneinander in $x$-Richtung.
+Ein Gitter besteht aus N Einzelspalten nebeneinander angeordnet. Alle Spalten haben idealerweise die Breite $b$ und die Distanz $K$ voneinander in $x$-Richtung. $K$ wird als Gitterkonstante bezeichnet. Die Aperturfunktion f\"ur das Gitter lautet somit:
+
+$$ g(x) = \begin{cases} 
+	1 & \text{, falls \ \ } N\cdot K\leq x \leq N\cdot K+b \text{\ mit \ } n \in \mathbb{N}\\
+	0 & \text{, sonst}
+     \end{cases}$$
+     
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 	\begin{center}
@@ -75,6 +81,25 @@ Ein Gitter besteht aus N Einzelspalten nebeneinander angeordnet. Alle Spalten ha
 	\end{center}
 \end{minipage}
 
+F\"ur die Intensit\"atsverteilung folgt hier:
+
+$$I \sim \left(\frac{\sin(\beta)}{\beta}\right)^2\cdot \left(\frac{\sin(N\gamma)}{N\cdot \sin(N\gamma)}\right)^2 $$
+
+mit $\gamma = \frac{1}{2}\cdot k\cdot K\cdot \sin(\theta)$.
+
+Der linke Faktor beschreibt die Einh\"ullende der Intensit\"atsverteilung am Schirm, und der rechte Faktor beschreibt die Intensit\"atspeaks. Wenn der Gangunterschied von zwei Elementarwellen ein Vielfaches der Wellenl\"ange des Lichts ist, so erh\"alt man am Schirm ein Intensit\"atsmaximum. Man erh\"alt die Beziehung
+
+$$ m \cdot \lambda = K\cdot \sin(\theta) \text{,} $$
+
+die die Position der Maxima beschreibt.
+
+\item Sinusgitter
+
+Die Aperturfunktion eines Sinusgitters lautet:
+
+$$g(x) = \sqrt{I_0} + \sqrt{I_1} \cdot \cos \left( \frac{2\pi}{K}x \right) $$
+
+Man hat also nur Maxima 0. und 1. Ordnung.
 
 
 \end{enumerate}
