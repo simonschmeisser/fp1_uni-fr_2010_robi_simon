@@ -1,7 +1,7 @@
 \subsection{Raman-Nath-Theorie}
 Für das Experiment wird eine Ultraschallzelle nach Karolus und Fries \cite{Karolus} verwendet. Diese besteht aus zwei Schwingquarzen, welche entgegengesetz schwingen und dadurch im Bereich zwischen ihnen annähernd eine stehende Welle erzeugen. Die Schwingungsamplitude ist dabei proportional zum Quadrat der Spannung ( $S \sim U^2$). Als Träger wird Isooktan verwendet, wobei sich dessen Dichte periodisch ändert. Der lokale Brechungsindex ist dann \cite{Raman}: 
 \begin{equation}
- \mu \left( x \right) = \mu_0 - \mu sin \frac{2 \pi x}{ \lambda^*}
+ \mu \left( x \right) = \mu_0 - \mu \cdot \sin \frac{2 \pi x}{ \lambda^*}
 \end{equation}
 mit $x$ der Position entlang des Wellenvektors, $\mu_0$ dem Brechungsindex im ungestörten Zustand, $\mu$ der maximalen Abweichung davon und $\lambda^*$ der Wellenlänge des Schalls. Das Isooktan bildet somit ein sinusförmiges Phasengitter, d.h. kohärentes Licht
 \begin{equation}
@@ -55,12 +55,12 @@ Die relative Intensität der m-ten zur n-ten Ordnung erhalten wir über
 \end{equation}
 Im ungestörten Fall gibt es keine Variation der Dichte, also $\mu = 0$ und somit auch $v=0$. Die Besselfunktionen verschwinden damit bis auf die 0-te Ordnung
 \begin{align}
- J_m(0) & = 0 \forall m \neq 0 \\
+ J_m(0) & = 0 \ \ \forall m \neq 0 \\
  J_0(0) & = 1
 \end{align}
  
 
-\begin{figure}
+\begin{figure}[H]
  \centering \includegraphics{Bilder/bessel-funktionen.jpg}
  \caption{Relative Intensitäten in Abhängigkeit von $v$ nach \cite{Raman}}
 \end{figure}
