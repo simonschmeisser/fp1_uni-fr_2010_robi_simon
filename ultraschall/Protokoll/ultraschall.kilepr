@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0.85
-lastDocument=
+lastDocument=bib.bib
 masterDocument=ultraschall.tex
 name=Ultraschall
 pkg_extIsRegExp=false
@@ -16,15 +16,61 @@ src_extensions=.tex .ltx .latex .dtx .ins
 MakeIndex=
 QuickBuild=
 
-[item:VB.tex]
-archive=true
-column=5570640
-encoding=
-highlight=
-line=0
-mode=
-open=false
-order=-1
+[document-settings,item:auswertung.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
+[document-settings,item:bib.bib]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=BibTeX
+Indentation Mode=
+Mode=BibTeX
+ReadWrite=true
+
+[document-settings,item:messwerte.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
+[document-settings,item:simon-theorie.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
+[document-settings,item:ultraschall.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
+[document-settings,item:versuchsbeschreibung.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
+
+[document-settings,item:zusammenfassung.tex]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=LaTeX
+Indentation Mode=
+Mode=LaTeX
+ReadWrite=true
 
 [item:aufgabenstellung.tex]
 archive=true
@@ -36,15 +82,35 @@ mode=
 open=false
 order=-1
 
+[item:auswertung.tex]
+archive=true
+column=0
+encoding=UTF-8
+highlight=LaTeX
+line=0
+mode=LaTeX
+open=true
+order=4
+
 [item:bib.bib]
 archive=true
-column=32750
-encoding=
-highlight=
+column=0
+encoding=UTF-8
+highlight=BibTeX
 line=0
-mode=
+mode=BibTeX
 open=true
-order=-1
+order=1
+
+[item:messwerte.tex]
+archive=true
+column=19
+encoding=UTF-8
+highlight=LaTeX
+line=0
+mode=LaTeX
+open=true
+order=3
 
 [item:robi-theorie.tex]
 archive=true
@@ -58,13 +124,13 @@ order=-1
 
 [item:simon-theorie.tex]
 archive=true
-column=85
-encoding=
-highlight=
+column=0
+encoding=UTF-8
+highlight=LaTeX
 line=0
-mode=
+mode=LaTeX
 open=true
-order=-1
+order=0
 
 [item:ultraschall.kilepr]
 archive=true
@@ -78,10 +144,58 @@ order=-1
 
 [item:ultraschall.tex]
 archive=true
-column=0
-encoding=
-highlight=
-line=0
-mode=
+column=21
+encoding=UTF-8
+highlight=LaTeX
+line=43
+mode=LaTeX
 open=true
-order=-1
+order=2
+
+[item:versuchsbeschreibung.tex]
+archive=true
+column=59
+encoding=UTF-8
+highlight=LaTeX
+line=26
+mode=LaTeX
+open=true
+order=6
+
+[item:zusammenfassung.tex]
+archive=true
+column=0
+encoding=UTF-8
+highlight=LaTeX
+line=0
+mode=LaTeX
+open=true
+order=5
+
+[view-settings,view=0,item:auswertung.tex]
+CursorColumn=0
+CursorLine=0
+
+[view-settings,view=0,item:bib.bib]
+CursorColumn=0
+CursorLine=0
+
+[view-settings,view=0,item:messwerte.tex]
+CursorColumn=19
+CursorLine=0
+
+[view-settings,view=0,item:simon-theorie.tex]
+CursorColumn=0
+CursorLine=0
+
+[view-settings,view=0,item:ultraschall.tex]
+CursorColumn=21
+CursorLine=43
+
+[view-settings,view=0,item:versuchsbeschreibung.tex]
+CursorColumn=59
+CursorLine=26
+
+[view-settings,view=0,item:zusammenfassung.tex]
+CursorColumn=0
+CursorLine=0
