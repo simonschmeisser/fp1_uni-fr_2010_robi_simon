@@ -1,1 +1,115 @@
-\section{Auswertung}
+\section{Messwerte und Auswertung}
+
+\subsection{Sinusgitter}
+
+Der Laser wird anhand des 2. Spiegels zentriert, dann werden das Sinusgitter und der Schirm eingebaut. Die Distanz zwischen den beiden Maxima 1. Ordnung ergibt sich aus der $x$- und der $y$-Verschiebung auf dem Schirm. Wir haben folgende Werte gemessen:
+\begin{itemize}
+\item $D_x = (9.9 \pm 0,1) cm$ (Distanz in $x$-Richtung)
+\item $D_y = (1.1 \pm 0.1) cm$ (Distanz in $y$-Richtung)
+\item $L = (5.9 \pm 0.3) cm$ (Distanz zwischen dem Gitter und dem Schirm)
+\end{itemize}
+
+Aus $D_x$ und $D_y$ ergibt sich die Distanz $D=\sqrt{D_x^2 + D_y^2} = 9.96$ mit dem Fehler
+$$\sigma_D = \sqrt{\left(\frac{\partial D}{\partial D_x}\right)^2\sigma_{D_x}^2 + \left(\frac{\partial D}{\partial D_y}\right)^2\sigma_{D_y}^2} = \sqrt 2 \left(\frac{\partial D}{\partial D_x}\right)\sigma_{D_x} = \sqrt 2 \frac{D_x}{\sqrt{D_x^2 + D_y^2}}\sigma_{D_x} = \sqrt 2 \frac{D_x}{D}\sigma_{D_x} = 0,14$$
+
+Somit: $$\boxed{D = (9.96 \pm 0.14) cm}$$
+
+Es folgt der Winkel $\alpha$ aus $\tan(\alpha) = \frac{D}{2L} \Leftrightarrow\alpha = \arctan\left(\frac{D}{2L}\right) = 40.17^\circ$ mit dem Fehler
+
+$$\sigma(\alpha) = \sqrt{\left(\frac{\partial \alpha}{\partial D}\right)^2\sigma_{D}^2 + \left(\frac{\partial \alpha}{\partial L}\right)^2\sigma_{L}^2} = \sqrt{\frac{L\sigma_D^2 + D\sigma_L^2}{2L(1+D^2/4L^2)}} = 0.22^\circ$$
+
+Es folgt: $$\boxed{\alpha = (40.17 \pm 0.22)^\circ} $$
+
+Die Gitterkonstante $K$ l\"asst sich somit berechnen: $$ K\sin(\alpha) = n\lambda \Leftrightarrow K = \frac{n\lambda}{\sin(\alpha)} = 9810.13 \ \mathring A \ \text{mit \ } n=1$$
+
+$K$ besitzt den Fehler (unter Vernachl\"assigung des Fehlers auf $\lambda$): $$\sigma_K = \frac{\lambda\cos(\alpha)\sigma_\alpha}{\sin^2(\alpha)} = 2601.98 \ \mathring A$$
+
+Somit folgt: $$\boxed{K=(9810.13 \pm 2601.98) \ \mathring A = (0.98 \pm 0.26) \ \mu m}$$
+
+Als Vergleich: Auf dem Gitter ist die Zahl der Linien pro Millimeter angegeben: \\ $g_{theo}=1016 L/mm$. Es folgt der Wert f\"ur die Gitterkonstante: $K_{theo} = 1/g_{theo} = 9842.52 \ \mathring A$, welcher sehr dicht an unserem ermittelten Wert liegt und innerhalb der ersten Standardabweichung.
+
+\subsection{Bestimmung der Gitterkonstanten}
+
+Wir haben den Strahlengang wie in 3.2.2 beschrieben justiert um eine m\"oglichst hohe Genauigkeit bei unserer Messung zu erhalten.
+
+\subsubsection{Eichung anhand des Gitters R}
+
+Sei $\Delta t$ die zeitliche Distanz zwischen 2 Nebenmaxima der Intensit\"atsverteilung. Die Distanz zwischen dem Hauptmaximum und einem Nebenmaximum ist somit $\Delta t/2$ und ist proportional zu $\sin(\alpha)$. Es gilt: $$\sin(\alpha) = \frac{n\lambda}{K} = \gamma \frac{\Delta t}{2}$$
+Wir bestimmen die Proportionalit\"atskonstante $\gamma$ durch lineare Regression, indem wir $\Delta t/2$ gegen $n$ auftragen und den Steigungsfaktor $b$ ermitteln. Der Achsenabschnitt $a$ sollte idealerweise Null sein.
+
+$$\frac{\Delta t}{2} = \frac{\lambda}{K\gamma}n = b\cdot n$$
+
+%Auswertung
+
+\subsubsection{Bestimmung der Gitterkonstanten f\"ur die 5 Gitter}
+\begin{itemize}
+\item G1
+\item G3
+\item G4
+\item PHYWE-08534
+\item PHYWE-08540
+\end{itemize}
+
+F\"ur die beiden PHYWE-Gitter kennen wir den theoretischen Wert, n\"amlich: 
+\begin{itemize}
+\item PHYWE-08534: $g_{theo} = 8 L/mm\ \Rightarrow \ K_{theo} = 125 \ \mu m$
+\item PHYWE-08540: $g_{theo} = 10 L/mm\ \Rightarrow \ K_{theo} = 100 \ \mu m$
+%Vergleich mit dem exp. ermittelten Wert
+\end{itemize} 
+
+\subsection{Berechnung der Aperturfunktion f\"ur Gitter 1}
+
+Wir bestimmen die Aperturfunktion aus den Intensit\"aten der gemessenen Verteilung, indem wir diese invers fouriertransformieren. Die Inverse Fouriertransformation lautet:
+$$g(x) = \frac{\sqrt{I_0}}{2} + \sum_{n=1}^N \sqrt{I_n}\cos\left(\frac{2\pi n}{K}x \right)$$
+F\"ur die $I_0$ haben wir folgende Werte ermittelt:
+%Resultate I_0
+Mit $K = ... $ %Wert | erhalten wir....... + Plot 
+
+\subsection{Bestimmung des Verh\"altnisses zwischen Spaltbreite und Spaltabstand}
+
+\subsection{Aufl\"osungsverm\"ogen der Gitter}
+
+Das Aufl\"osungverm\"ogen $a$ ergibt sich bei normalen Gittern durch $a=N\cdot m$, wobei N die Zahl der durchleuchteten Maxima ist, und m die Zahl der sichtbaren Maxima. N bestimmen wir, indem wir die Laserbreite $b_L$ messen und durch die Gitterkonstante $K$ teilen.\\
+Die Laserbreite haben wir mit dem Schirm gemessen und haben $b_L = (3.0 \pm 0.5) mm$ erhalten.\\
+Es gilt also: $$N = \frac{b_L}{K}$$
+mit dem Fehler: $$\sigma_N = \sqrt{\frac{\sigma_{b_L}^2K^2 + \sigma_K^2b_L^2}{K^4}}$$
+Der Fehler auf $a$ ist: $$\sigma_a = \frac{\partial a}{\partial N}\sigma_N = m\cdot \sigma_N$$
+
+Somit folgt f\"ur die Gitter:
+
+\begin{itemize}
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
