@@ -39,6 +39,35 @@ Wir bestimmen die Proportionalit\"atskonstante $\gamma$ durch lineare Regression
 
 $$\frac{\Delta t}{2} = \frac{\lambda}{K\gamma}n = b\cdot n$$
 
+\begin{center}
+\begin{tabular}{lllll}
+\toprule
+Peak & t in $\mu s$ & st in $\mu s$ & $\Delta t$ in $\mu s$ & $s\Delta t$ in $\mu s$ \\
+\midrule
+0. Ordnung \\
+ & 0,0005010635 & 3,36E-008\\
+\midrule
+1. Ordnung\\
+links & 0,0004047489 & 3,71E-008 & 0,0001924441 & 7,29084668847E-008\\
+rechts & 0,000597193 & 3,59E-008\\
+\midrule
+2. Ordnung\\ 
+links & 0,0003093735 & 2,07E-007 & 0,000383268 & 3,90324905236E-007\\
+rechts & 0,0006926415 & 1,83E-007\\
+\midrule
+3. Ordnung\\ 
+links & 0,0002143283 & 5,28E-007 & 0,0005732411 & 1,21769040489E-006\\
+rechts & 0,0007875694 & 6,89E-007\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Die Parameter der linearen Regression:
+$$ b               = 0.000190698      \pm 1.965E-07    (0.103\%) $$
+$$ a               = 1.74811E-06      \pm 2.087E-07    (11.94\%) $$
+
+$$ \gamma = \frac{\lambda}{Kb} = $$
+
 %Auswertung
 
 \subsubsection{Bestimmung der Gitterkonstanten f\"ur die 5 Gitter}
