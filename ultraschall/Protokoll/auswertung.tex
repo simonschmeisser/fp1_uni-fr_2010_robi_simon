@@ -1,6 +1,6 @@
 \section{Messwerte und Auswertung}
 
-\subsection{Sinusgitter}
+\subsection{Sinusgitter} %fertig
 
 Der Laser wird anhand des 2. Spiegels zentriert, dann werden das Sinusgitter und der Schirm eingebaut. Die Distanz zwischen den beiden Maxima 1. Ordnung ergibt sich aus der $x$- und der $y$-Verschiebung auf dem Schirm. Wir haben folgende Werte gemessen:
 \begin{itemize}
@@ -18,13 +18,13 @@ Es folgt der Winkel $\alpha$ aus $\tan(\alpha) = \frac{D}{2L} \Leftrightarrow\al
 
 $$\sigma(\alpha) = \sqrt{\left(\frac{\partial \alpha}{\partial D}\right)^2\sigma_{D}^2 + \left(\frac{\partial \alpha}{\partial L}\right)^2\sigma_{L}^2} = \sqrt{\frac{L\sigma_D^2 + D\sigma_L^2}{2L(1+D^2/4L^2)}} = 0.22^\circ$$
 
-Es folgt: $$\boxed{\alpha = (40.17 \pm 0.22)^\circ} $$
+Es folgt: $$\boxed{\alpha = (40.17 \pm 0.22)^\circ = (0.701 \pm 0.004) rad} $$
 
 Die Gitterkonstante $K$ l\"asst sich somit berechnen: $$ K\sin(\alpha) = n\lambda \Leftrightarrow K = \frac{n\lambda}{\sin(\alpha)} = 9810.13 \ \mathring A \ \text{mit \ } n=1$$
 
-$K$ besitzt den Fehler (unter Vernachl\"assigung des Fehlers auf $\lambda$): $$\sigma_K = \frac{\lambda\cos(\alpha)\sigma_\alpha}{\sin^2(\alpha)} = 2601.98 \ \mathring A$$
+$K$ besitzt den Fehler (unter Vernachl\"assigung des Fehlers auf $\lambda$): $$\sigma_K = \sqrt{\left(\frac{\partial K}{\partial \alpha}\right)^2\sigma_\alpha^2} = \frac{\lambda\cos(\alpha)\sigma_\alpha}{\sin^2(\alpha)} = 44.62 \ \mathring A$$
 
-Somit folgt: $$\boxed{K=(9810.13 \pm 2601.98) \ \mathring A = (0.98 \pm 0.26) \ \mu m}$$
+Somit folgt: $$\boxed{K=(9810 \pm 44) \ \mathring A = (981.0 \pm 4.4) \ nm}$$
 
 Als Vergleich: Auf dem Gitter ist die Zahl der Linien pro Millimeter angegeben: \\ $g_{theo}=1016 L/mm$. Es folgt der Wert f\"ur die Gitterkonstante: $K_{theo} = 1/g_{theo} = 9842.52 \ \mathring A$, welcher sehr dicht an unserem ermittelten Wert liegt und innerhalb der ersten Standardabweichung.
 
