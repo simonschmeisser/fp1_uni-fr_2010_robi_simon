@@ -37,47 +37,60 @@ Wir haben den Strahlengang wie in 3.2.2 beschrieben justiert um eine m\"oglichst
 Sei $\Delta t$ die zeitliche Distanz zwischen 2 Nebenmaxima der Intensit\"atsverteilung. Die Distanz zwischen dem Hauptmaximum und einem Nebenmaximum ist somit $\Delta t/2$ und ist proportional zu $\sin(\alpha)$. Es gilt: $$\sin(\alpha) = \frac{n\lambda}{K} = \gamma \frac{\Delta t}{2}$$
 Wir bestimmen die Proportionalit\"atskonstante $\gamma$ durch lineare Regression, indem wir $\Delta t/2$ gegen $n$ auftragen und den Steigungsfaktor $b$ ermitteln. Der Achsenabschnitt $a$ sollte idealerweise Null sein.
 
-$$\frac{\Delta t}{2} = \frac{\lambda}{K\gamma}n = b\cdot n$$
-
 \begin{center}
 \begin{tabular}{lllll}
 \toprule
 Peak & t in $\mu s$ & st in $\mu s$ & $\Delta t$ in $\mu s$ & $s\Delta t$ in $\mu s$ \\
 \midrule
 0. Ordnung \\
- & 0,0005010635 & 3,36E-008\\
+ & 501,0635 & 3,36E-002\\
 \midrule
 1. Ordnung\\
-links & 0,0004047489 & 3,71E-008 & 0,0001924441 & 7,29084668847E-008\\
-rechts & 0,000597193 & 3,59E-008\\
+links & 404,7489 & 3,71E-002 & 192,4441 & 7,29084668847E-002\\
+rechts & 597,193 & 3,59E-002\\
 \midrule
 2. Ordnung\\ 
-links & 0,0003093735 & 2,07E-007 & 0,000383268 & 3,90324905236E-007\\
-rechts & 0,0006926415 & 1,83E-007\\
+links & 309,3735 & 2,07E-001 & 383,268 & 3,90324905236E-001\\
+rechts & 692,6415 & 1,83E-001\\
 \midrule
 3. Ordnung\\ 
-links & 0,0002143283 & 5,28E-007 & 0,0005732411 & 1,21769040489E-006\\
-rechts & 0,0007875694 & 6,89E-007\\
+links & 214,3283 & 5,28E-001 & 573,2411 & 1,21769040489\\
+rechts & 787,5694 & 6,89E-001\\
 \bottomrule
 \end{tabular}
 \end{center}
 
 Die Parameter der linearen Regression:
-$$ b               = 9.53491e-05      \pm 9.823e-08    (0.103\%) $$
-$$ a               = 8.74055e-07      \pm 1.043e-07    (11.94\%) $$
+$$ b               = (9.53491e-05      \pm 9.823e-08) s    (0.103\%) $$
+$$ a               = (8.74055e-07      \pm 1.043e-07) s    (11.94\%) $$
 
-$$ \gamma = \frac{\lambda}{Kb} = 53.093317084272421 \pm ?????? $$
+Der Achsenabschnitt $a$ ist also tatsächlich um einige zwei Größenordnungen kleiner als die Steigung $b$ und wird daher vernachlässigt. Somit erhalten wir den Zusammenhang
 
-%Auswertung
+$$\frac{\Delta t}{2} = \frac{\lambda}{K\gamma}n = b\cdot n$$
+
+den wir umstellen können nach $\gamma$, dem Proportionalitätsfaktor zwischen Zeit $t$ und Sinus des Winkels $\sin \alpha$ 
+
+$$ \gamma = \frac{\lambda}{Kb} = (53.093317084272421 \pm 0.0546974909799) s^{-1} $$
+%$$s\gamma = \frac{\lambda}{Kb^2} \cdot sb $$
+
 
 \subsubsection{Bestimmung der Gitterkonstanten f\"ur die 5 Gitter}
-\begin{itemize}
-\item G1
-\item G3
-\item G4
-\item PHYWE-08534
-\item PHYWE-08540
-\end{itemize}
+
+Mit diesem Faktor können wir nun die Gitterkonstanten der anderen fünf Gitter aus dem Abstand der Maxima der ersten Ordnung bestimmen:
+$$ g = \frac{\beta}{\lambda}\cdot \frac{\Delta t}{2} \text{ bzw. } k = \frac{2 \lambda }{\beta \Delta t} $$
+\begin{center}
+\begin{tabular}{lllll}
+\toprule 
+Gitter & $\Delta t /2$ in $\mu s$ & $s\Delta t /2$ in $\mu s$ & $k$ in $\mu m$ & $sk$ in $\mu m$\\
+\midrule
+G1 & 89.742 & 0.568 & 132.81 & 0.85\\
+G3 & 112.111 & 0.205 & 106.31 & 0.22\\
+G4 & 112.411 & 0.107 & 106.03 & 0.14\\
+08540 & 113.490 & 0.677 & 105.02 & 0.64\\
+08534 & 91.0123 & 0.139 & 130.96 & 0.24\\
+\bottomrule
+\end{tabular} 
+\end{center}
 
 F\"ur die beiden PHYWE-Gitter kennen wir den theoretischen Wert, n\"amlich: 
 \begin{itemize}
@@ -88,10 +101,26 @@ F\"ur die beiden PHYWE-Gitter kennen wir den theoretischen Wert, n\"amlich:
 
 \subsection{Berechnung der Aperturfunktion f\"ur Gitter 1}
 
-Wir bestimmen die Aperturfunktion aus den Intensit\"aten der gemessenen Verteilung, indem wir diese invers fouriertransformieren. Die Inverse Fouriertransformation lautet:
+Wir nähern die Aperturfunktion mittels den Intensit\"aten der gemessenen Verteilung als Fourierreihe:
 $$g(x) = \frac{\sqrt{I_0}}{2} + \sum_{n=1}^N \sqrt{I_n}\cos\left(\frac{2\pi n}{K}x \right)$$
-F\"ur die $I_0$ haben wir folgende Werte ermittelt:
+F\"ur die $I_n$ haben wir folgende Werte ermittelt:
 %Resultate I_0
+\begin{tabular}{lll}
+ \toprule
+Ordnung & Amplitude & Fehler \\
+\midrule
+0. Ordnung & 5.5184706157133 & 0.0205159936960068 \\
+1. Ordnung l & 0.221293372204415 & 0.00303468123804445 \\
+1. Ordnung r & 0.154596997473865 & 0.00250997613519101 \\
+2. Ordnung l & 0.147836581064078 & 0.00309767922452523 \\
+2. Ordnung r & 0.135446035218821 & 0.00287225704831411 \\
+3. Ordnung l & 0.0869833409521151 & 0.00328617199395248 \\
+3. Ordnung r & 0.0952050159181131 & 0.00267868139085647 \\
+\bottomrule
+\end{tabular}
+
+
+
 Mit $K = ... $ %Wert | erhalten wir....... + Plot 
 
 \subsection{Bestimmung des Verh\"altnisses zwischen Spaltbreite und Spaltabstand}
