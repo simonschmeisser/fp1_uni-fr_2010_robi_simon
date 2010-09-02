@@ -1,1 +1,69 @@
 \section{Theorie}
+
+\subsection{Der Mitführungskoeffizient}
+
+Die Geschwindigkeit des Lichtes in einem ruhenden Medium wird durch die Formel $$v=\frac{c}{n}$$ berechnet, wobei $c = 3\cdot 10^8 m/s$ die Lichgeschwindigkeit im Vakuum und $n$ der Brechungsindex des jeweiligen Mediums ist. Hat das Medium eine Geschwindigkeit w, so ergibt sich folgende Formel für die Geschwindigkeit des Lichtes:
+\begin{equation} v = \frac{c}{n} \pm \alpha\cdot w  \end{equation}
+$\alpha$ ist hier der Mitführungskoeffizient und es gilt:
+\begin{equation} \alpha = 1 - \frac{1}{n^2} - \frac{\lambda\cdot\Delta n}{n \cdot\Delta\lambda} \end{equation}
+Fresnel postulierte 1818, dass dieser die Mitführung des Äthers durch die Bewegung des Körpers beschreibt, daher der Name. Er leitete den Wert von $\alpha = 1 - 1/n^2$ her. Nach der experimentellen Widerlegung der Äthertheorie leiteten modernere Theorien, wie die Relativitätstheorie, diesen Faktor genauer her, sodass die oben genannte Formel (2) entstand.
+
+\subsubsection{Herleitung des Mitführungskoeffizienten}
+
+Die Relativitätstheorie besagt, dass wenn ein System $K'$ sich relativ zu einem System $K$ mit der Geschwindigkeit $w$ in x-Richtung bewegt, dass die Orts- und Zeitkoordinaten dieser Systeme durch die Lorentztransformationen zusammenhängen: 
+
+\begin{equation} x' = \gamma (x-wt) \end{equation}
+\begin{equation} t' = \gamma \left(t-\frac{wx}{c^2}\right) \end{equation}
+\begin{equation} \text{mit \ } \gamma = \frac{1}{\sqrt{1-\frac{w^2}{c^2}}} \end{equation}
+
+Außerdem gilt $y'=y$ und $z'=z$. Aus diesen Formeln ergibt sich die Formel für die relati\-vistische Addition von Geschwindigkeiten:
+
+\begin{equation} v = \frac{v' + w}{1 + \frac{v'\cdot w}{c^2}} \end{equation}
+
+(v und v' sind hier in x-Richtung). Für ein Lichtstrahl der Geschwindigkeit $v' = c/n$ und mit den Näherung $w<<c$ und somit $(1+a)^{-1}\approx 1-a$ und $\frac{w}{c} \approx 0$ erhält man schlussendlich die Fresnelsche Mitführungsformel:
+
+\begin{equation} v\approx \frac{c}{n} \pm \left(1-\frac{1}{n^2}\right)w \end{equation}
+
+Im Fall von der rotierenden Quarzscheibe gilt $w = w_x = w_r = w_i / n$  (siehe hierzu Abbildung 2 in 2.1). Außerdem betrachten wir nun auch die Abhängigkeit des Brechungsindexes eines Mediums von der Frequenz des gebrochenen Lichts, also $n = n(\nu)$. Nämlich folgt aus der Dopplerverschiebung
+
+$$\nu' = \nu\left( 1\mp \frac{w_i}{c}\right)$$
+
+die lineare Näherung für den Brechungsindex
+
+$$n(\nu') = n(\nu) + (\nu' - \nu)\frac{dn}{d\nu} = n(\nu)\left(1 \mp \frac{w_i\cdot\nu}{c\cdot n(\nu)}\frac{dn(\nu)}{d\nu} \right)$$
+
+und somit die Formel für die Geschwindigkeit, nachdem Näherungen gemacht wurden \\ ($w_r << c$):
+
+\begin{align} 
+v & \approx \frac{c}{n} \pm w_r\cdot\left(1 - \frac{1}{n^2} - \frac{w_i}{w_r}\frac{\nu}{n^2}\frac{dn}{d\nu} \right)\\
+& = \frac{c}{n} \pm w_r\cdot\left(1 - \frac{1}{n^2} - \frac{w_i}{w_r}\frac{\lambda}{n^2}\frac{dn}{d\lambda} \right)
+\end{align}
+
+Bei der Quarzscheibe ergibt sich dann wegen $w_i / w_r = n$ schlussendlich:
+
+\begin{equation}
+v = \frac{c}{n} \pm \alpha\cdot w = \frac{c}{n} \pm \left(1 - \frac{1}{n^2} - \frac{\lambda}{n}\frac{dn}{d\lambda} \right)w_r
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
