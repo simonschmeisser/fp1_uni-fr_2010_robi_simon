@@ -42,8 +42,34 @@ v & \approx \frac{c}{n} \pm w_r\cdot\left(1 - \frac{1}{n^2} - \frac{w_i}{w_r}\fr
 Bei der Quarzscheibe ergibt sich dann wegen $w_i / w_r = n$ schlussendlich:
 
 \begin{equation}
-v = \frac{c}{n} \pm \alpha\cdot w = \frac{c}{n} \pm \left(1 - \frac{1}{n^2} - \frac{\lambda}{n}\frac{dn}{d\lambda} \right)w_r
+\boxed{v = \frac{c}{n} \pm \alpha\cdot w = \frac{c}{n} \pm \left(1 - \frac{1}{n^2} - \frac{\lambda}{n}\frac{dn}{d\lambda} \right)w_r}
 \end{equation}
+
+Diese Formel brauchen wir, um den theoretischen Wert für $\alpha$ zu berechnen (siehe Aufgabenstellung). Den experimentellen Wert erhalten wir durch die Formel:
+
+\begin{equation} \alpha = \frac{L\cdot\lambda\cdot\Delta\nu}{2\cdot n\cdot\omega\cdot d \cdot x_0} \end{equation}
+
+wobei $L$ die optische Länge des Ringlasers, $d$ die Dicke der Quarzscheibe, $\omega$ die Drehfrequenz der Scheibe und $x_0$ der Auftreffpunkt des Lasers auf die Scheibe.
+
+\subsection{Der Brewsterwinkel}
+
+\begin{figure}[H]
+	\centering \includegraphics[width = 0.6 \textwidth]{Bilder/brewster.jpg}
+	\caption{Zum Brewsterwinkel}
+\end{figure}
+
+Der Brewsterwinkel $\theta_B$ ist der Einfallswinkel, für den gilt $\theta_B + \theta' = 90^\circ$, wobei $\theta'$ der Winkel der Brechung ist. Aus den Fresnel-Formeln für Brechung und Reflexion lässt sich berechnen, dass für genau diesen Winkel die reflektierte Welle keine Parallelkomponente hat, d.h. dass die vollständig senkrecht zur Einfallsebene polarisiert ist. Der Winkel lässt sich einfach herleiten:
+
+Aus $$ \frac{\sin(\theta_B)}{\sin(\theta')} = \frac{n_2}{n_1} \text{ \ mit \ } \theta' = 90^\circ - \theta_B$$ folgt sofort die Brewsterbedingung: 
+\begin{equation} \tan\theta_B = \frac{n_2}{n_1} \end{equation}
+
+Ist wie in unserem Fall der Strahl linear polarisiert und parallel zur Einfallsebene, so entstehen keine Reflexionsverluste und der Strahl wird komplett durchgelassen.
+
+\subsection{Der He-Ne-Laser}
+
+
+
+
 
 
 
