@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0.85
-lastDocument=auswertung.tex
+lastDocument=ultraschall.tex
 masterDocument=ultraschall.tex
 name=Ultraschall
 pkg_extIsRegExp=false
@@ -84,13 +84,13 @@ order=-1
 
 [item:auswertung.tex]
 archive=true
-column=9
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=127
+line=156
 mode=LaTeX
 open=true
-order=4
+order=1
 
 [item:bib.bib]
 archive=true
@@ -99,17 +99,17 @@ encoding=UTF-8
 highlight=BibTeX
 line=0
 mode=BibTeX
-open=true
+open=false
 order=1
 
 [item:messwerte.tex]
 archive=true
-column=19
+column=0
 encoding=UTF-8
 highlight=LaTeX
 line=0
 mode=LaTeX
-open=true
+open=false
 order=3
 
 [item:robi-theorie.tex]
@@ -130,7 +130,7 @@ highlight=LaTeX
 line=0
 mode=LaTeX
 open=true
-order=0
+order=3
 
 [item:ultraschall.kilepr]
 archive=true
@@ -150,7 +150,7 @@ highlight=LaTeX
 line=47
 mode=LaTeX
 open=true
-order=2
+order=0
 
 [item:versuchsbeschreibung.tex]
 archive=true
@@ -160,7 +160,7 @@ highlight=LaTeX
 line=24
 mode=LaTeX
 open=true
-order=6
+order=2
 
 [item:zusammenfassung.tex]
 archive=true
@@ -169,12 +169,12 @@ encoding=UTF-8
 highlight=LaTeX
 line=0
 mode=LaTeX
-open=true
+open=false
 order=5
 
 [view-settings,view=0,item:auswertung.tex]
-CursorColumn=9
-CursorLine=127
+CursorColumn=0
+CursorLine=156
 
 [view-settings,view=0,item:bib.bib]
 CursorColumn=0
