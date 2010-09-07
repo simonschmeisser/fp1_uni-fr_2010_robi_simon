@@ -124,7 +124,7 @@ Ordnung & Amplitude & Fehler \\
 
 Mit $K = 130.96 \mu m $ erhalten wir folgende  
 \begin{figure}[h!]
- %\includegraphics{Bilder/appertur.pdf}
+ \includegraphics{Bilder/appertur.pdf}
 \caption{Apperturfunktion}
 \end{figure}
 
@@ -155,6 +155,29 @@ Somit folgt f\"ur die Gitter:
 
 \subsection{Raman-Nath-Theorie}
 
+Durch Ablesen haben wir die Intensität der Maxima bestimmt. Diese haben wir dann mit der Intensität des Hauptmaxima bei ausgeschalteter Spannung $I_0 = $ normiert. Die in der Anleitung empfohlene Verwendung des 1. Minimums bei der Nullten Ordnung zur Bestimmung des Skalierungsfaktors $ $ konnten wir leider nicht befolgen, da dieses Minimum bei nicht durch unsere Messwerte abgedeckt wurde. Daher haben wir den Faktor alternativ durch Fitten der Funktion $J_0(a_0*x)$ an die 0. Ordnung bzw. $J_1(a_1*x)$ an die 1. Ordnung ermittelt. Wir erhalten dabei $a_0 = 1.8453e-01 \pm 3.7e-04$ sowie $a_1 = 2.3449e-01 \pm 7.0e-04 $ und verwenden für die restlichen beiden Ordnungen den Mittelwert $a = 2.09508e-01$. 
+
+\begin{figure}[ht!]
+ \includegraphics[width=0.9\textwidth]{Bilder/raman/raman-fit_0.png}
+ \caption{Vergleich 0. Beugungsordnung mit $J_0^2$}
+\end{figure}
+
+\begin{figure}[ht!]
+ \includegraphics[width=0.9\textwidth]{Bilder/raman/raman-fit_1.png}
+ \caption{Vergleich 1. Beugungsordnung mit $J_1^2$}
+\end{figure}
+
+\begin{figure}[ht!]
+ \includegraphics[width=0.9\textwidth]{Bilder/raman/raman-fit_2.png}
+ \caption{Vergleich 2. Beugungsordnung mit $J_2^2$}
+\end{figure}
+
+\begin{figure}[ht!]
+ \includegraphics[width=0.9\textwidth]{Bilder/raman/raman-fit_3.png}
+ \caption{Vergleich 3. Beugungsordnung mit $J_3^2$}
+\end{figure}
+
+
 \subsubsection{Ultraschallwellenlänge}
 
 Für die Ermittlung der Schallwellenlänge haben wir die Messung bei $ U = 9.69 V$ und $f = 2109.195 kHz $ verwendet. Dazu haben wir die Zeit $t$ der Maxima gegen ihre Ordnung aufgetragen. Aus der Steigung $a$ einer Ausgleichsgeraden erhalten wir über den Zusammenhang $ \sin \alpha = \frac{m \lambda}{\lambda^{*}} = \beta \frac{\Delta t}{2} $ die Schallwellenlänge $ \lambda^* $
@@ -167,7 +190,7 @@ Aus $ \beta \frac{\Delta t}{2} = a m + b = \frac{\lambda}{\lambda^*} m + b $ fol
 
 
 
-sin \alpha = 
+$sin \alpha = $
 
 
 
