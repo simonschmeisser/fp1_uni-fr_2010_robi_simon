@@ -40,7 +40,7 @@ Wir bestimmen die Proportionalit\"atskonstante $\gamma$ durch lineare Regression
 \begin{center}
 \begin{tabular}{lllll}
 \toprule
-Peak & t in $\mu s$ & st in $\mu s$ & $\Delta t$ in $\mu s$ & $s\Delta t$ in $\mu s$ \\
+Peak & $t$ in $\mu s$ & $S_t$ in $\mu s$ & $\Delta t$ in $\mu s$ & $S_{\Delta t}$ in $\mu s$ \\
 \midrule
 0. Ordnung \\
  & 501,0635 & 3,36E-002\\
@@ -71,17 +71,17 @@ $$\frac{\Delta t}{2} = \frac{\lambda}{K\gamma}n = b\cdot n$$
 den wir umstellen können nach $\gamma$, dem Proportionalitätsfaktor zwischen Zeit $t$ und Sinus des Winkels $\sin \alpha$ 
 
 $$ \gamma = \frac{\lambda}{Kb} = (53.093 \pm 0.054) s^{-1} $$
-$$s\gamma = \frac{\lambda}{Kb^2} \cdot sb $$
+$$S_{\gamma} = \frac{\lambda}{Kb^2} \cdot S_b $$
 
 
 \subsubsection{Bestimmung der Gitterkonstanten f\"ur die 5 Gitter}
 
 Mit diesem Faktor können wir nun die Gitterkonstanten der anderen fünf Gitter aus dem Abstand der Maxima der ersten Ordnung bestimmen:
-$$ g = \frac{\beta}{\lambda}\cdot \frac{\Delta t}{2} \text{ bzw. } k = \frac{2 \lambda }{\beta \Delta t} $$
+$$ g = \frac{\gamma}{\lambda}\cdot \frac{\Delta t}{2} \text{ bzw. } K = \frac{2 \lambda }{\gamma \Delta t} $$
 \begin{center}
 \begin{tabular}{lllll}
 \toprule 
-Gitter & $\Delta t /2$ in $\mu s$ & $s\Delta t /2$ in $\mu s$ & $k$ in $\mu m$ & $sk$ in $\mu m$\\
+Gitter & $\Delta t /2$ in $\mu s$ & $S_{\Delta t /2}$ in $\mu s$ & $K$ in $\mu m$ & $S_k$ in $\mu m$\\
 \midrule
 G1 & 89.742 & 0.568 & 132.81 & 0.85\\
 G3 & 112.111 & 0.205 & 106.31 & 0.22\\
@@ -236,7 +236,7 @@ Da wir die dritte Beugungsordnung nur bei wenigen Spannungen beobachten konnten,
 \subsubsection{Ultraschallwellenlänge}
 
 Für die Ermittlung der Schallwellenlänge haben wir die Messung bei $ U = 9.69 V$ und $f = 2109.195 kHz $ verwendet. Dazu haben wir die Zeit $t$ der Maxima gegen ihre Ordnung aufgetragen. Aus der Steigung $a$ einer Ausgleichsgeraden erhalten wir über den Zusammenhang 
-$$ \sin \alpha = \frac{m \lambda}{\lambda^{*}} = \beta \frac{\Delta t}{2} $$
+$$ \sin \alpha = \frac{m \lambda}{\lambda^{*}} = \gamma \frac{\Delta t}{2} $$
  die Schallwellenlänge $ \lambda^* $
 
 
@@ -255,7 +255,7 @@ b & 9.85261e-05 & $ \pm 1.966e-07$ &   $(0.1995\%)$ \\
 \end{table}
 
 
-Aus $ \beta \frac{\Delta t}{2} = a m + b = \frac{\lambda}{\lambda^*} m + b $ folgt 
-$$\boxed{ \lambda^* = \frac{\lambda}{\beta a} = 575.329 \mu m}$$
+Aus $ \gamma \frac{\Delta t}{2} = a m + b = \frac{\lambda}{\lambda^*} m + b $ folgt 
+$$\boxed{ \lambda^* = \frac{\lambda}{\gamma a} = 575.329 \mu m}$$
 
 Der Achsenabschnitt enthält nur den Offset und ist nicht weiter von Bedeutung. 
