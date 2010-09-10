@@ -1,0 +1,11 @@
+*.*~
+*.toc
+*.aux
+*.log
+*.bbl
+*.backup
+*.out
+*.blg
+*.pdf
+*.py
+*.py*
