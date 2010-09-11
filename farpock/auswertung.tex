@@ -6,7 +6,7 @@
 
 Wir haben zwei getrennte Messreihen a ca. 15 Messpaaren aufgenommen. Ein Messpaar bestand daraus, sowohl bei positiver als auch bei negativer Spannung, den Wert der Gleichspannung zu finden, bei dem das Sinussignal mit doppelter Frequenz am besten sichtbar war.
 
-Messreihe 1 wurde bei $2010 \pm 7 Hz$ Sinussignal aufgenommen, Messreihe 2 bei $1800 \pm 1 Hz$ bzw $1815 \pm 1 Hz$ aufgenommen.
+Messreihe 1 wurde bei $2010 \pm 7 Hz$ Sinussignal aufgenommen, Messreihe 2 bei $1800 \pm 1 Hz$ bzw $1815 \pm 1 Hz$ aufgenommen. Der Frequenzgenerator
 
 \begin{python}
 from numpy import *
@@ -16,12 +16,12 @@ def sinus_auswertung(u_plus, u_minus):
 
   print '\n'
 
-  print r'\begin{tabular}{lll} \toprule'
+  print r'\begin{tabular}{rrr} \toprule'
   print r' $U_+$ [V] & $U_i$ [V] & $U_{\lambda/2}$ [U] \\'
   print r' \midrule '
 
   for i in range(len(u_plus)):
-    print repr(u_plus[i]) + r' & ' + repr(-u_minus[i]) + r' & ' + repr(u_halb[i]) + r' \\ '
+    print r'{u_plus:> 5.1f}&{u_minus:> 5.1f}&{u_halb:> 5.1f}\\'.format(u_plus=u_plus[i], u_minus=-u_minus[i], u_halb=u_halb[i])
 
   print r'\bottomrule '
   print r'\end{tabular}'
@@ -67,12 +67,12 @@ def auswertung_faraday(I, s_I, alpha, s_alpha):
 
   print '\n'
 
-  print r'\begin{tabular}{ll} \toprule'
+  print r'\begin{tabular}{rr} \toprule'
   print r' I [A] & $\alpha$ [$\circ$] \\'
   print r' \midrule '
 
   for i in range(len(I)):
-    print repr(I[i]) + r' & ' + repr(alpha[i]) + r' \\ '
+    print r' {I:> 7.3g}  &  {alpha:> 7.3g} \\ '.format(I = I[i], alpha = alpha[i])
 
   print r'\bottomrule '
   print r'\end{tabular}'
