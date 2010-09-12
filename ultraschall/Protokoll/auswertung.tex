@@ -9,7 +9,7 @@ Der Laser wird anhand des 2. Spiegels zentriert, dann werden das Sinusgitter und
 \item $L = (5.9 \pm 0.3) cm$ (Distanz zwischen dem Gitter und dem Schirm)
 \end{itemize}
 
-Aus $D_x$ und $D_y$ ergibt sich die Distanz $D=\sqrt{D_x^2 + D_y^2} = 9.96$ mit dem Fehler
+Aus $D_x$ und $D_y$ ergibt sich die Distanz $D=\sqrt{D_x^2 + D_y^2} = 9.96 cm$ mit dem Fehler
 $$\sigma_D = \sqrt{\left(\frac{\partial D}{\partial D_x}\right)^2\sigma_{D_x}^2 + \left(\frac{\partial D}{\partial D_y}\right)^2\sigma_{D_y}^2} = \sqrt 2 \left(\frac{\partial D}{\partial D_x}\right)\sigma_{D_x} = \sqrt 2 \frac{D_x}{\sqrt{D_x^2 + D_y^2}}\sigma_{D_x} = \sqrt 2 \frac{D_x}{D}\sigma_{D_x} = 0,14$$
 
 Somit: $$\boxed{D = (9.96 \pm 0.14) cm}$$
@@ -43,28 +43,28 @@ Wir bestimmen die Proportionalit\"atskonstante $\gamma$ durch lineare Regression
 Peak & $t$ in $\mu s$ & $S_t$ in $\mu s$ & $\Delta t$ in $\mu s$ & $S_{\Delta t}$ in $\mu s$ \\
 \midrule
 0. Ordnung \\
- & 501,0635 & 3,36E-002\\
+ & $501,0635$ & $3,36\e{-2}$\\
 \midrule
 1. Ordnung\\
-links & 404,7489 & 3,71E-002 & 192,444 & 0,73E-001\\
-rechts & 597,193 & 3,59E-002\\
+links & $404,7489$ & $3,71\e{-2}$ & $192,444$ & $0,73\e{-1}$\\
+rechts & $597,193$ & $3,59\e{-2}$\\
 \midrule
 2. Ordnung\\ 
-links & 309,3735 & 2,07E-001 & 383,268 & 3,90E-001\\
-rechts & 692,6415 & 1,83E-001\\
+links & $309,3735$ & $2,07\e{-1}$ & $383,268$ & $3,90\e{-1}$\\
+rechts & $692,6415$ & $1,83\e{-1}$\\
 \midrule
 3. Ordnung\\ 
-links & 214,3283 & 5,28E-001 & 573,241 & 12,17E-001\\
-rechts & 787,5694 & 6,89E-001\\
+links & $214,3283$ & $5,28\e{-1}$ & $573,241$ & $12,17\e{-1}$\\
+rechts & $787,5694$ & $6,89\e{-1}$\\
 \bottomrule
 \end{tabular}
 \end{center}
 
 Die Parameter der linearen Regression:
-$$ b               = (9.53491e-05      \pm 9.823e-08) s $$
-$$ a               = (8.74055e-07      \pm 1.043e-07) s $$
+$$ b               = (953.4 \pm 1.0)\e{-7} s $$
+$$ a               = (8.7 \pm 1.0)\e{-7} s $$
 
-Der Achsenabschnitt $a$ ist also tatsächlich um einige zwei Größenordnungen kleiner als die Steigung $b$ und wird daher vernachlässigt. Somit erhalten wir den Zusammenhang
+Der Achsenabschnitt $a$ liegt also in der selben Größenordnung wie sein Fehler $S_a$ und wird daher vernachlässigt. Somit erhalten wir den Zusammenhang
 
 $$\frac{\Delta t}{2} = \frac{\lambda}{K\gamma}n = b\cdot n$$
 
