@@ -4,9 +4,9 @@
 
 \subsubsection{Sinusmodulation}
 
-Wir haben zwei getrennte Messreihen a ca. 15 Messpaaren aufgenommen. Ein Messpaar bestand daraus, sowohl bei positiver als auch bei negativer Spannung, den Wert der Gleichspannung zu finden, bei dem das Sinussignal mit doppelter Frequenz am besten sichtbar war.
+Wir haben zwei getrennte Messreihen à ca. 15 Messpaaren aufgenommen. Ein Messpaar bestand daraus, sowohl bei positiver als auch bei negativer Spannung, den Wert der Gleichspannung zu finden, bei dem das Sinussignal mit doppelter Frequenz am besten sichtbar war.
 
-Messreihe 1 wurde bei $2010 \pm 7 Hz$ Sinussignal aufgenommen, Messreihe 2 bei $1800 \pm 1 Hz$ bzw $1815 \pm 1 Hz$ aufgenommen.
+Messreihe 1 wurde bei $2010 \pm 7 Hz$ Sinussignal aufgenommen, Messreihe 2 bei $1800 \pm 1 Hz$ bzw $1815 \pm 1 Hz$ aufgenommen. Der Frequenzgenerator zeigte bei Messreihe 1 einen Drift von ca. $2017 Hz$ auf $2003 Hz$, blieb aber bei Messreihe 2 bis auf kleine Schwankungen stabil. Die Frequenzänderung bei Messreihe 2 ergibt sich dadurch, dass wir die Messung für eine Mittagspause unterbrochen haben.
 
 \begin{python}
 from numpy import *
@@ -16,12 +16,12 @@ def sinus_auswertung(u_plus, u_minus):
 
   print '\n'
 
-  print r'\begin{tabular}{lll} \toprule'
+  print r'\begin{tabular}{rrr} \toprule'
   print r' $U_+$ [V] & $U_i$ [V] & $U_{\lambda/2}$ [U] \\'
   print r' \midrule '
 
   for i in range(len(u_plus)):
-    print repr(u_plus[i]) + r' & ' + repr(-u_minus[i]) + r' & ' + repr(u_halb[i]) + r' \\ '
+    print r'{u_plus:> 5.1f}&{u_minus:> 5.1f}&{u_halb:> 5.1f}\\'.format(u_plus=u_plus[i], u_minus=-u_minus[i], u_halb=u_halb[i])
 
   print r'\bottomrule '
   print r'\end{tabular}'
@@ -29,10 +29,13 @@ def sinus_auswertung(u_plus, u_minus):
   print '\n'
 
   u_halb_a = array(u_halb)
-  print r'Anzahl: ' + repr(len(u_halb_a)) + r'\\'
-  print r'Summe: ' + repr(sum(u_halb_a)) + r'\\'
-  print r'Mean: ' + repr(mean(u_halb_a)) + r'\\'
-  print r'Std: ' + repr(std(u_halb_a)) + r'\\'
+  print '\n'
+  print r'Anzahl: {anzahl} \\'.format(anzahl = len(u_halb_a))
+  print r'Summe: {summe:.5f}\\'.format(summe = sum(u_halb_a))
+  print r'Mean: {mean:.5f}\\'.format(mean=mean(u_halb_a))
+  print r'Std: {std:.5f}\\'.format(std = std(u_halb_a))
+
+  
 
 u_plus_r  = [164.1, 162.4, 161.9, 161.9, 162.3, 158.2, 156.3, 156.0, 156.1, 156.6, 155.2, 154.7, 152.5, 151.2, 151.4, 150.3]
 u_minus_r = [89.9, 90.6, 90.4, 90.2, 91.9, 92.9, 93.4, 93.3, 92.8, 93.4, 94.0, 94.6, 97.3, 98.3, 99.3, 99.4]
@@ -67,12 +70,12 @@ def auswertung_faraday(I, s_I, alpha, s_alpha):
 
   print '\n'
 
-  print r'\begin{tabular}{ll} \toprule'
+  print r'\begin{tabular}{rr} \toprule'
   print r' I [A] & $\alpha$ [$\circ$] \\'
   print r' \midrule '
 
   for i in range(len(I)):
-    print repr(I[i]) + r' & ' + repr(alpha[i]) + r' \\ '
+    print r' {I:> 7.3g}  &  {alpha:> 7.3g} \\ '.format(I = I[i], alpha = alpha[i])
 
   print r'\bottomrule '
   print r'\end{tabular}'
