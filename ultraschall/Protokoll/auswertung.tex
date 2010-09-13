@@ -64,7 +64,7 @@ Die Parameter der linearen Regression:
 $$ b               = (953.4 \pm 1.0)\e{-7} s $$
 $$ a               = (8.7 \pm 1.0)\e{-7} s $$
 
-Der Achsenabschnitt $a$ liegt also in der selben Größenordnung wie sein Fehler $S_a$ und wird daher vernachlässigt. Somit erhalten wir den Zusammenhang
+Der Achsenabschnitt $a$ liegt dicht genug am Ursprung und wird daher vernachlässigt. Somit erhalten wir den Zusammenhang
 
 $$\frac{\Delta t}{2} = \frac{\lambda}{K\gamma}n = b\cdot n$$
 
@@ -135,10 +135,11 @@ Die Gitterform ist grob erkennbar, es ist aber auch deutlich zu sehen, dass für
 
 \subsection{Bestimmung des Verh\"altnisses zwischen Spaltbreite und Spaltabstand}
 
-Den maximalen y-Wert erhalten wir für $g\left( 0 \right) = \sqrt{I0}/2+\sqrt{I1}+\sqrt{I2}+\sqrt{I3} = y_{max} = 2.28627 $. Den minimalen y-Wert erhalten wir durch Ablesen $ y_{min} = 0.743486 $. Die Halbwertsbreite $b$ mit $ g\left( - b/2 \right) = g \left( b/2 \right) = 1.51488 V^{1/2} $ ergibt die Spaltbreite des Gitters mit 
+Den maximalen y-Wert erhalten wir für $g\left( 0 \right) = \sqrt{I_0}/2+\sqrt{I_1}+\sqrt{I_2}+\sqrt{I_3} = y_{max} = 2.28627 V^{1/2} $. Den minimalen y-Wert erhalten wir durch Ablesen $ y_{min} = 0.743486 V^{1/2} $. Die Halbwertsbreite $b$ mit $ g\left( - b/2 \right) = g \left( b/2 \right) = 1.51488 V^{1/2} $ ergibt die Spaltbreite des Gitters mit 
 $$ b = 27.334 \mu m $$
 Somit erhalten wir für das Verhältnis von Spaltbreite zu -abstand
 $$ v = \frac{b}{K-b} = 0.26378 $$ %TODO Fehler? 
+Die Spaltbreite ist also kleiner als der Spaltabstand.
 
 \subsection{Aufl\"osungsverm\"ogen der Gitter}
 
@@ -162,7 +163,7 @@ Somit folgt f\"ur die Gitter:
 \subsection{Raman-Nath-Theorie}
 Durch Ablesen haben wir die Intensität der Maxima bestimmt (siehe Anhang). Diese haben wir dann mit der Intensität des Hauptmaxima bei ausgeschalteter Spannung $I_0 = 7.814 \pm 0.05$ normiert. Der Fehler ergibt sich dann durch $S_I = \frac{I}{I_0}  \sqrt{\left(\frac{S_I}{I}\right)^2 + \left(\frac{S_{I_0}}{I_0}\right)^2}$.
 
-Die in der Anleitung empfohlene Verwendung des 1. Minimums bei der nullten Ordnung zur Bestimmung des Skalierungsfaktors $ a $ konnten wir leider nicht befolgen, da dieses Minimum nicht durch unsere Messwerte abgedeckt wurde. Daher haben wir den Faktor alternativ durch Fitten der Funktion $J_0^2(a_0 x)$ an die 0. Ordnung bzw. $J_1^2(a_1 x)$ an die 1. Ordnung ermittelt. Wir erhalten dabei $a_0 = (1845.3 \pm 3.7)\e{-4}$ sowie $a_1 = (2344.9 \pm 7.0)\e{-4} $ und verwenden für die restlichen beiden Ordnungen den Mittelwert $a = (2095.08 \pm 2.4)\e{-4}$. 
+Die in der Anleitung empfohlene Verwendung des 1. Minimums bei der nullten Ordnung zur Bestimmung des Skalierungsfaktors $ a $ konnten wir leider nicht befolgen, da dieses Minimum nicht durch unsere Messwerte abgedeckt wurde. Daher haben wir den Faktor alternativ durch Fitten der Funktion $J_0^2(a_0 x)$ an die 0. Ordnung bzw. $J_1^2(a_1 x)$ an die 1. Ordnung ermittelt. Wir erhalten dabei $a_0 = (1845.3 \pm 3.7)\e{-4} V^{-1}$ sowie $a_1 = (2344.9 \pm 7.0)\e{-4} V^{-1} $ und verwenden für die restlichen beiden Ordnungen den Mittelwert $a = (2095.08 \pm 2.4)\e{-4} V^{-1}$. 
 
 \begin{figure}[H]
  \includegraphics[width=0.9\textwidth]{Bilder/raman/raman-fit_0.png}
@@ -199,7 +200,7 @@ $$ \sin \alpha = \frac{m \lambda}{\lambda^{*}} = \gamma \frac{\Delta t}{2} $$
  die Schallwellenlänge $ \lambda^* $.
 
 
-Steigung und Achsenabschnitt der Ausgleichsgeraden:
+Steigung $a$ und Achsenabschnitt $b$ der Ausgleichsgeraden:
 $$ a = (2071.62 \pm 9.1) \e{-8} $$
 $$ b = (985.26 \pm 2.0) \e{-7} $$
 
@@ -212,4 +213,4 @@ Der Achsenabschnitt enthält nur den Offset und ist nicht weiter von Bedeutung.
 Mit der gegebenen Schallgeschwindigkeit $v=1111 m/s$ in Isooktan erhalten wir die theoretische Schallwellenlänge:
 $$ \lambda^*_{theo} = \frac{v}{f} = 526.741 \mu m$$
 
-Unser Ergebnis hat also eine Abweichung von ca. 9\% vom theoretischen Wert.
+Unser Ergebnis hat also eine Abweichung von ca. 9\% vom theoretischen Wert, Ursachen könnten die schon besprochene unpräzise Eichung mit Gitter R, die Erwärmung des Isooktans und die damit einhergehende Schlierenbildung sowie natürlich Ungenauigkeiten beim Versuchsaufbaus sein.
