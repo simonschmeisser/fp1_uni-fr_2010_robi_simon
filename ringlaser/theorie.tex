@@ -8,9 +8,17 @@ $\alpha$ ist hier der Mitführungskoeffizient und es gilt:
 \begin{equation} \alpha = 1 - \frac{1}{n^2} - \frac{\lambda\cdot\Delta n}{n \cdot\Delta\lambda} \end{equation}
 Fresnel postulierte 1818, dass dieser die Mitführung des Äthers durch die Bewegung des Körpers beschreibt, daher der Name. Er leitete den Wert von $\alpha = 1 - 1/n^2$ her. Nach der experimentellen Widerlegung der Äthertheorie leiteten modernere Theorien, wie die Relativitätstheorie, diesen Faktor genauer her, sodass die oben genannte Formel (2) entstand.
 
-\subsubsection{Herleitung des Mitführungskoeffizienten}
 
-Die Relativitätstheorie besagt, dass wenn ein System $K'$ sich relativ zu einem System $K$ mit der Geschwindigkeit $w$ in x-Richtung bewegt, Orts- und Zeitkoordinaten dieser Systeme durch die Lorentztransformationen zusammenhängen: 
+Diese Formel brauchen wir, um den theoretischen Wert für $\alpha$ zu berechnen (siehe Aufgabenstellung). Den experimentellen Wert erhalten wir durch die Formel:
+
+\begin{equation} \alpha = \frac{L\cdot\lambda\cdot\Delta\nu}{2\cdot n\cdot\omega\cdot d \cdot x_0} \end{equation}
+
+wobei $L$ die optische Länge des Ringlasers, $d$ die Dicke der Quarzscheibe, $\omega$ die Drehfrequenz der Scheibe und $x_0$ der Auftreffpunkt des Lasers auf die Scheibe.
+
+
+\subsubsection{Herleitung des theoretischen Mitführungskoeffizienten}
+
+Die Relativitätstheorie besagt, dass wenn ein System $K'$ sich relativ zu einem System $K$ mit der Geschwindigkeit $w$ in x-Richtung bewegt, dass die Orts- und Zeitkoordinaten dieser Systeme durch die Lorentztransformationen zusammenhängen: 
 
 \begin{equation} x' = \gamma (x-wt) \end{equation}
 \begin{equation} t' = \gamma \left(t-\frac{wx}{c^2}\right) \end{equation}
@@ -32,7 +40,7 @@ die lineare Näherung für den Brechungsindex
 
 $$n(\nu') = n(\nu) + (\nu' - \nu)\frac{dn}{d\nu} = n(\nu)\left(1 \mp \frac{w_i\cdot\nu}{c\cdot n(\nu)}\frac{dn(\nu)}{d\nu} \right)$$
 
-und somit die Formel für die Geschwindigkeit, nachdem Näherungen ($w_r << c$) gemacht wurden:
+und somit die Formel für die Geschwindigkeit, nachdem Näherungen gemacht wurden \\ ($w_r << c$):
 
 \begin{align} 
 v & \approx \frac{c}{n} \pm w_r\cdot\left(1 - \frac{1}{n^2} - \frac{w_i}{w_r}\frac{\nu}{n^2}\frac{dn}{d\nu} \right)\\
@@ -45,11 +53,37 @@ Bei der Quarzscheibe ergibt sich dann wegen $w_i / w_r = n$ schlussendlich:
 \boxed{v = \frac{c}{n} \pm \alpha\cdot w = \frac{c}{n} \pm \left(1 - \frac{1}{n^2} - \frac{\lambda}{n}\frac{dn}{d\lambda} \right)w_r}
 \end{equation}
 
-Der Term $\frac{\lambda}{n}\frac{dn}{d\lambda}$ wird dabei als Dispersionsterm bezeichnet. Diese Formel verwenden wir, um den theoretischen Wert für $\alpha$ zu berechnen (siehe Aufgabenstellung). Den experimentellen Wert erhalten wir durch die Formel:
+\subsubsection{Herleitung des Mitführungskoeffizienten in unserem Fall}
 
-\begin{equation} \alpha = \frac{L\cdot\lambda\cdot\Delta\nu}{2\cdot n\cdot\omega\cdot d \cdot x_0} \end{equation}
+Für die sich im Resonator aus den links- und rechtslaufenden Wellen zusammengesetzte stehende Welle gilt die Bedingung: 
 
-wobei $L$ die optische Länge des Ringlasers, $d$ die Dicke der Quarzscheibe, $\omega$ die Drehfrequenz der Scheibe und $x_0$ der Auftreffpunkt des Lasers auf die Scheibe.
+$$ N\cdot \lambda = L \text{ \ \ wobei N eine ganze Zahl ist} $$
+
+Wenn der Resonator in der gleichen Mode weiterschwingt, gilt somit $dL = N\cdot d\lambda$ und es ergibt sich für kleine Differenzen:
+
+$$\frac{\Delta L}{L} = \frac{\Delta\lambda}{\lambda} = -\frac{\Delta\nu}{\nu} $$
+
+Im Resonator haben links- und rechtsdrehende Wellen eine Geschwindigkeitsdifferenz von $2\alpha w$. Für den optischen Weg im ruhenden Medium $l\cdot n$ folgt:
+
+$$\frac{\Delta L}{L} = \frac{\Delta l\cdot n}{l\cdot n} = \frac{v(w \neq 0)-v(w = 0)}{v(w=0)} = \pm \frac{n\alpha w}{c} $$
+
+Und somit:
+
+\begin{equation} \frac{\Delta L}{L} = \frac{\Delta l\cdot n}{L} = \pm \frac{n^2\alpha lw}{Lc} = -\frac{\Delta \nu}{\nu} \end{equation}
+
+Für die gemessene Differenzfrequenz der Schwebung folgt also:
+
+\begin{equation}
+\Delta \nu_{exp} = 2 \Delta \nu = \frac{2n^2\alpha l w \nu}{Lc} = \frac{2n^2\alpha lw}{L\lambda}
+\end{equation}
+
+Für die rotierende Quarzscheibe ergibt sich aus dessen Geometrie der Zusammenhang:
+
+\begin{equation} wl = \frac{d\cdot x_0 \cdot \omega}{n} \end{equation}
+
+und daraus mit Gleichung (13):
+
+\begin{equation} \boxed{\alpha = \frac{L\cdot\lambda\cdot\Delta\nu}{2\cdot n\cdot\omega\cdot d \cdot x_0}} \end{equation}
 
 \subsection{Der Brewsterwinkel}
 
@@ -67,7 +101,7 @@ Ist wie in unserem Fall der Strahl linear polarisiert und parallel zur Einfallse
 
 \subsection{Der He-Ne-Laser}
 
-Ein Helium-Neon-Laser besteht aus einem Glasrohr, in dem sich ein Helium-Neon-Gasgemisch unter Druck befindet. Durch Gasentladung (Energiepumpe) wird das Helium auf den $2^1 S_0$-Zustand angeregt und durch Stöße zweiter Art wird diese Energie auf den $3 s_2$-Zustand eines Neon-Atoms übertragen. An den Enden des Glasrohrs befinden sich Resonatorspiegel, welche vom Neon emittierte Photonen wieder durch das Gasgemisch zurückreflektieren und somit stimulierte Emission induzieren. Diese Resonatorspiegel sind teildurchlässig, so dass ein Teil der Photonen als eigentlicher Laserstrahl herauskommt. Schließlich befinden sich am Laser noch Brewsterfenster, die dafür sorgen, dass nur bestimmt polarisiertes Licht durchkommt.
+Ein Helium-Neon-Laser besteht aus einem Glasrohr, in dem sich ein Helium-Neon-Gasgemisch unter Druck befindet. Durch eine Energiepumpe wird das Helium auf den $2^1 S_0$-Zustand angeregt und durch Stöße zweiter Art wird diese Energie auf den $3 s_2$-Zustand eines Neon-Atoms übertragen. An den Enden des Glasrohrs befinden sich Resonatorspiegel, welche vom Neon emittierte Photonen wieder durch das Gasgemisch zurückreflektiert und somit stimulierte Emission induzieren. Diese Resonatorspiegel sind teildurchlässig, so dass ein Teil der Photonen als eigentlicher Laserstrahl herauskommt. Schließlich befinden sich am Laser noch Brewsterfenster, die dafür sorgen, dass nur bestimmt polarisiertes Licht durchkommt.
 
 \begin{figure}[H]
 	\centering \includegraphics[width = 0.8\textwidth]{Bilder/henelaser.jpg}
