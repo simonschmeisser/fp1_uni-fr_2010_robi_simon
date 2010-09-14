@@ -80,7 +80,7 @@ void objects()
     //cout<<"Vor der Schleife"<<endl;
 
     vector<double> r;
-    int length=280;//graph->GetN();
+    int length=290;//graph->GetN();
     cout<<"habe r definiert successfull!"<<endl;
     for(int b=0;b<length;b++)
     {

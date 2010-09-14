@@ -133,3 +133,22 @@ auswertung_faraday(I_s, s_I, alpha_s, s_alpha)
 auswertung_faraday(I_r, s_I, alpha_r, s_alpha)
 
 \end{python}
+
+Wir berechnen das Magnetfeld auf der Achse:
+
+und integrieren darüber
+$\int H dl$
+
+Vergleich mit $ H = \frac{N I}{l} $
+
+Berechnen die Verdetkonstante
+
+$$ \alpha = l V H $$
+
+Wir führen eine lineare Regression durch und erhalten die Steigung $a$ und den Achsenabschnitt $b$.
+
+Es gilt $$ \alpha = V l_{Stab} H = V l_{Stab} \frac{N I}{l_{Spule}} = a I + b $$
+
+Der Achsenabschnitt $b$ enthält den Offset bei der Winkelmessung und ist nicht weiter von Bedeutung.
+
+Somit erhalten wir die Verdetkonstante aus $$ V = \frac{a l_{Spule}}{N l_{Stab}} $$  

@@ -81,23 +81,15 @@ Für eine Spule, hängt das Feld von der Anzahl der Windungen N ab. Nähert man 
 	\caption{Das Magnetfeld einer Spule \emph{(paukr.de)}}
 \end{figure}
 
-Wie man sehen kann, ist das B-Feld im Innern einer Spule also homogen und unabhängig vom Ort. Man kann es sich also als komplett linear vorstellen, wie es auf dem Bild veranschaulicht ist.
+Wie man sehen kann, ist das B-Feld im Innern einer Spule also homogen und unabhängig vom Ort.
 
+Ist die Spule allerdings nicht hinreichend lang im Verhältnis zum betrachteten Gebiet, erhält man eine Abhängigkeit von der Position entlang der Spulenachse, sowie einigen weiteren geometrischen Eigenschaften der Spule. Über das Biot-Savart-Gesetz
+$$  dH\left( z \right) = \frac{1}{4 \pi} \frac{I d\vec{l} \times \vec{r}}{\left|r\right|^3} $$
+erhält man
+$$ H \left( z \right) = \frac{N I}{2 L \left( x_2 - x_1 \right)} \left( \left( L - z \right) \ln \frac{x_2 + \sqrt{\left( L-z \right)^2 + x_2^2}}{x_1 + \sqrt{\left( L - z \right)^2 + x_1^2}} + z \ln \frac{x_2 + \sqrt{z^2 + x_2^2}}{x_1 + \sqrt{z^2 + x_1^2}}  \right) $$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Für uns interresant ist das Integral über die Stablänge
+$$ \int_{\frac{L-l}{2}}^{\frac{L+l}{2}} H\left( z \right) dz = 2556*I $$
+wobei der genaue Zahlenwert natürlich nur für die spezifischen Eigenschaften unseres Aufbaus gilt. Die Herleitung findet sich in der Staatsexamensarbeit.
 
 \clearpage
