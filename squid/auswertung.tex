@@ -35,7 +35,7 @@ $$p = I\cdot A = \frac{U}{R}\pi r^2 \text{ \ \ \ mit \ \ \ } s_p = p\sqrt{\frac{
 
 Die Feldstärke berechnen wir mit der Formel:
 
-$$B = \frac{\mu_0}{2\pi}\frac{p}{z^3} \text{ \ \ \ mit \ \ \ } s_B=B\sqrt{\frac{s_p^2}{p^2} + 3 \frac{s_z^2}{z^2}}$$
+$$B_z = \frac{\mu_0}{2\pi}\frac{p}{z^3} \text{ \ \ \ mit \ \ \ } s_{B_z}=B_z\sqrt{\frac{s_p^2}{p^2} + 3 \frac{s_z^2}{z^2}}$$
 
 Wir erhalten die Werte:
 
@@ -45,11 +45,47 @@ Wir erhalten die Werte:
 
 \subsubsection{Graphisch}
 
+Zur graphischen Berechnung der Dipolmomente und Feldstärken haben wir die Messwerte des SQUIDS sinusförmig gefittet nach der Funktion:
 
+$$ f(A,B,C,D,x) = A + B\cdot\sin(C\cdot x + D) $$
 
+Hier ist somit A der Offset, B die Amplitude, C die Frequenz und D die Phasenverschiebung. Wir erhalten die Ergebnisse:
 
+\begin{tabular}[H]{| c | c | c | c | c | c |} \hline
+ & $\chi^2 / ndf$ & Offset $A$ in $V$ & Amplitude $B$ in $V$ & Frequenz C in $^\circ/s$ & Phase $D$ \\ 
+\hline
+$R_1$ & 0.82 & -0.6252$\pm$0.0005 & 0.5244$\pm$0.0006 & 49.950$\pm$0.005 & $2.167 \pm 0.002$\\
+$R_2$ & 1.64 & 0.6340$\pm$0.0006 & 0.2722$\pm$0.0009 & 49.916$\pm$0.014 & $-2.682 \pm 0.007$\\
+$R_3$ & 0.22 & -0.5370$\pm$0.0002 & 0.0916$\pm$0.0003 & 49.936$\pm$0.015 & $3.208 \pm 0.007$\\
+$R_4$ & 0.20 & -0.5263$\pm$0.0002 & 0.0546$\pm$0.0003 & 50.048$\pm$0.023 & $0.178 \pm 0.001$\\
+$R_5$ & 0.32 & -0.6587$\pm$0.0003 & 0.0247$\pm$0.0004 & 49.953$\pm$0.071 & $3.032 \pm 0.035$\\ \hline
+\end{tabular}
 
+Mit der Formel 
 
+$$ B_z = F \frac{\Delta V}{2s_i} = F\frac{B}{s_i} $$
+
+berechnen wir anhand der Fits die Feldstärke. $F = 9.3 nT / \Phi_0$ ist der Feld-Fluss-Koeffizient, der Wert ist Herstellerangabe. $s_i$ ist der eingestellte Wert des Feedback-Resistors und beträgt in allen Fällen $1,9 V/ \Phi_0$. Der Fehler auf $B_z$ berechnet sich durch:
+
+$$ s_{B_z} = B_z\frac{s_B}{B} $$
+
+(B ist hier die aus den Fits bestimmte Amplitude der Sinusfunktion)
+ 
+Die erhaltenen Werte haben wir in einer Tabelle zusammengefasst, um den direkten Vergleich mit den berechneten Werten zu erleichtern:
+
+\begin{center}
+\begin{tabular}[H]{| c | c | c |} \hline
+ & $B_z / nT$ berechnet & $B_z / nT$ aus dem Fit\\ \hline \hline
+ $R_1$ & $1,696 \pm 0,219$ & $2,567\pm ...$\\
+ $R_2$ & $1,022 \pm 0,132$ & $1,333\pm ...$\\
+ $R_3$ & $0,376 \pm 0,048$ & $0,449\pm ...$\\
+ $R_4$ & $0,227 \pm 0,029$ & $0,268\pm ...$\\
+ $R_5$ & $0,117 \pm 0,015$ & $0,121\pm ...$\\ \hline
+ \end{tabular}
+ \end{center}
+ 
+ 
+ \subsection{Dipolmoment und Feldstärke anderer Proben}
 
 
 
