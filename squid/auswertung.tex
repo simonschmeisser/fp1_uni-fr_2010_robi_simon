@@ -31,21 +31,21 @@ Wir haben eine stromdurchflossene Leiterschleife mit Durchmesser $d = (3,5 \pm 0
 
 Das magnetische Dipolmoment berechnen wir mit der Formel:
 
-$$p = I\cdot A = \frac{U}{R}\pi r^2 \text{ \ \ \ mit \ \ \ } s_p = p\sqrt{\frac{s_U^2}{U^2} + \frac{s_R^2}{R^2} + 2\frac{s_r^2}{r^2}}$$
+$$p = I\cdot A = \frac{U}{R}\pi r^2 \text{ \ \ \ mit \ \ \ } s_p = p\sqrt{\frac{s_U^2}{U^2} + \frac{s_R^2}{R^2} + 4\frac{s_r^2}{r^2}}$$
 
 Die Feldstärke berechnen wir mit der Formel:
 
-$$B_z = \frac{\mu_0}{2\pi}\frac{p}{z^3} \text{ \ \ \ mit \ \ \ } s_{B_z}=B_z\sqrt{\frac{s_p^2}{p^2} + 3 \frac{s_z^2}{z^2}}$$
+$$B_z = \frac{\mu_0}{2\pi}\frac{p}{z^3} \text{ \ \ \ mit \ \ \ } s_{B_z}=B_z\sqrt{\frac{s_p^2}{p^2} + 9 \frac{s_z^2}{z^2}}$$
 
 Wir erhalten die Werte:
 
 \begin{figure}[H]
-	\centering \includegraphics{Bilder/Tab-Leiterschleife.jpg}
+	\centering \includegraphics{Bilder/Tab-Leiterschleife.png}
 \end{figure}
 
 \subsubsection{Graphisch}
 
-Zur graphischen Berechnung der Dipolmomente und Feldstärken haben wir die Messwerte des SQUIDS sinusförmig gefittet nach der Funktion:
+Zur graphischen Berechnung der Dipolmomente und Feldstärken haben wir die Messwerte des SQUIDs sinusförmig gefittet nach der Funktion:
 
 $$ f(A,B,C,D,x) = A + B\cdot\sin(C\cdot x + D) $$
 
@@ -65,7 +65,7 @@ Mit der Formel
 
 $$ B_z = F \frac{\Delta V}{2s_i} = F\frac{B}{s_i} $$
 
-berechnen wir anhand der Fits die Feldstärke. $F = 9.3 nT / \Phi_0$ ist der Feld-Fluss-Koeffizient, der Wert ist Herstellerangabe. $s_i$ ist der eingestellte Wert des Feedback-Resistors und beträgt in allen Fällen $1,9 V/ \Phi_0$. Der Fehler auf $B_z$ berechnet sich durch:
+berechnen wir anhand der Fits die Feldstärke. Es gilt $\Delta V = 2B$. $F = 9.3 nT / \Phi_0$ ist der Feld-Fluss-Koeffizient, der Wert ist Herstellerangabe. $s_i$ ist der eingestellte Wert des Feedback-Resistors und beträgt in allen Fällen $1,9 V/ \Phi_0$. Der Fehler auf $B_z$ berechnet sich durch:
 
 $$ s_{B_z} = B_z\frac{s_B}{B} $$
 
@@ -76,16 +76,40 @@ Die erhaltenen Werte haben wir in einer Tabelle zusammengefasst, um den direkten
 \begin{center}
 \begin{tabular}[H]{| c | c | c |} \hline
  & $B_z / nT$ berechnet & $B_z / nT$ aus dem Fit\\ \hline \hline
- $R_1$ & $1,696 \pm 0,219$ & $2,567\pm ...$\\
- $R_2$ & $1,022 \pm 0,132$ & $1,333\pm ...$\\
- $R_3$ & $0,376 \pm 0,048$ & $0,449\pm ...$\\
- $R_4$ & $0,227 \pm 0,029$ & $0,268\pm ...$\\
- $R_5$ & $0,117 \pm 0,015$ & $0,121\pm ...$\\ \hline
+ $R_1$ & $1,696 \pm 0,219$ & $2,567\pm 0,003$\\
+ $R_2$ & $1,022 \pm 0,132$ & $1,333\pm 0,004$\\
+ $R_3$ & $0,376 \pm 0,048$ & $0,448\pm 0,001$\\
+ $R_4$ & $0,227 \pm 0,029$ & $0,267\pm 0,001$\\
+ $R_5$ & $0,117 \pm 0,015$ & $0,121\pm 0,002$\\ \hline
  \end{tabular}
  \end{center}
  
+ Wie man gut erkennen kann, ist vor allem die Abweichung der Werte für $R_1$ sehr groß. Die anderen Werte liegen alle mehr oder weniger im tolerierbaren Bereich aneinander.
  
- \subsection{Dipolmoment und Feldstärke anderer Proben}
+ Aus der magnetischen Feldstärke können wir das magnetische Dipolmoment der Leiterschleife für die einzelnen Widerstände ausrechnen mit der Formel:
+ 
+$$ B_z = \frac{\mu_0}{2\pi}\frac{p}{z^3} \ \Leftrightarrow \  p = \frac{2\pi z^3}{\mu_0}B_z $$
+
+mit dem Fehler:
+
+$$s_p = p\sqrt{\frac{s_{B_z}^2}{B_z^2} + 9\frac{s_z^2}{z^2}}$$
+
+Wir erhalten die Werte (im Vergleich mit den berechneten:
+
+\begin{center}
+\begin{tabular}[H]{| c | c | c |} \hline
+ & $p$ in $A\cdot mm^2$ berechnet & $p$ in $A\cdot mm^2$ aus dem Fit\\ \hline \hline
+ $R_1$ & $0,369 \pm 0,068$ & $0,599\pm 0,100$\\
+ $R_2$ & $0,283 \pm 0,041$ & $0,311\pm 0,052$\\
+ $R_3$ & $0,088 \pm 0,015$ & $0,105\pm 0,017$\\
+ $R_4$ & $0,053 \pm 0,009$ & $0,062\pm 0,010$\\
+ $R_5$ & $0,027 \pm 0,005$ & $0,028\pm 0,005$\\ \hline
+ \end{tabular}
+ \end{center}
+ 
+ Auch hier kann man gut erkennen, dass vor allem die Werte für $R_1$ stark voneinander abweichen.
+
+\subsection{Dipolmoment und Feldstärke anderer Proben}
 
 
 
