@@ -1,0 +1,100 @@
+
+
+*******************************************************************************
+Wed Sep 15 10:05:22 2010
+
+
+FIT:    data read from '1.tab' u 1:2
+        format = x:z
+	y range restricted to [0.00280000 : 0.0168000]
+        #datapoints = 1401
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6057.27           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.707147
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.232745
+rel. change during last iteration : -7.65605e-13
+
+degrees of freedom    (FIT_NDF)                        : 1399
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0128983
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000166365
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 343.879          +/- 0.0852       (0.02478%)
+b               = -0.810902        +/- 0.0009033    (0.1114%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.924  1.000 
+
+
+*******************************************************************************
+Wed Sep 15 10:05:22 2010
+
+
+FIT:    data read from '1.tab' u 1:3
+        format = x:z
+	y range restricted to [0.00280000 : 0.0168000]
+        #datapoints = 1401
+        residuals are weighted equally (unit weight)
+
+function used for fitting: s(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2179.06           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.707119
+
+initial set of free parameter values
+
+sin_off         = 1
+sin_amp         = 1
+sin_fr          = 467
+sin_ph          = 1
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 2.10102e-05
+rel. change during last iteration : -4.03065e-07
+
+degrees of freedom    (FIT_NDF)                        : 1397
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000122636
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.50395e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+sin_off         = 0.00206942       +/- 3.284e-06    (0.1587%)
+sin_amp         = -0.0145439       +/- 4.855e-06    (0.03338%)
+sin_fr          = 467.743          +/- 0.0723       (0.01546%)
+sin_ph          = 1.64256          +/- 0.000768     (0.04676%)
+
+
+correlation matrix of the fit parameters:
+
+               sin_of sin_am sin_fr sin_ph 
+sin_off         1.000 
+sin_amp        -0.010  1.000 
+sin_fr          0.033 -0.225  1.000 
+sin_ph         -0.054  0.204 -0.913  1.000 
