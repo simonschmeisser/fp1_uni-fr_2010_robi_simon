@@ -82,6 +82,13 @@ Zum Vergleich, der Literaturwert beträgt: $r_{41} = 23.4 pm/V$
 
 \subsubsection{Sägezahnmodulation}
 
+\begin{figure}[H]
+ \centering
+ \includegraphics{messwerte/saegezahn/saegezahn_1.pdf}
+ \caption{Sinusförmiges Signal als Reaktion auf eine Sägezahnspannung}
+\end{figure}
+
+
 Noch zu machen!
 
 
@@ -92,8 +99,32 @@ $\alpha_1 = 8.4$
 
 $\alpha_2 = 174,8$
 
+\newcommand{\faradayDesc}{
+Wir berechnen das Magnetfeld auf der Achse:
+
+und integrieren darüber
+$\int H dl$
+
+Vergleich mit $ H = \frac{N I}{l} $
+
+Berechnen die Verdetkonstante
+
+$$ \alpha = l V H $$
+
+Wir führen eine lineare Regression durch und erhalten die Steigung $a$ und den Achsenabschnitt $b$.
+
+Es gilt $$ \alpha = V \int H(z) dz= V 2556 I = a I + b $$
+
+Der Achsenabschnitt $b$ enthält den Offset bei der Winkelmessung und ist nicht weiter von Bedeutung.
+
+Somit erhalten wir die Verdetkonstante aus $$ V = \frac{a}{2556} $$  
+
+}
+
 \begin{python}
 from scipy import stats
+
+from numbers import *
 
 def auswertung_faraday(I, s_I, alpha, s_alpha):
   for i in range(len(alpha)):
@@ -119,6 +150,8 @@ def auswertung_faraday(I, s_I, alpha, s_alpha):
   print r'Steigung: ' + repr(a_s)
   print r'Achsenab: ' + repr(b_s)
 
+  return a_s, b_s
+
 
 I_s = [-0.01, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.47, +0.01, -0.5, -1.0, -1.5, -2.0, -2.5, -3.0, -3.5, -4.01, -4.50]
 alpha_s = [0.50, 179.80, 178.05, 176.25, 175.42, 174.41, 173.10, 171.80, 170.48, 169.0, 0.55, 2.25, 3.40, 4.60, 5.85, 7.10, 8.40, 9.50, 10.80, 12.01]
@@ -129,26 +162,21 @@ alpha_r = [0.35, 179.15, 177.9, 176.3, 175.0, 174.05, 172.65, 171.60, 170.25, 16
 s_I = 0.01
 s_alpha = 0.4
 
-auswertung_faraday(I_s, s_I, alpha_s, s_alpha)
-auswertung_faraday(I_r, s_I, alpha_r, s_alpha)
+a_s_s, b_s_s = auswertung_faraday(I_s, s_I, alpha_s, s_alpha)
+a_s_r, b_s_r = auswertung_faraday(I_r, s_I, alpha_r, s_alpha)
+
+print r'''\faradayDesc'''
+
+print r'''
+\begin{tabular}{rrr}
+ \toprule
+ Steigung $a$ & Achsenabschnitt $b$ & Verdetkonstante $V$ \\
+ \midrule
+''' + str(round(a_s_s, 3))+ r' & ' + str(round(b_s_s, 3)) + r' & ' + number_to_latex(a_s_s/2556, 5, -3) + r'''\\
+''' + str(round(a_s_r, 3))+ r' & ' + str(round(b_s_r, 3)) + r' & ' + number_to_latex(a_s_r/2556, 5, -3) + r'''\\
+ \bottomrule  
+\end{tabular}
+'''
 
 \end{python}
 
-Wir berechnen das Magnetfeld auf der Achse:
-
-und integrieren darüber
-$\int H dl$
-
-Vergleich mit $ H = \frac{N I}{l} $
-
-Berechnen die Verdetkonstante
-
-$$ \alpha = l V H $$
-
-Wir führen eine lineare Regression durch und erhalten die Steigung $a$ und den Achsenabschnitt $b$.
-
-Es gilt $$ \alpha = V l_{Stab} H = V l_{Stab} \frac{N I}{l_{Spule}} = a I + b $$
-
-Der Achsenabschnitt $b$ enthält den Offset bei der Winkelmessung und ist nicht weiter von Bedeutung.
-
-Somit erhalten wir die Verdetkonstante aus $$ V = \frac{a l_{Spule}}{N l_{Stab}} $$  
