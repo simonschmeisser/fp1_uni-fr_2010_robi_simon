@@ -61,6 +61,8 @@ $R_4$ & 0.20 & -0.5263$\pm$0.0002 & 0.0546$\pm$0.0003 & 50.048$\pm$0.023 & $0.17
 $R_5$ & 0.32 & -0.6587$\pm$0.0003 & 0.0247$\pm$0.0004 & 49.953$\pm$0.071 & $3.032 \pm 0.035$\\ \hline
 \end{tabular}
 
+Die Graphen, sowie deren Fits und Polarplots kann man im Anhang einsehen.
+
 Mit der Formel 
 
 $$ B_z = F \frac{\Delta V}{2s_i} = F\frac{B}{s_i} $$
@@ -94,7 +96,7 @@ mit dem Fehler:
 
 $$s_p = p\sqrt{\frac{s_{B_z}^2}{B_z^2} + 9\frac{s_z^2}{z^2}}$$
 
-Wir erhalten die Werte (im Vergleich mit den berechneten:
+Wir erhalten die Werte (im Vergleich mit den Berechneten):
 
 \begin{center}
 \begin{tabular}[H]{| c | c | c |} \hline
@@ -111,9 +113,44 @@ Wir erhalten die Werte (im Vergleich mit den berechneten:
 
 \subsection{Dipolmoment und Feldstärke anderer Proben}
 
+Nach der Leiterschleife, haben wir andere Proben in das SQUID eingeführt und gemessen. Die Auswertung haben wir wieder mit der Sinus-Funktion $f(x) = A + B\sin(Cx+D)$ gemacht. Hier eine Tabelle der Proben und deren Fit-Werte. (Die gefitteten Sinusfunktionen kann man im Anhang einsehen).
 
+\begin{center}
+\begin{tabular}[H]{| l | c | c | c | c |} \hline 
+ & $\chi^2 / ndf$ & Offset $A$ in $V$ & Amplitude $B$ in $V$ & Frequenz C in $^\circ/s$\\ 
+\hline \hline
+{Metallbolzen} & 303 & -2.7585$\pm$0.0087 & 7.1330$\pm$0.0123 &	 49.7482$\pm$0.0070\\
+{Magnetspan $\perp$} & 267 & -7.6301$\pm$0.0082 & 5.6332$\pm$0.0116 & 49.7893$\pm$0.0081\\
+{Magnetspan 45$^\circ$} & 706 & -5.3528$\pm$0.0133 & 8.6427$\pm$0.0187 & 49.7974$\pm$0.0087\\
+{Magnetspan //} & 344 & -5.8435$\pm$0.0093 & 7.8321$\pm$0.0132 & 49.7035$\pm$0.0066\\
+{Steinzylinder} & 0.33 & 0.04678$\pm$0.0003 & -0.0043$\pm$0.0004 & 44.0235$\pm$0.4014\\
+{Eisenspan //} & 0.05 & -0.0101$\pm$0.0001 & 0.0122$\pm$0.0001 & 49.7288$\pm$0.05103\\
+{Eisenspan$\perp$} & 0.04 & 0.0074$\pm$0.0001 & -0.0126$\pm$0.0001 & 49.6935$\pm$0.0438\\
+{Gold} & 0.002 & 0.0012$\pm$0.0001 & 0.0001$\pm$0.0001 & 21.6771$\pm$2.0544\\ %Gold1
+{Heller Stein} & 0.18 & 0.0183$\pm$0.0002 & 0.0024$\pm$0.0003 & 47.0429$\pm$0.3391\\
+{ISE Zugangsschlüssel} & 0.02 & 0.0024$\pm$0.0001 & 0.0001$\pm$0.0001 & 24.8102$\pm$2.9728\\
+{Kronkorken} & 237 & -1.6482$\pm$0.0077 & 3.5751$\pm$0.0109 & 49.8015$\pm$0.0122\\ %1
+{Kaffeeschlüssel} & 4.42 & 0.0083$\pm$0.0011 & 0.1781$\pm$0.0015 & 49.8351$\pm$0.03293\\
+{iPod Shuffle} & 8173 & -4.3923$\pm$0.0453 & 4.6443$\pm$0.0638 & 49.8386$\pm$0.0555\\
+\hline
+\end{tabular}
+\end{center}
 
+Die Suffixe // (parallel), $\perp$ (senkrecht) und \emph{45$^\circ$} bezeichnen hier die Ausrichtung der Probe zum Stab des Motors. Wie man erkennen kann entsprechen die Frequenzen für das Gold und den ISE-Zugangsschlüssel nicht dem Wert der anderen Frequenzen (obwohl der Motor immer gleich eingestellt war). Dies deutet daraufhin, dass diese Proben keine mit dem SQUID messbaren Dipolmomente haben. Wie man an den Graphen im Anhang erkennen kann, sind diese Verläufe auch nicht wirklich sinusförmig so dass der Fit nicht wirklich angebracht ist. Trotzdem haben wir diese pro forma ausgewertet und das Dipolmoment und die magnetische Feldstärke berechnet.
 
+Zur Auswertung benutzen wir (wieder) folgende Formeln;
+
+$$ B_z = F\frac{B}{s_i} \text{ \ \ , \ \ } s_{B_z} = B_z\frac{s_B}{B}$$
+
+$$ p = \frac{2\pi z^3}{\mu_0}B_z \text{ \ \ , \ \ } s_p = p\sqrt{\frac{s_{B_z}^2}{B_z^2} + 9\frac{s_z^2}{z^2}} $$
+
+Wir erhalten:
+
+\begin{figure}[H]
+	\centering \includegraphics[width=\textwidth]{Bilder/Tab-Proben.png}
+\end{figure}
+
+Wie man sieht sind die Feldstärken/Dipolmomente beim Metallbolzen, Kronkorken und iPod Shuffle (ausgeschaltet!) am höchsten. Der Magnetspan hat auch ein relativ starkes Dipolmoment/Feld. Das Gold und der ISE-Zugangsschlüssel haben wie erwartet kaum ein Dipolmoment (Feldstärke), bzw. ein vernachlässigbares, da der Fehler hier so groß wie der Wert selber ist. Die Werte vom Steinzylinder und dem Eisenspan sind vergleichbar mit den Werten der Leiterschleife ($R_3$ bis $R_5$). Der helle Kieselstein hat auch kaum ein Dipolmoment/eine Feldstärke, der Kaffeeschlüssel hingegen ist wiederum im Bereich der Leiterschleife bei $R_2$.
 
 
 
