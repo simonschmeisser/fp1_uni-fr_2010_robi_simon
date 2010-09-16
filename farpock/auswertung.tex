@@ -88,8 +88,56 @@ Zum Vergleich, der Literaturwert beträgt: $r_{41} = 23.4 pm/V$
  \caption{Sinusförmiges Signal als Reaktion auf eine Sägezahnspannung}
 \end{figure}
 
+Wir haben die Pockelszelle mit der Spannung eines Sägezahngenerators betrieben und konnten auf dem Oszilloskop einen sinusförmigen Verlauf der intensität des Photodiodensignals beobachten. Über eine lineare Regression der ansteigenden Spannungsflanke berechnen wir $\frac{\Delta U}{\Delta t}$ und können somit aus der halben Periodendauer des Sinussignals auf die Halbwellenspannung $U_{\lambda/2}$ schliessen.
 
-Noch zu machen!
+Für die lineare Regression haben wir
+$$ U_{saege}(t) = a  t + b $$
+und für den Fit des Signals
+$$ U_{sinus}(t) = \mathit{amp}  \sin(\mathit{fr} t + \mathit{ph}) + \mathit{off} $$
+verwendet.
+
+
+  %343.879  &  467.743  &  0.735187913021  &  7.66637377568e-09 \\
+\begin{python}
+from numbers import *
+from math import pi
+
+lmbd = 632.8e-9 #m
+d = 2.4e-3 #m
+l = 20.0e-3 #m
+n1 = 1.522
+n3 = 1.477
+
+def r_41(lmbd, d, l, U, n1, n3):
+  return d*lmbd/(4.0*l*U)*(0.5*(1/(n1**2) + 1/(n3**2)))**(1.5)
+
+def saege(a, sa, fr, sfr):
+  U = a * 100.0 / fr * pi #nur eine halbe periode
+  r = r_41(lmbd, d, l, U, n1, n3)
+  print r' ', a, r' & ', fr, r' & ', U, r' & ', r, r'\\', '\n'
+
+print r'''\begin{table}[H]
+ \begin{tabular}{llll}
+  \toprule
+  a [V/s]  &  fr [ $s^{-1}$] & $U_{\lambda/2}$ [V] & $r_{41} [m/V]$ \\
+  \midrule
+'''
+
+saege(a= 343.879, sa = 0.0852, fr = 467.743, sfr = 0.0723)
+saege(a = 343.848, sa = 0.08643, fr = 467.484, sfr = 0.07867)
+saege(a = 344.282, sa = 0.08705, fr = 467.366, sfr = 0.08143)
+saege(a = 344.323, sa = 0.08556, fr = 467.776, sfr = 0.07919)
+saege(a = 344.323, sa = 0.08556, fr = 467.776, sfr = 0.07919)
+
+print r'''
+\bottomrule
+
+\end{tabular}
+
+\end{table}'''
+
+\end{python}
+
 
 
 \subsection{Faradayeffekt}
