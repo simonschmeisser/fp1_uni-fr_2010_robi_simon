@@ -217,27 +217,23 @@ Wir haben zuerst den Abstand der beiden Punkte maximaler Dunkelheit im Halbschat
 
 Simon maß $\alpha_1 = 8.4^\circ$, $\alpha_2 = 174,8^\circ$ und somit $ 2\epsilon = 13.60^\circ $,\\ Robi hingegen $\alpha_1 = 14.50^\circ$, $\alpha_2 = 2.05^\circ$ und somit $ 2\epsilon = 12.45^\circ $.
 
-\newcommand{\faradayDesc}{
-Wir berechnen das Magnetfeld auf der Achse:
 
-und integrieren darüber
-$\int H dl$
+\paragraph{Berechnen der Verdetkonstante}
 
-Vergleich mit $ H = \frac{N I}{l} $
-
-Berechnen die Verdetkonstante
-
-$$ \alpha = l V H $$
-
-Wir führen eine lineare Regression durch und erhalten die Steigung $a$ und den Achsenabschnitt $b$.
-
-Es gilt $$ \alpha = V \int H(z) dz= V 2556 I = a I + b $$
+Nun haben wir jeder eine Messreihe aufgenommen, bei der wir die Stromstärke durch die Spule im Bereich von $-4.5 A$ bis $4.5 A$ variierten und die resultierenden Polarisationsebene vermassen. Um die Verdetkonstante zu ermitteln, verwenden wir dann den generellen Zusammenhang
+$$ \alpha = l \cdot V \cdot H $$
+bzw. in unserem speziellen Fall
+$$ \alpha = V \cdot 2556 \cdot I $$
+  
+Wir führten eine lineare Regression über $\alpha$ gegen $I$ durch und erhalten die Steigung $a$ und den Achsenabschnitt $b$. Es gilt
+$$ \alpha = V \cdot 2556 \cdot  I = a \cdot I + b $$
 
 Der Achsenabschnitt $b$ enthält den Offset bei der Winkelmessung und ist nicht weiter von Bedeutung.
 
 Somit erhalten wir die Verdetkonstante aus $$ V = \frac{a}{2556} $$  
 
-}
+
+\newcommand{\faradayDesc}{}
 
 \begin{python}
 from scipy import stats
@@ -278,8 +274,8 @@ alpha_s = [0.50, 179.80, 178.05, 176.25, 175.42, 174.41, 173.10, 171.80, 170.48,
 I_r = [0.01, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.01, 4.52, -0.01, -0.51, -1.0, -1.5, -2.0, -2.49, -3.0, -3.5, -4.01, -4.53]
 alpha_r = [0.35, 179.15, 177.9, 176.3, 175.0, 174.05, 172.65, 171.60, 170.25, 168.85, 0.40, 1.70, 3.10, 4.50, 5.55, 7.00, 8.25, 9.40, 10.80, 12.15]
 
-s_I = 0.01
-s_alpha = 0.004
+s_I = 0.005
+s_alpha = 0.05
 
 
 print r'''\begin{table}[H]
@@ -330,7 +326,7 @@ print r'''
 
 \end{python}
 
-Laut Herstellerangaben beträgt die Verdetkonstante des Flintglasstabes $V = 0.05 \frac{min}{Oe \cdot cm}$. Unsere beiden Messergebnisse bestätigen diese Angabe auch relativ gut.
+Laut Herstellerangaben beträgt die Verdetkonstante des Flintglasstabes $V = 0.05 \frac{min}{Oe \cdot cm}$. Unsere beiden Messergebnisse bestätigen diese Angabe auch innerhalb der gegebenen Genauigkeit. Die angegebenen Fehler ergeben sich aus einem von uns geschätzten relativen Fehler auf die Winkelmessung von $5\%$ sowie einem Fehler von $0.5\%$ auf die Stromstärke. 
 
 \paragraph{Anmerkung}
 Die Umrechnung von $\frac{{}^{\circ}}{A}$ zu $\frac{min}{Oe \cdot cm}$ ist:
