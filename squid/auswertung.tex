@@ -138,7 +138,25 @@ Nach der Leiterschleife, haben wir andere Proben in das SQUID eingeführt und ge
 
 Die Suffixe // (parallel), $\perp$ (senkrecht) und \emph{45$^\circ$} bezeichnen hier die Ausrichtung der Probe zum Stab des Motors. Wie man erkennen kann entsprechen die Frequenzen für das Gold und den ISE-Zugangsschlüssel nicht dem Wert der anderen Frequenzen (obwohl der Motor immer gleich eingestellt war). Dies deutet daraufhin, dass diese Proben keine mit dem SQUID messbaren Dipolmomente haben. Wie man an den Graphen im Anhang erkennen kann, sind diese Verläufe auch nicht wirklich sinusförmig so dass der Fit nicht wirklich angebracht ist. Trotzdem haben wir diese pro forma ausgewertet und das Dipolmoment und die magnetische Feldstärke berechnet.
 
-Zur Auswertung benutzen wir (wieder) folgende Formeln;
+Wichtig ist hier zu bemerken, dass wir nach der Messung des Goldes flüssiges Stickstoff in das SQUID nachgefüllt haben. Wir mussten danach also nochmal das SQUID justieren. Das neu eingestellten Parameter lauten
+
+\begin{center}
+\begin{tabular}[H]{l l}
+	$VCA = 1441$ & Stromamplitude des Schwingkreises ($\sim 6\cdot 10^{-8} W$)\\
+	$VCO = 1477$ & Frequenz des Schwingkreises ($\sim 760 MHz$)\\
+	$OFF = 1446$  & Offset des Signals
+\end{tabular}
+\end{center}
+
+und das Pattern sieht folgendermaßen aus:
+
+\begin{figure}[H]
+	\centering \includegraphics[width = 0.8\textwidth]{Bilder/Pattern2.png}
+	\caption{Das zweite SQUID-Pattern}
+\end{figure}
+
+
+Zur Auswertung der obigen Tabelle benutzen wir (wieder) folgende Formeln;
 
 $$ B_z = F\frac{B}{s_i} \text{ \ \ , \ \ } s_{B_z} = B_z\frac{s_B}{B}$$
 
