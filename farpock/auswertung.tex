@@ -82,13 +82,16 @@ d = 2.4e-3 #m
 l = 20.0e-3 #m
 n1 = 1.522
 n3 = 1.477
+r_41_l = 23.4e-12
 
 print r'''Die Werte f\"ur\\
-Wellenl\"ange $\lambda$ = ''' + number_to_latex(lmbd, 1, -9) + r'''nm \\
-Kristalldicke d = ''' +number_to_latex(d, 1, -3) + r'''m\\
-Zellenl\"ange l = ''' + number_to_latex(l, 1, -3) + r'''m\\
-Brechungsindex 1 $n_1$ = ''' + repr(n1) + r'''m\\
-Brechungsindex 3 $n_3$ = ''' + repr(n3) + r'''m\\
+\begin{itemize}
+ \item Wellenl\"ange $\lambda$ = ''' + number_to_latex(lmbd, 1, -9) + r'''nm \\
+ \item Kristalldicke d = ''' +number_to_latex(d, 1, -3) + r'''m\\
+ \item Zellenl\"ange l = ''' + number_to_latex(l, 1, -3) + r'''m\\
+ \item Brechungsindex 1 $n_1$ = ''' + n_to_latex(n1, 3, 0) + r'''m\\
+ \item Brechungsindex 3 $n_3$ = ''' + n_to_latex(n3, 3, 0) + r'''m\\
+\end{itemize}
 sind in der Versuchsanleitung gegeben und werden von uns als fehlerfrei idealisiert.
 '''
 
@@ -102,20 +105,23 @@ s_r_41_s = r_41_s * s_u_l2_s / u_l2_s
 
 print r'''Somit erhalten wir die Ergebnisse:\\
 \begin{center}
-\fbox{
-'''
+\fbox{\vbox{\hsize=10cm\noindent'''
 
-print r'$r_{41_r} = $', n_e_to_latex(r_41_r, s_r_41_r, 3, -12), r' pm/V\\'
-print r'$r_{41_s} = $', n_e_to_latex(r_41_s, s_r_41_s, 3, -12), r' pm/V\\'
+print r'$r_{41_r} = $', n_e_to_latex(r_41_r, s_r_41_r, 3, -12), r' $pm/V$  (Robi)\\'
+print r'$r_{41_s} = $', n_e_to_latex(r_41_s, s_r_41_s, 3, -12), r' $pm/V$  (Simon)\\'
 
-print r'''
-}
+
+
+print r'''}}
 \end{center}
-'''
+
+
+Zum Vergleich, der Literaturwert betr\"agt: $r_{41} = 23.4 pm/V$
+
+Unsere Ergebnisse weichen also um ''', n_to_latex((r_41_l - r_41_r)/r_41_l, 1, -2), r'\% bzw. ', n_to_latex((r_41_l - r_41_s)/r_41_l, 1, -2), r'''\% vom Literaturwert ab.'''
 
 \end{python}
 
-Zum Vergleich, der Literaturwert beträgt: $r_{41} = 23.4 pm/V$
 
 \subsubsection{Sägezahnmodulation}
 
@@ -153,6 +159,8 @@ l = 20.0e-3 #m
 n1 = 1.522
 n3 = 1.477
 
+r_41_l = 23.4e-12
+
 def r_41(lmbd, d, l, U, n1, n3):
   return d*lmbd/(4.0*l*U)*(0.5*(1/(n1**2) + 1/(n3**2)))**(1.5)
 
@@ -187,20 +195,27 @@ print r'''
 \caption{Ergebnisse S\"agezahn}
 \end{table}
 
-Wir erhalten also den Mittelwert
+Wir erhalten also den Mittelwert\\
+\begin{center}
+\fbox{\vbox{\hsize=10cm\noindent
+$r_{41} = $''' +  n_e_to_latex(rges, sr, 3, -12) + r''' pm/V
+}}
+\end{center}
 
-$r_{41} = $''' +  n_e_to_latex(rges, sr, 3, -12) + r''' pm/V'''
+Zum Vergleich, der Literaturwert betr\"agt: $r_{41} = 23.4 pm/V$. 
+Die Abweichung unseres Ergebnisses von ''', n_to_latex((r_41_l - rges)/r_41_l, 1, -2), r'\%  vom Literaturwert ist also deutlich geringer, als bei der Sinusmodulation.'''
 
 \end{python}
 
+ Dies überrascht uns auch nicht weiter, da wir bei dieser die genaue Spannung abschätzen mussten, was gerade im negativen Frequenzbereich durch das verrauschte Signal nicht besonders gut gelang. Bei der Sägezahn-Methode erhielten wir hingegen ein stabiles Bild, was sich selbst durch Aus- und Anschalten aller Geräte und Ähnliches kaum zu einer Variation motivieren lies. Dieses Signal konnten wir dann weiterhin sehr gut durch Fits parametrisieren und somit Ablesefehler vermeiden. Der verbleibenden Fehler von immerhin 1,5\% muss folglich systematischer Natur sein, wir vermuten eine Abweichung der Raumtemperatur von den angegebenen $21,5^\circ C$, haben es aber leider versäumt, diese zu messen. Weitere mögliche Fehlerquellen sind die Unterschiede in der Länge der vier Kristalle und die daraus resultierende unvollständige Kompensation der natürlichen Doppelbrechung, des Piezo-Effekts sowie des Kerr-Effekts.
 
 
 \subsection{Faradayeffekt}
 
-Messung von $2\epsilon$:
-$\alpha_1 = 8.4$
+\paragraph{Messung von $2\epsilon$}
+Wir haben zuerst den Abstand der beiden Punkte maximaler Dunkelheit im Halbschattenpolarimeter abgemessen, um so einerseits den Polarisierungsunterschied zwischen den beiden "`Hälften"' zu ermitteln, andererseits aber auch, um aus der starken Abweichung zwischen unseren beiden Messpaaren zu erkennen, wie großartig das Konzept des Halbschattenpolarimeters wirklich ist.
 
-$\alpha_2 = 174,8$
+Simon maß $\alpha_1 = 8.4^\circ$, $\alpha_2 = 174,8^\circ$ und somit $ 2\epsilon = 13.60^\circ $,\\ Robi hingegen $\alpha_1 = 14.50^\circ$, $\alpha_2 = 2.05^\circ$ und somit $ 2\epsilon = 12.45^\circ $.
 
 \newcommand{\faradayDesc}{
 Wir berechnen das Magnetfeld auf der Achse:
