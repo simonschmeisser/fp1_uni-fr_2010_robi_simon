@@ -19,8 +19,8 @@ $\vec{E}= E_0\cdot \begin{pmatrix} \cos(\omega t - kz) \\ \sin(\omega t - kz) \\
 \item Elliptische Polarisation: In allen anderen Fällen ist das Licht elliptisch polarisiert.
 \end{itemize}
 
-Bei linear polarisiertem Licht, lässt sich die Ebene des E-Felds am einfachsten mit einem Polarisator nachweisen. Die Intensität des Lichts hinter einem Polarisationsfilter (Analysator) sagt aus wie der Winkel des E-Felds zu dem Filter orientiert ist. Die maximale Intensität erhält man, wenn diese beiden Winkel sich genau entsprechen. Die Intensität kann z.B. mit einer Photodiode messen.
-Eine andere Möglichkeit ist der Halbschattenpolarimeter. Der Vorteil an diesem liet darin, dass man mit dem menschlichen Auge die Polarisation überprüfen kann. Ein Teil des polarisierten Lichts wird um einen Winkel zu dem anderen Teil gedreht. Hinter dem Analysator sieht der Betrachter zwei unterschiedliche Flächen. Der Analysator wird gedreht, bis die Flächen nicht mehr unterscheidbar sind, und kann dann den Winkel der Polarisation ablesen.
+Bei linear polarisiertem Licht, lässt sich die Ebene des E-Felds am einfachsten mit einem Polarisator nachweisen. Die Intensität des Lichts hinter einem Polarisationsfilter (Analysator) sagt aus wie der Winkel des E-Felds zu dem Filter orientiert ist. Die maximale Intensität erhält man, wenn diese beiden Winkel sich genau entsprechen. Die Intensität kann man z.B. mit einer Photodiode messen.
+Eine andere Möglichkeit ist der Halbschattenpolarimeter. Desen Vorteil liegt darin, dass man mit dem menschlichen Auge die Polarisation überprüfen kann. Ein Teil des polarisierten Lichts wird um einen Winkel zu dem anderen Teil gedreht. Hinter dem Analysator sieht der Betrachter zwei unterschiedliche Flächen. Der Analysator wird gedreht, bis die Flächen nicht mehr unterscheidbar sind, und man kann dann den Winkel der Polarisation, bzw. dessen Änderung, ablesen.
 
 
 
@@ -37,7 +37,7 @@ In einem anisotropen Medium sind Ausbreitungsrichtung der Welle und Energiefluss
 
 \subsection{Piezoeffekt}
 
-In bestimmten Materialien, piezoelektrisch genannt, entstehen durch Verformung mikroskopische Dipole in diesen, die eine Spannung induzieren. Da sehr viele dieser Dipole entstehen, ist die Spannung sogar messbar. Legt man an piezoelektrische Materialien eine Spannung an, so verformen sich diese.
+In bestimmten Materialien, piezoelektrisch genannt, entstehen durch Verformung mikroskopische Dipole in diesen, die eine Spannung induzieren. Da sehr viele dieser Dipole entstehen, ist die Spannung sogar messbar. Dieser Effekt tritt allerdings auch in umgekehrter Form auf, legt man an piezoelektrische Materialien eine Spannung an, so verformen sich diese. Über den Photoelastischen Effekt wirkt sich dies auch auf den Brechungsindex aus. Durch Symmetrieüberlegungen lässt sich zeigen, dass dieser Effekt nur für Kristalle ohne Symmetriezentrum existiert.
 
 
 \subsection{Pockelseffekt}
@@ -47,10 +47,13 @@ Die dielektrische Konstante ist definiert durch
 \begin{equation} \epsilon = \frac{\partial D}{\partial E}  \end{equation}
 \begin{equation} \text{mit \ } D = aE + bE^2 + cE^3 + \dots \end{equation}
 
-$\epsilon$ ist also eigentlich keine Konstante und $D$ hängt nicht linear von $E$ ab. $a$, $b$ und $c$ sind hier einfach Konstanten. Für $\epsilon$ folgt also:
+$\epsilon$ ist also eigentlich keine Konstante und $D$ hängt nicht linear von $E$ ab. Für $\epsilon$ folgt also:
 \begin{equation} \epsilon = a + 2bE + 3cE^2 + \dots \end{equation}
 
-Der Term $3cE^2$ ist verantwortlich für den Kerr-Effekt und für unseren Versuch unwichtig. Alle Terme höherer Ordnung sind vernachlässigbar klein. Der Term $2bE$ ist verantwortlich für den Pockelseffekt. Die Dielektrizitätskonstante ist also, wie man sehen kann, (etwa) linear abhängig vom E-Feld, welches an das betrachtete Medium angelegt wird. Somit ist auch der Brechungsindex abhängig vom E-Feld, dies nennt man den Pockelseffekt. Der lineare Term $2bE$ ist der Term der beim Pockelseffekt wichtig ist. Dieser Effekt existiert nur für Kristalle ohne Symmetriezentrum. Im Vorfaktor $2b$ steckt der Piezoeffekt drin. 
+Der Term $3cE^2$ ist verantwortlich für den Kerr-Effekt und ebenso wie alle Terme höherer Ordnung in unserem Versuch vernachlässigbar klein. Der Parameter $b$ fasst hier zwei verschiedene Effekte zusammen. Er beschreibt einerseits den Pockelseffekt, die \emph{direkte lineare Veränderung der dielektrischen Verschiebung} durch das externe Feld. Andererseits zeigt aber auch der Piezoeffekt eine lineare Abhängigkeit von der Feldstärke und wird somit ebenso durch diesen Parameter beschrieben. Somit stört uns dieser bei der Messung des reinen Pockelseffekts. Da er auf Veränderungen der Gitterstruktur beruht, welche wesentlich langsamer sind als die direkte Änderung der dielektrischen Verschiebung, versuchen wir ihn durch hinreichend hochfrequente Signale zu elimienieren.
+
+Der Pockels-Effekt existiert ebenso wie der Piezo-Effekt nur für Kristalle ohne Symmetriezentrum.
+
 
 
 \subsection{Faradayeffekt}
@@ -90,7 +93,7 @@ $$ H \left( z \right) = \frac{N I}{2 L \left( x_2 - x_1 \right)} \left( \left( L
 
 Für uns interresant ist das Integral über die Stablänge
 $$ \int_{\frac{L-l}{2}}^{\frac{L+l}{2}} H\left( z \right) dz = 2556 I $$
-wobei der genaue Zahlenwert natürlich nur für die spezifischen Eigenschaften unseres Aufbaus gilt. Die Herleitung findet sich in der Staatsexamensarbeit.a
+wobei der genaue Zahlenwert natürlich nur für die spezifischen Eigenschaften unseres Aufbaus gilt. Die Herleitung findet sich in der Staatsexamensarbeit.
 
 
 \clearpage
