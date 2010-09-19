@@ -47,7 +47,7 @@ Wir erhalten die Werte:
 
 Zur graphischen Berechnung der Dipolmomente und Feldstärken haben wir die Messwerte des SQUIDs sinusförmig gefittet nach der Funktion:
 
-$$ f(A,B,C,D,x) = A + B\cdot\sin(C\cdot x + D) $$
+$$ f\left(A,B,C,D,x \right) = A + B\cdot\sin\left(\frac{2 \pi}{180^\circ} C\cdot x + D\right) $$
 
 Hier ist somit A der Offset, B die Amplitude, C die Frequenz und D die Phasenverschiebung. Wir erhalten die Ergebnisse:
 
@@ -67,7 +67,7 @@ Mit der Formel
 
 $$ B_z = F \frac{\Delta V}{2s_i} = F\frac{B}{s_i} $$
 
-berechnen wir anhand der Fits die Feldstärke. Es gilt $\Delta V = 2B$. $F = 9.3 nT / \Phi_0$ ist der Feld-Fluss-Koeffizient, der Wert ist Herstellerangabe. $s_i$ ist der eingestellte Wert des Feedback-Resistors und beträgt in allen Fällen $1,9 V/ \Phi_0$. Der Fehler auf $B_z$ berechnet sich durch:
+berechnen wir anhand der Fits die Feldstärke. Es gilt $\Delta V = 2B$. $F = 9.3 nT / \Phi_0$ ist der Feld-Fluss-Koeffizient, der Wert ist eine Herstellerangabe. $s_i$ ist der eingestellte Wert des Feedback-Resistors und beträgt in allen Fällen $1,9 V/ \Phi_0$. Der Fehler auf $B_z$ berechnet sich durch:
 
 $$ s_{B_z} = B_z\frac{s_B}{B} $$
 
@@ -88,7 +88,7 @@ Die erhaltenen Werte haben wir in einer Tabelle zusammengefasst, um den direkten
  
  Wie man gut erkennen kann, ist vor allem die Abweichung der Werte für $R_1$ sehr groß. Die anderen Werte liegen alle mehr oder weniger im tolerierbaren Bereich aneinander.
  
- Aus der magnetischen Feldstärke können wir das magnetische Dipolmoment der Leiterschleife für die einzelnen Widerstände ausrechnen mit der Formel:
+ Aus der magnetischen Feldstärke können wir das magnetische Dipolmoment der Leiterschleife für die einzelnen Widerstände mit folgender Formel berechnen:
  
 $$ B_z = \frac{\mu_0}{2\pi}\frac{p}{z^3} \ \Leftrightarrow \  p = \frac{2\pi z^3}{\mu_0}B_z $$
 
@@ -113,7 +113,7 @@ Wir erhalten die Werte (im Vergleich mit den Berechneten):
 
 \subsection{Dipolmoment und Feldstärke anderer Proben}
 
-Nach der Leiterschleife, haben wir andere Proben in das SQUID eingeführt und gemessen. Die Auswertung haben wir wieder mit der Sinus-Funktion $f(x) = A + B\sin(Cx+D)$ gemacht. Hier eine Tabelle der Proben und deren Fit-Werte.
+Nach der Leiterschleife, haben wir andere Proben in das SQUID eingeführt und vermessen. Die Auswertung haben wir wieder mit der Sinus-Funktion $f(x) = A + B\sin(Cx+D)$ gemacht. Hier eine Tabelle der Proben und deren Fit-Werte.
 
 \begin{center}
 \begin{tabular}[H]{| l | c | c | c | c |} \hline 
