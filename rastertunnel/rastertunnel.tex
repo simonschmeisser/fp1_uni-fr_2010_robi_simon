@@ -43,11 +43,17 @@ pdfauthor={Robi Pedersen, Simon Schmeißer}}
 	\end{tabular}
 	\end{center}
 	}
-\providecommand{\zweid}[2]{
+\providecommand{\zweid}[4]{
 	\begin{figure}[H]
-	\centering \includegraphics*[viewport= 5 528 322 825 , width = 0.6\textwidth]{messwerte/#1}
+	\begin{minipage}{0.5\textwidth}
+	\centering \includegraphics*[viewport= 5 528 322 825 , width = \textwidth]{messwerte/#1}
 	\caption{#2}
-	\end{figure} 
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+	\centering \includegraphics*[viewport= 5 528 322 825 , width = \textwidth]{messwerte/#3}
+	\caption{#4}
+	\end{minipage}
+	\end{figure}
 	}
 \providecommand{\zweiunddreid}[1]{
 	\begin{figure}[H]
