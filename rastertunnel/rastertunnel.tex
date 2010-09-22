@@ -30,7 +30,22 @@ pdftitle={Rastertunnelmikroskop},
 pdfauthor={Robi Pedersen, Simon Schmeißer}}
 
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\bild}[2]{
+	\begin{figure}[H]
+	\centering \includegraphics*[viewport= 5 225 322 520 , width = 0.6\textwidth]{messwerte/#1}
+	\caption{#2} 
+	\end{figure}
+	}
+\providecommand{\parameter}[3]{
+	\begin{center}
+	\begin{tabular}[H]{l c}
+	Image Width & #1 nm\\ Time/Line & #2 s\\ Points/Line & #3\\
+	\end{tabular}
+	\end{center}
+	}
 
+
+	
 \begin{document}
 \begin{titlepage}
   \maketitle
@@ -45,6 +60,7 @@ pdfauthor={Robi Pedersen, Simon Schmeißer}}
 \input{aufgabenstellung}
 \input{theorie}
 \input{versuchsbeschreibung}
+\input{durchfuehrung}
 \input{auswertung}
 \input{zusammenfassung}
 \input{appendix}

@@ -30,7 +30,7 @@ Da Gold ein reines Metall ist, sind die Elektronen zwischen den Atomen komplett 
 	\caption{Kristallstruktur von Graphit (Längen in $\mathring{A})$}
 \end{figure}
 
-Graphit besteht aus übereinanderliegenden Schichten von Kohlenstoffatomen, welche in Sechsecken angeordnet sind. Die Atome in einer Schicht sind durch kovalente, lokalisierte $\sigma$-Bindungen und durch nichtlokalisierte $\pi$-Bindungen verbunden. Die Elektronen der $\pi$-Bindung bewegen sich frei zwischen den Schichten. Dies erklärt die Halbmetalleigenschaft des Graphits: Die delokalisierten Elektronen können Strom nur parallel zu den Schichten leiten, aber nicht senkrecht. Die Schichten halten durch Van-der-Waals-Kräfte zusammen. Man unterscheidet beim Graphit zwischen den $\alpha$- und den $\beta$-Kohlenstoffatomen (siehe hierzu obere Abbildung). Die $\alpha$-Atome, sind die Atome unter denen in jeder Schicht nochmal ein $\alpha$-Atom liegt. Die $\beta$-Atome hingegen liegen nur in jeder zweiter Schicht, d.h. in der Schicht darunter ist ein Loch und darunter wieder ein $\beta$-Atom. Da die $\alpha$-Atome mit den $\alpha$-Atomen der unteren Schichten koppeln, ist die Energie deren Elektronen erniedrigt. Die $\beta$-Atome sind mit dem Rastertunnelmikroskop also besser sichtbar.
+Graphit besteht aus übereinanderliegenden Schichten von Kohlenstoffatomen, welche in Sechsecken angeordnet sind. Die Atome in einer Schicht sind durch kovalente, lokalisierte $\sigma$-Bindungen und durch nichtlokalisierte $\pi$-Bindungen verbunden. Die Elektronen der $\pi$-Bindung bewegen sich frei zwischen den Schichten. Dies erklärt die Halbmetalleigenschaft des Graphits: Die delokalisierten Elektronen können Strom nur parallel zu den Schichten leiten, aber nicht senkrecht. Die Schichten halten durch Van-der-Waals-Kräfte zusammen. Man unterscheidet beim Graphit zwischen den $\alpha$- und den $\beta$-Kohlenstoffatomen (siehe hierzu obere Abbildung). Die $\alpha$-Atome, sind die Atome unter denen in jeder Schicht nochmal ein $\alpha$-Atom liegt. Die $\beta$-Atome hingegen liegen nur in jeder zweiter Schicht, d.h. in der Schicht darunter ist ein Loch und darunter wieder ein $\beta$-Atom. Da die $\alpha$-Atome mit den $\alpha$-Atomen der unteren Schichten koppeln, ist die Energie deren Elektronen erniedrigt. Die $\beta$-Atome sind mit dem Rastertunnelmikroskop also besser sichtbar. Man sieht also eher ein dreieckiges Gitter aus $\beta$-Atomen als eine sechseckige Wabenstruktur.
 
 \subsection{Struktur von $MoS_2$}
 
@@ -43,10 +43,41 @@ Molybdändisulfid ist ein Halbleiter mit einer Energiebandlücke von 0.75 eV. Es
 
 \subsection{Funktionsprinzip des Rastertunnelmikroskops}
 
-Eine im Idealfall atomar scharfe metallische Spitze wird an eine Probenoberfläche herangefürt im Abstand von ca. $10 \mathring A$. Legt man eine Potentialdifferenz U zwischen Spitze und Probe an, so fließt zwischen Probe und Spitze ein Tunnelstrom I.
+Eine im Idealfall atomar scharfe metallische Spitze wird an eine Probenoberfläche herangefürt im Abstand von ca. $10 \mathring A$. Legt man eine Potentialdifferenz U zwischen Spitze und Probe an, so fließt zwischen Probe und Spitze ein Tunnelstrom I. Für die Stromstärke gilt näherungsweise folgende Abhängigkeit:
 
+$$ I \sim U\exp\left(-\sqrt{\frac{2\pi\Phi}{\hbar}}\cdot d\right) $$
 
+$\Phi$ ist die effektive lokale Höhe der Barriere, die durchtunnelt wird, und $d$ die Distanz der Probe zu Spitze. Man sieht also dass die Stromstärke stark dieser abhängt. Der Strom I liegt typischerweise im Nano-Ampere-Bereich.
 
+\begin{figure}[H]
+\begin{minipage}{0.5\textwidth}
+	\includegraphics[width=0.9\textwidth]{Bilder/CCM.png}
+	\centering \caption{Nachführen der Spitze}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+Durch die Messung des Tunnelstromes kann man also den relativen Abstand der Spitze zur Probe feststellen (Je stärker der Tunnelstrom, desto näher ist die Spitze an der Probe und umgekehrt). Misst  der eingebaute Regelkreis eine Abnahme der Stromstärke, so wird die Spitze näher an die Probe herangefahren, bis wieder der eingestel\-lte Strom fließt. Dasselbe gilt bei Zunahme des Stroms, die Spitze wird wegbewegt. Das Raster-
+\end{minipage}
+\end{figure}
+tunnelmikroskop zeichnet somit die Topographie der Oberfläche der Probe, indem es die Bewegung der Spitze registriert. Die Spitze wird anhand eines Piezo-Kristalls nachgeführt um eine bestmögliche Genauigkeit zu erreichen, und um die Bewegung der Spitze anhand der angelegten Spannung an das Kristall zu registrieren.
+
+Die hier erklärte Messungsweise wird \emph{Constant Current Mode} genannt, da die Stromstärke konstant bleibt. Eine weitere Methode ist die \emph{Constant Height Mode}, bei der die Spitze immer die gleiche Höhe behält und durch die Stärke des Tunnelstroms die Distanz von der Spitze zur Probe misst. Letztere Methode wird aber im Versuch nicht benutzt.
+
+\begin{figure}[H]
+\begin{minipage}{0.5\textwidth}
+Nicht nur die Stromstärke sondern auch die Auflösung des Rastertunnelmikroskops hängt von der Distanz der Spitze zur Probe ab. Außerdem hängt sie von der Breite der Spitze ab. Sei R die räumliche Ausdehnung der Spitze, so gilt für das laterale Auflösungsvermögen L des Rastertunnelmikroskops folgende Abhängigkeit:
+
+$$ L \sim \sqrt{R+d} $$
+
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\includegraphics[width=0.6\textwidth]{Bilder/auflsg.png}
+	\centering \caption{Zur lateralen Auflösung des RTM}
+\end{minipage}
+\end{figure}
+
+Um genaue Messungen machen zu können ist es außerdem sehr wichtig, dass die externen Störungen minimiert werden. Wichtige Störparameter sind vor allem Temperaturschwankungen (wegen der temperaturabhängigen Ausdehnung von der Metallspitze) und Vibrationen. Temperaturschwankungen sind am leichtesten durch Abdichtung des Raumes zu verhindern und im Raum selber keine Heiz- bzw. Kühlkorper zu haben. Vibrationen, wie Trittschall und Gebäudeschwingungen können mit speziellen Vibrationsisolierungen minimiert werden. 
+
+\clearpage
 
 
 
