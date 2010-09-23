@@ -1,0 +1,58 @@
+\documentclass[a4paper,oneside]{scrartcl} %twocolumn,
+\usepackage[utf8]{inputenc} %für MAC: applemac; für Windows: latin1 statt utf8
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{mathptmx}
+\usepackage{microtype}
+\usepackage[nice]{nicefrac}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{float}
+
+\setkomafont{captionlabel}{\upshape\bfseries}
+\setkomafont{caption}{\itshape}
+
+
+\title{Lange Halbwertszeiten}
+\author{Robi Pedersen \and Simon Schmeißer}
+\date{Versuchsdurchführung 24.09. & 27.09.2010}
+
+\hypersetup{
+pdftitle={Lange Halbwertszeiten},
+pdfauthor={Robi Pedersen, Simon Schmeißer}}
+
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+\begin{document}
+\begin{titlepage}
+  \maketitle
+  \vfill
+  \thispagestyle{empty}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+%*****************************************************************
+
+\input{aufgabenstellung}
+\input{theorie}
+\input{versuchsbeschreibung}
+\input{auswertung}
+\input{zusammenfassung}
+\input{appendix}
+
+\clearpage
+
+%\bibliographystyle{alphadin} 
+%\bibliography{bib}
+
+
+\end{document}
