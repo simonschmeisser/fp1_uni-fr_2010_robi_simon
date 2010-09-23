@@ -1,2 +1,46 @@
 \section{Aufgabenstellung}
 
+\renewcommand{\labelenumi}{\alph{enumi})}
+%\renewcommand{\labelenumi}{\theenumi}
+
+\subsection{Erstellen eines LabView-Messprogramms}
+Erstellen Sie anhand der Darstellung in Ref. [1.1], Kapitel 2.6 „Messung mit Hilfe
+eines LabVIEW-Messprogramms" und der Kurzanleitung (Anhang A.1) zur
+Programmierung in LabVIEW ein Messprogramm, das es ermöglicht, Spannungen
+einzustellen und Zählraten zu messen.
+
+\subsection{Zählrohrcharakteristik}
+Wählen Sie geeignete Einstellungen der Elektronik. Beobachten Sie dazu die Signale nach dem Vorverstärker, dem Hauptverstärker und dem Einkanalanalysator. Für eine bestmögliche Trennung von Signal und Rauschen ist eine geeignete Wahl der unteren Schwelle am Einkanalanalysator entscheidend: diese muss hoch genug sein
+um Pulse durch Rauschen auszuschließen und gleichzeitig niedrig genug, um auch kleine Signalpulse zu registrieren. Machen Sie sich den Einfluss von Verstärkungsfaktor und Shaping Time am Verstärker auf die richtige Wahl der unteren Schwelle klar! Warum müsste man eigentlich die Einstellungen für jedes Präparat neu optimieren?
+\begin{enumerate}
+ \item Nehmen Sie mit \atom{238}{}{U} die Zählrohrcharakteristik des Durchflusszählrohrs auf.
+Wählen Sie die Anfangsspannung $U_{initial} = 1000 V$, die Endspannung $U_{end} = 4000 V$, die Schrittweite $U_{step} = 100 V$ und die Messzeit pro Spannungswert t = 50 s. Stellen Sie bei allen Messreihen eine ausreichend lange Pause vor dem Beginn der Messzeit ein, damit sich die Spannung einstellen kann!
+
+\item Führen Sie eine Untergrundmessung mit einem leeren Aluminiumschälchen durch, mit der Sie die Zählrohrcharakteristik aus a) und die Messungen der Plateaus mit Samarium in c) und Kalium in e) korrigieren. Wählen Sie als Anfangsspannung die Einsatzspannung für $\alpha$-Strahlung bei \atom{238}{}{U} und als Endspannung $U_{end} = 4000 V$, bei einer Schrittweite $U_{step} = 100 V$ und einer Messzeit pro Spannungswert von t = 100s.
+
+\end{enumerate}
+
+\subsection{Bestimmung der Halbwertszeit von \atom{147}{}{Sm} ($\alpha$-Zerfall)}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Nehmen Sie mit \atom{147}{}{Sm} das Plateau mit $U_{step} = 100 V$ und t = 200 s auf. Wählen Sie als Anfangsspannung die Einsatzspannung des $\alpha$-Plateaus der Zählrohrcharakteristik, die Endspannung sollte die Einsatzspannung des $\beta$-Plateaus überragen. Korrigieren Sie Ihre Plateaumessung mit der Untergrundmessung aus b).
+
+\item Messen Sie bei einer Arbeitsspannung in der Mitte des $\alpha$-Plateaus die Aktivität von \atom{147}{}{Sm} und den Untergrund mit leerem Aluminiumschälchen. Wählen Sie die Messzeiten so, dass Sie einen relativen statistischen Fehler von etwa 2\% erhalten und der Fehler der Untergrundzählrate zum Gesamtfehler nicht beiträgt. Verwenden Sie dazu als Erwartungswert die Zählrate aus der Plateaumessung. Ermitteln Sie den Schälchendurchmesser, indem Sie über mehrere Einzelmessungen mitteln.
+Bestimmen Sie die Halbwertszeit von \atom{147}{}{Sm} und berechnen Sie den Fehler.
+Vergleichen Sie mit dem Literaturwert und diskutieren Sie mögliche Fehlerquellen.
+\end{enumerate}
+
+\subsection{Bestimmung der Halbwertszeit von \atom{40}{}{K} ($\beta$-Zerfall)}
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item Nehmen Sie mit \atom{40}{}{K} das $\beta$-Plateau mit $U_{step} = 100 V$ und t = 100 s auf. Wählen Sie als Anfangsspannung die Einsatzspannung des $\beta$-Plateaus der Zählrohrcharakteristik und als Endspannung $U_{end} = 4000 V$. Korrigieren Sie Ihre Plateaumessung mit der
+Untergrundmessung aus b).
+\item Führen Sie bei einer Arbeitsspannung in der Mitte des $\beta$-Plateaus für 10 verschiedene Massen eine Aktivitätsmessung von 40K durch. Präparieren Sie dazu jeweils ein Schälchen mit Kaliumchlorid und wiegen es mit der Präzisionswaage.
+Messen Sie die Aktivitäten und berücksichtigen Sie den Untergrund durch eine weitere Messung mit leerem Aluminiumschälchen. Bestimmen Sie die Messzeit pro Masse so, dass die Messwerte wieder einen relativen Fehler von etwa 2\% haben und der Untergrund nicht beiträgt. Tragen Sie die Aktivität gegen die Masse auf und passen sie an die Daten eine Funktion der Form
+
+$$ n\left( m \right) = a \left( 1 - e^{-bm} \right)$$
+
+an. Bestimmen Sie mit den Parametern a und b die Halbwertszeit von 40K und berechnen Sie den Fehler unter Berücksichtigung einer möglichen Korrelation der beiden Parameter. Vergleichen Sie mit dem Literaturwert und diskutieren Sie mögliche Fehlerquellen.
+
+
+\end{enumerate}
