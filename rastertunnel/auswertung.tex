@@ -2,6 +2,12 @@
 
 Bei der Auswertung zeigen wir nur die Bilder, die uns tatsächlich relevante Aussagen über die Struktur machen können und die Bilder, die wir zur Messung der Gitterkonstante benutzt haben.
 
+\subsection{Fehlerabschätzung auf die Gitterkonstante}
+
+Wir haben bei der Gitterkonstante immer die Distanz über mehrere Maxima gemessen und gemittelt. Den Fehler auf diese Gesamtlänge haben wir mit $s_L = 0.5 \mathring A$ abgeschätzt. Somit ergibt sich der Fehler auf die Gitterkonstante $g=L/N$ mit:
+
+$$s_g = \frac{\partial g}{\partial L}s_L = \frac{s_L}{N}$$
+
 \subsection{Gold}
 
 \subsubsection{Gold\_3.png ($\sim$ 500 nm)}
@@ -18,11 +24,19 @@ Wie man sehen kann ist die Auflösung beim Gold nicht besonders gut. Dies liegt 
 \subsubsection{Graphit\_F3.png (atomar)}
 \zweiunddreid{Freitag/Graphit_F3.png}
 
-Bei diesem Bild haben wir eine Gitterkonstante waagerecht von 2.313 $\mathring{A}$ erhalten. Die beiden anderen, zur Messung der Gitterkonstanten benutzten Bilder sind folgende:
+Bei diesem Bild haben wir eine Gitterkonstante waagerecht von $(2.313 \pm 0.050)\ \mathring{A}$ erhalten. Der theoretische Wert $g_{theo}=2.456\ \mathring A$ liegt in der 3. Standardabweichung dieses Wertes. Die beiden anderen, zur Messung der Gitterkonstanten benutzten Bilder sind folgende:
 
 \zweid{Freitag/Graphit_F4.png}{Graphit\_F4.png}{Freitag/Graphit_F5.png}{Graphit\_F5.png}
 
-Die Resultate sind 2.391 $\mathring{A}$ bzw. 2.333 $\mathring{A}$ (F4, beide senkrecht) und 2.341 $\mathring{A}$ bzw. 2.324 $\mathring{A}$ (F5, beide senkrecht).
+Die (relevanten) Resultate sind\\
+
+\begin{tabular}{c c c}
+	$g^{F4}_1 = (2.391 \pm 0.063) \mathring{A}$ (senkrecht) & und & $g^{F4}_2 = (2.333 \pm 0.063) \mathring{A}$ (senkrecht)\\
+	$g^{F5}_1 = (2.341 \pm 0.063) \mathring{A}$ (senkrecht) & und & $g^{F5}_2 = (2.324 \pm 0.071) \mathring{A}$ (senkrecht)\\
+\end{tabular}
+
+
+$g_{Theo}$ liegt somit bei allen Werten in der 2. Standardabweichung und konnte somit bestätigt werden. Wichtig ist hier nochmal zu bemerken, dass wir nur die in unseren Augen relevanten Messungen ausgewertet haben. Die leichte Verzerrtheit der Bilder hat uns auch z.T. Werte gegeben, die gar nicht der Realität entsprechen, und somit haben wir diese nicht in der Auswertung berücksichtigt.
 
 \subsection{Molybdändisulfid}
 
@@ -31,9 +45,24 @@ Die Resultate sind 2.391 $\mathring{A}$ bzw. 2.333 $\mathring{A}$ (F4, beide sen
 \subsubsection{MoS2\_F7.png (atomar)}
 \zweiunddreid{Freitag/MoS2_F7.png}
 
-Bei diesem Bild haben wir eine Gitterkonstante von 2.74 $\mathring{A}$ gemessen(waagerecht). Außerdem  haben wir für folgendes Bild noch eine Gitterkonstane von 2.70 $\mathring{A}$ gemessen (waagerecht):
+Für MoS2\_F7.png und MoS2\_F8.png haben wir die Gitterkonstanten gemessen.
 
 \begin{figure}[H]
 	\centering \includegraphics*[viewport= 5 528 322 825 , width = 0.5\textwidth]{messwerte/Freitag/MoS2_F8.png}
 	\caption{MoS2\_F8.png}
 	\end{figure}
+	
+Wir haben folgende Werte gemessen:
+
+\begin{tabular}{c c c}
+	$g^{F7} = (2.744 \pm 0.100) \mathring{A}$ (waagerecht) & und & $g^{F8} = (2.700 \pm 0.056) \mathring{A}$ (waagerecht)
+\end{tabular}	
+	
+Der theoretische Wert müsste hier $g_{Theo} = 3.16\ \mathring A$ lauten. Er liegt in der 4. Standardabweichung von $g^{F7}$ und in der 9. Standartabweichung von $g^{F8}$. Diesen Wert konnten wir also nicht so genau wie beim Graphit nachweisen, das liegt vor allem daran, dass die Auflösung nicht so gut ist, wie man an den Bildern erkennen kann.
+	
+	
+	
+	
+	
+	
+	
