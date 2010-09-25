@@ -62,6 +62,25 @@
 				    \end{minipage}
 				    \end{figure} }
 
+\providecommand{\bildmitdesc}[4]{\begin{center}
+				\begin{tabular}[H]{l l l c}
+				#1 & & Image Width & #2 nm\\ & & Time/Line & #3 s\\ & & Points/Line & #4\\
+				\end{tabular}
+				\end{center}}
+
+\providecommand{\bildmitdescpic}[5]{\begin{center}
+				\begin{minipage}{0.6\textwidth}
+				\begin{tabular}[H]{l l l c}
+				#1 & & Image Width & #2 nm\\
+				   & & Time/Line & #3 s\\
+				   & & Points/Line & #4\\
+				\end{tabular}
+				\end{minipage}
+				\begin{minipage}{0.25\textwidth}
+				    \includegraphics*[viewport= 5 528 322 825 , width = 0.8\textwidth]{messwerte/#5} \\
+				\end{minipage}
+				\end{center}}
+
 \begin{document}
 \begin{titlepage}
   \maketitle
@@ -79,7 +98,7 @@
 \input{durchfuehrung}
 \input{auswertung}
 \input{zusammenfassung}
-\input{appendix}
+%\input{appendix}
 
 \clearpage
 
