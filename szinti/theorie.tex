@@ -1,7 +1,6 @@
 \section{Theoretische Grundlagen}
 
 %Zerfallskaskaden
-%Wirkungsweise von Szintillationszählern und Photomultipliern
 %Zufällige Koinzidenzen
 
 \subsection{$\alpha$-Zerfall}
@@ -95,23 +94,40 @@ $$\mu = \mu_{Ph.} + \mu_{C} + \mu_{PB} $$
 	\caption{Schema eines Szintillationszählers}
 \end{figure}
 
-Ein Szintillationszähler ist ein Gerät zum Nachweis ionisierender Strahlung. Die vom Quant abgegebene Energie wird in Licht verwandelt und von einem Photomultiplier verstärkt. Dieses Licht ist proportional zur Energie des Quants.
+Ein Szintillationszähler ist ein Gerät zum Nachweis ionisierender Strahlung. Die vom Quant abgegebene Energie wird in Licht verwandelt und von einem Photomultiplier verstärkt. Dieses Licht ist proportional zur Energie des Quants. Man unterscheidet zwischen organischen und anorganischen Szintillatoren. Bei dem organischen werden einzelne Moleküle angeregt, welche Messbare Quanten emittieren. Beim anorganischen entstehen diese in einem Kristallgitter:
 
 \begin{figure}[H]
 	\begin{minipage}{0.45\textwidth}
-	Der Szintillator selber ist ein NaI-Kristall mit Tl-Aktivatorzellen. Das Bändermodell erlaubt eine einfache Beschreibung des Verhaltens. Nämlich befinden sich bei tiefen Temperaturen alle Elektronen des Kristalls im sogenannten Valenzband. Absorbieren diese Elektronen energiereiche Strahlung, z.B. durch $\gamma$-Quanten (v.a. Photoeffekt), so werden diese angeregt und steigen auf höhere Energieniveaus. Reicht die Energie aus, so werden die Elektronen ins Leitungsband gehoben. Falls sie nicht groß genug ist um das Elektron vom Valenzband ins Leitungsband zu heben, so können sogenannte Exzitonen entstehen, lose gekoppelte Elektron-Loch-Paare (siehe Bild). Die Exzitonen, können sich genau so wie die Leitungsband-Elektronen frei im Kristall 
-bewegen und können unter Emission eines 
+	Der organische Szintillator selber ist ein NaI-Kristall mit Tl-Aktivatorzellen. Das Bändermodell erlaubt eine einfache Beschreibung des Verhaltens. Nämlich befinden sich bei tiefen Temperaturen alle Elektronen des Kristalls im sogenannten Valenzband. Absorbieren diese Elektronen energiereiche Strahlung, z.B. durch $\gamma$-Quanten (v.a. Photoeffekt), so werden diese angeregt und steigen auf höhere Energieniveaus. Reicht die Energie aus, so werden die Elektronen ins Leitungsband gehoben. Falls sie nicht groß genug ist um das Elektron vom Valenzband ins Leitungsband zu heben, so können sogenannte Exzitonen entstehen, lose gekoppelte Elektron-Loch-Paare (siehe Bild). Die Exzitonen, können sich genau so wie die Leitungsband-Elektronen frei im Kristall bewegen und können unter Emission 
 	\end{minipage}
 	\begin{minipage}{0.55\textwidth}
 	\centering \includegraphics[width=\textwidth]{Bilder/Bandmodell.png}
 	\caption{Bändermodell beim NaI:Tl$^+$}
 	\end{minipage}
 \end{figure}
-Photons wieder in den Grundzustand zurückkehren. Eintreffende $\gamma$-Quanten haben Energien im Bereich von 0.1 bis 1 MeV, regen also mehrere hundert Elektronen gleichzeitig an. Wenn diese Elektron-Loch-Paare rekombinieren, entstehen neue Photonen, welche in den Photomultiplier geraten und dort verstärkt werden. Die Dotierung verformt lokal das Leitungsband und da diese Photonen vor allem an den Tl-Störstellen rekombinieren, reicht ihre Energie nicht aus um andere Elektronen ins Leitungsband anzuregen, somit können die Photonen nicht wieder vom Kristall absorbiert werden.
+eines Photons wieder in den Grundzustand zurückkehren. Eintreffende $\gamma$-Quanten haben Energien im Bereich von 0.1 bis 1 MeV, regen also mehrere hundert Elektronen gleichzeitig an. Wenn diese Elektron-Loch-Paare rekombinieren, entstehen neue Photonen, welche in den Photomultiplier geraten und dort verstärkt werden. Die Dotierung verformt lokal das Leitungsband und da diese Photonen vor allem an den Tl-Störstellen rekombinieren, reicht ihre Energie nicht aus um andere Elektronen ins Leitungsband anzuregen, somit können die Photonen nicht wieder vom Kristall absorbiert werden.
 
+Im Photomultiplier (PM) angekommen, treffen die Photonen auf eine Kathode, an der sie per Photoeffekt Elektronen herausschlagen, welche wegen einer anliegenden Spannung zu einer Dynode beschleunigt werden. An dieser Dynode werden dann wiederum Elektronen herausgeschlagen, und zur nächsten beschleunigt und so weiter. Die Anzahl an Elektronen wird somit an jeder Dynode vervielfacht, so dass das Signal verstärkt wird. Letzteres wird an einer Anode in proportionale Stromimpulse umgesetzt.
 
+\subsection{Signalverstärkung}
 
+\subsubsection{Der Vorverstärker (VV)}
 
+Der Vorverstärker integriert die vom Photomultiplier ankommenden Stromimpulse über eine bestimmte Zeit ($\sim$ 100 ns) und gibt so eine proportionale Ausgangsspannung heraus, dessen Amplitude gemessen werden kann.
+
+\subsubsection{Der Hauptverstärker (V)}
+
+Am Hauptverstärker können gleichzeitig die weitere Verstärkung des Signals, sowie dessen \emph{shaping time} eingestellt werden. Die Verstärkung kann die Amplitude des Signals auf einige Volt bringen.  Die \emph{shaping time} ist die Zeit, in der das Signal differenziert und integriert wird, um eventuelle Fehler und Schwankungen herauszufiltern. Der Hauptverstärker besitzt einen unipolaren und einen bipolaren Ausgang, wobei der bipolare die Differentiation des unipolaren ist. Außerdem kann man einen Delay zwischen beiden Signalen einstellen und die Polarität ändern.
+
+\subsubsection{Der Vielkanalanalysator (VKA)}
+
+Der Vielkanalanalysator verteilt die Ausgangsimpulse des Hauptverstärkers je nach Spannungshöhe auf verschiedene Kanäle (hier 8192 Kanäle). Der Kanalinhalt wird bei jedem Ereignis der bestimmten Spannungshöhe um 1 erhöht, was ermöglicht die Anzahl der Impulse einer bestimmten Spannung zu messen. Die Kanal-Energie-Abhängigkeit kann man dann durch bekannte Energien (vgl. 511keV-Linie) bestimmt werden.
+
+\subsubsection{Der Einkanalanalysator (EKA)}
+
+Der Einkanalanalysator wird mit dem bipolaren Ausgang des Hauptverstärkers verbunden. Im EKA kann man einstellen, welche Signale man messen will. Man kann dazu eine minimale und eine maximale Schwelle (\emph{lower und upper level}) einstellen, die erlauben, dass nur Signale registriert werden, deren Energie in dem Bereich zwischen beiden Schwellen liegt. Wird ein Signal registriert, so wird ein messbarer Puls erzeugt. Am EKA kann man außerdem noch die Verzögerung (\emph{Delay}) zwischen beiden Signalen und das \emph{Gate} einstellen. Ein \emph{Gate} ist ein einstellbarer Zeitraum, in dem ein Signal registriert werden soll. Liegt das Signal außerhalb des eingestellten \emph{Gates}, wird es nicht registriert. 
+
+\subsubsection{Die Koinzidenzeinheit}
 
 
 
