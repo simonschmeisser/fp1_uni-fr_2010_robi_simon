@@ -81,6 +81,19 @@
 				\end{minipage}
 				\end{center}}
 
+\providecommand{\bildmitdescpicnureinbild}[5]{\begin{center}
+				\begin{minipage}{0.6\textwidth}
+				\begin{tabular}[H]{l l l c}
+				#1 & & Image Width & #2 nm\\
+				   & & Time/Line & #3 s\\
+				   & & Points/Line & #4\\
+				\end{tabular}
+				\end{minipage}
+				\begin{minipage}{0.25\textwidth}
+				    \includegraphics*[viewport= 5 225 322 520 , width = 0.8\textwidth]{messwerte/#5} \\
+				\end{minipage}
+				\end{center}}
+
 \begin{document}
 \begin{titlepage}
   \maketitle
