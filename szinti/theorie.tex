@@ -109,13 +109,22 @@ eines Photons wieder in den Grundzustand zurückkehren. Eintreffende $\gamma$-Qu
 
 Im Photomultiplier (PM) angekommen, treffen die Photonen auf eine Kathode, an der sie per Photoeffekt Elektronen herausschlagen, welche wegen einer anliegenden Spannung zu einer Dynode beschleunigt werden. An dieser Dynode werden dann wiederum Elektronen herausgeschlagen, und zur nächsten beschleunigt und so weiter. Die Anzahl an Elektronen wird somit an jeder Dynode vervielfacht, so dass das Signal verstärkt wird. Letzteres wird an einer Anode in proportionale Stromimpulse umgesetzt.
 
+\subsection{Versuchsaufbau}
+
+\begin{figure}[H]
+\centering \includegraphics[width = \textwidth]{Bilder/Aufbau.png}
+\caption{Versuchsaufbau}
+\end{figure}
+
+* ist hier das radioaktive Präparat. Die verschiedenen Abkürzungen werden in der Theorie unter \emph{Signalverstärkung} definiert und die Funktionsweise aller Komponenten erläutert.
+
 \subsection{Signalverstärkung}
 
 \subsubsection{Der Vorverstärker (VV)}
 
 Der Vorverstärker integriert die vom Photomultiplier ankommenden Stromimpulse über eine bestimmte Zeit ($\sim$ 100 ns) und gibt so eine proportionale Ausgangsspannung heraus, dessen Amplitude gemessen werden kann.
 
-\subsubsection{Der Hauptverstärker (V)}
+\subsubsection{Der Hauptverstärker (HV)}
 
 Am Hauptverstärker können gleichzeitig die weitere Verstärkung des Signals, sowie dessen \emph{shaping time} eingestellt werden. Die Verstärkung kann die Amplitude des Signals auf einige Volt bringen.  Die \emph{shaping time} ist die Zeit, in der das Signal differenziert und integriert wird, um eventuelle Fehler und Schwankungen herauszufiltern. Der Hauptverstärker besitzt einen unipolaren und einen bipolaren Ausgang, wobei der bipolare die Differentiation des unipolaren ist. Außerdem kann man einen Delay zwischen beiden Signalen einstellen und die Polarität ändern.
 
@@ -128,6 +137,8 @@ Der Vielkanalanalysator verteilt die Ausgangsimpulse des Hauptverstärkers je na
 Der Einkanalanalysator wird mit dem bipolaren Ausgang des Hauptverstärkers verbunden. Im EKA kann man einstellen, welche Signale man messen will. Man kann dazu eine minimale und eine maximale Schwelle (\emph{lower und upper level}) einstellen, die erlauben, dass nur Signale registriert werden, deren Energie in dem Bereich zwischen beiden Schwellen liegt. Wird ein Signal registriert, so wird ein messbarer Puls erzeugt. Am EKA kann man außerdem noch die Verzögerung (\emph{Delay}) zwischen beiden Signalen und das \emph{Gate} einstellen. Ein \emph{Gate} ist ein einstellbarer Zeitraum, in dem ein Signal registriert werden soll. Liegt das Signal außerhalb des eingestellten \emph{Gates}, wird es nicht registriert. 
 
 \subsubsection{Die Koinzidenzeinheit}
+
+Bei der Koinzidenzmessung wird gemessen, ob zwei $\gamma$-Quanten gleichzeitig in beiden Szintillationszählern ankommen. Wenn zwei $\gamma$-Quanten innerhalb einer fest eingestellten kurzen Zeitspanne $\Delta t$ in beiden Szintillationszählern ankommen, so registriert ein Zähler einen Count. In unserem Versuch werden die Koinzidenzen für verschiedene Winkel zwischen den beiden Szintillationszählern gemessen.
 
 
 
