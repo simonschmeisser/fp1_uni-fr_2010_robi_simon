@@ -94,9 +94,52 @@ Im Unterschied zum Plastikszintillator ist das Signal des NaI-Szintillators viel
 
 \subsection{Energieeichung des MCA}
 
-Wir haben für die Messungen den NaI-Szintillator benutzt. Zur Energieeichung des Vielkanalanalysators haben wir die Spektren von 3 Proben aufgenommen, nämlich $^{22}Na$, $^{60}Co$ und $^{138}Eu$. Alle Messungen wurden mit der Verstärkung 20 und der Shaping Time 2 $\mu s$ aufgenommen.
+Wir haben für die Messungen den NaI-Szintillator benutzt. Zur Energieeichung des Vielkanalanalysators haben wir die Spektren von 3 Proben aufgenommen, nämlich $^{22}Na$, $^{60}Co$ und $^{152}Eu$. Alle Messungen wurden mit der Verstärkung 20 und der Shaping Time 2 $\mu s$ aufgenommen.
+
+Die bekannten Peaks der Spektren der 3 Proben wurden mit einer Gaußkurve gefittet. Aus diesen Peaks und den theoretischen Werten dieser Peaks, können wir nun die Energie-Kanal-Abhängigkeit ausrechnen. Die aus den Graphen ermittelten Werte sind folgende:\\
+
+\begin{center}
+\begin{tabular}{| l | c | c | c | c | c | c |} \hline
+Präparat & $^{22}Na$ & $^{22}Na$ & $^{60}Co$ & $^{60}Co$ & $^{152}Eu$ & $^{152}Eu$\\ \hline
+Energie / keV (theoretisch) & 511 & 1274 & 1173 & 1332 & 122 & 344\\ \hline
+Kanal & 146.8 & 354.1 & 326.1 & 369.3 & 38.1 & 100.4\\ \hline
+$\chi^2$/ndf & 1.24 & 1.70 & 0.82 & 1.14 & 65.40 & 5.09\\ \hline
+\end{tabular}
+\end{center}
+
+Die theoretische Werte wurden aus der Staatsexamensarbeit entnommen. Den Fehler auf den Kanal schätzen wir 3. Auf den theoretischen Wert der Energie nehmen wir keinen Fehler an.
+
+\begin{figure}
+\centering \includegraphics[width = 0.85\textwidth]{auswertung/Na22.png}
+\caption{$^{22}Na$}
+\end{figure}
+
+\begin{figure}[H]
+\centering \includegraphics[width = 0.85\textwidth]{auswertung/Co60.png}
+\caption{$^{60}Co$}
+\end{figure}
+
+\begin{figure}[H]
+\centering \includegraphics[width = 0.85\textwidth]{auswertung/Eu152.png}
+\caption{$^{152}Eu$}
+\end{figure}
 
 
+In dem wir den Kanal gegen die Energie auftragen, können wir per linearen Fit die Abhängigkeit dieser beiden Größen berechnen. Als Steigung erhalten wir:
+
+$$ b = (3.662 \pm 0.011) $$
+
+und als Achsenabschnitt
+
+$$ a = (-21.91 \pm 2.76) keV $$
+
+Somit ist die Umrechnung vom Kanal K in Energie E:
+
+$$ E = bK + a = 3.662\cdot K - 21.91 $$ 
+mit dem Fehler
+$$ s_E = \sqrt{K^2s_b^2 + b^2s_k^2 + s_a^2} = \sqrt{0.000114\cdot K^2 + 128.30} $$
+
+\subsection{Auswertung des Thoriums}
 
 
 
