@@ -1,2 +1,125 @@
 \section{Durchführung und Auswertung}
 
+\subsection{Einfluss der Einstellungen der NIM-Geräte auf das Signal}
+
+Wir haben verschiedene Einstellungen der NIM-Geräte ausprobiert und deren Einfluss auf das Signal am Oszilloskop beobachtet. Als Signalquelle haben wir einfach die Umgebungsstrahlung genutzt und als Messgerät den Plastikszintillator.
+
+Als erstes haben wir das Signal direkt am Vorverstärker gemessen. Danach haben wir den Einfluss der Verstärkung und der \emph{shaping time} am unipolaren Ausgang des Amplifiers auf das Signal untersucht. Schlussendlich haben wir noch den positiven Ausgang des Einkanalanalysators untersucht, indem wir die untere und die obere Schwelle eingestellt haben und die Funktion des Delays beobachtet haben.
+
+Zusammengefasst erhielten wir folgende Signale:
+
+\begin{figure}[H]
+\begin{minipage}{0.4\textwidth}
+\centering \includegraphics[width = \textwidth]{messergebnisse/1.JPG}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+Signal nach dem Vorverstärker.
+\centering \begin{tabular}{l l}
+Tiefe des Peaks & 5.8 mV\\
+Breite des Peaks & 1.2 $\mu s$
+\end{tabular}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}{0.4\textwidth}
+\centering \includegraphics[width = \textwidth]{messergebnisse/2.JPG}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+Signal nach dem Verstärker (unipolarer Ausgang) mit einer Verstärkung von 12.6 und einer shaping time von 0.5 $\mu s$
+
+\centering \begin{tabular}{l l}
+Spannung Peak to Peak & 36 mV\\
+Zeit Peak to Peak & 1.3 $\mu s$
+\end{tabular}
+\end{minipage}
+\end{figure}
+
+\clearpage %----------------------
+
+Einfluss höherer Verstärkung (shaping time: 0.5 $\mu s$)
+\begin{figure}[H]
+\begin{minipage}{0.5\textwidth}
+\centering \includegraphics[width = 0.8\textwidth]{messergebnisse/3.JPG} 
+\centering \begin{tabular}{l l}
+Verstärkung & 100\\
+Spannung Peak to Peak & 240 mV\\
+Zeit Peak to Peak & 1.3 $\mu s$
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering \includegraphics[width = 0.8\textwidth]{messergebnisse/4.JPG}
+\centering \begin{tabular}{l l}
+Verstärkung & 500\\
+Spannung Peak to Peak & 580 mV\\
+Zeit Peak to Peak & 1.3 $\mu s$
+\end{tabular}
+\end{minipage}
+\end{figure}
+
+Die Verstärkung hat also wie erwartet die Amplitude des Signals vergrößert, z.B. haben wir bei einer Einstellung der Vergrößerung von 500 das Signal bereits auf eine Amplitude von 0.6 V bringen können, wo es am Anfang gerade mal etwa 6 mV hatte (100-fache Verstärkung). 
+
+Der Einfluss der Shaping Time auf das Signal war schwer zu beobachten, da bei größerer Shaping Time das Signal immer instabiler wurde. Wir konnten jedoch sehen, dass das Signal breiter wurde. Bei einer eingestellten Shaping Time von 1 $\mu s$ konnten wir z.B. noch messen, dass die Distanz zwischen den beiden Peaks etwa 2.3 $\mu s$ betrug, im Gegensatz zu 1.3 $\mu s$ bei einer Shaping Time von 0.5 $\mu s$. Das Verstellen der Verstärkung hatte keinen sichtbaren Einfluss auf diese Distanz.
+
+Danach haben wir das Signal des negativen Ausgangs des Einkanalanalysators untersucht und mit dem Signal aus dem Vorverstärker verglichen.
+
+\begin{figure}[H]
+\begin{minipage}{0.4\textwidth}
+\centering \includegraphics[width = \textwidth]{messergebnisse/5.JPG}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+\centering \begin{tabular}{l l}
+Verstärkung & 1000\\
+Shaping Time & 0.5 $\mu s$\\
+Tiefe des Signals & 1.6 V\\
+Breite des Signals & 0.7 $\mu s$
+\end{tabular}
+\end{minipage}
+\end{figure}
+
+Die Distanz zwischen beiden Peaks ist hier etwa 2.2 $\mu s$. Durch Einstellen des Delays kann man diese ändern. Wir haben uns den Einfluss klar gemacht und folgende Werte gemessen:\\
+
+\begin{center}
+\begin{tabular}{l c c c c}
+Delay & 0.12 & 3.0 & 7.4 & 10.0\\
+$\Delta t / \mu s$ & 2.25 & 2.6 & 3.0 & 3.2
+\end{tabular}
+\end{center}
+
+Die Erhöhung des Lower Levels hat dazu geführt, dass wir seltener ein Signal erhalten haben. Ist der Lower Level zu hoch, so erhält man kein Signal mehr. Ebenso erhält man kein Signal mehr, wenn man den Upper Level zu niedrig einstellt. Ist er zu hoch, so flackert das Signal.\\
+
+Der positive Ausgang des Einkanalanalysators hat anstatt eines negativen Peaks, wie beim negativen Ausgang, einen Kasten mit positiver Amplitude herausgegeben. Bei einer Verstärkung von 1000 und einer Shaping Time von 0.5 $\mu s$ hatte der Kasten eine Amplitude von 6 V und eine Breite von 0.5 $\mu s$. Die Einstellungen, wie z.B. Verstärkung, Delay und Shaping Time hatten den gleichen Einfluss auf das positive wie auf das negative Signal.\\
+
+Im Unterschied zum Plastikszintillator ist das Signal des NaI-Szintillators viel stärker. Die Shaping Time kann auch viel freier gewählt werden, ohne dass das Signal zu flackern beginnt. Z.B. haben wir bei einer Verstärkung von 30 und einer Shaping Time von 10 $\mu s$ ein Signal am unipolaren Ausgang mit einer Amplitude von etwa 7 V und einer Peak to Peak-Länge von 30$\mu s$ erhalten. Das Signal sieht anders aus als beim Plastikszintillator, nämlich hat man hauptsächlich einen großen, positiven Peak und dann noch einen kleinen negativen, der etwa 10 mal kleiner ist. Beim bipolaren Ausgang erhält man ein Signal mit 2 gleich großen Peaks und mit der oben genannten Einstellung erhielten wir die Peak to Peak-Amplitude von 12 V und eine Zeitdifferenz von 22 $\mu s$ zwischen den Peaks.
+
+\subsection{Energieeichung des MCA}
+
+Wir haben für die Messungen den NaI-Szintillator benutzt. Zur Energieeichung des Vielkanalanalysators haben wir die Spektren von 3 Proben aufgenommen, nämlich $^{22}Na$, $^{60}Co$ und $^{138}Eu$. Alle Messungen wurden mit der Verstärkung 20 und der Shaping Time 2 $\mu s$ aufgenommen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
