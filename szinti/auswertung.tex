@@ -125,7 +125,7 @@ Die theoretische Werte wurden aus der Staatsexamensarbeit entnommen. Den Fehler 
 \end{figure}
 
 
-In dem wir den Kanal gegen die Energie auftragen, können wir per linearen Fit die Abhängigkeit dieser beiden Größen berechnen. Als Steigung erhalten wir:
+In dem wir den Kanal gegen die Energie auftragen, können wir per linearen Fit die Abhängigkeit dieser beiden Größen berechnen (siehe hierzu den Anhang). Als Steigung erhalten wir:
 
 $$ b = (3.662 \pm 0.011) $$
 
@@ -135,12 +135,116 @@ $$ a = (-21.91 \pm 2.76) keV $$
 
 Somit ist die Umrechnung vom Kanal K in Energie E:
 
-$$ E = bK + a = 3.662\cdot K - 21.91 $$ 
+$$ \boxed{E = bK + a = 3.662\cdot K - 21.91} $$ 
 mit dem Fehler
 $$ s_E = \sqrt{K^2s_b^2 + b^2s_k^2 + s_a^2} = \sqrt{0.000114\cdot K^2 + 128.30} $$
 
+\clearpage %-----------------------------------------------
+
 \subsection{Auswertung des Thoriums}
 
+\begin{figure}[H]
+\centering \includegraphics[width = \textwidth]{auswertung/Thoriumganz.png}
+\caption{Untergrundkorrigiertes Spektum von $^{228}Th$}
+\end{figure}
+
+Die Thoriumprobe wurde 55530.307 s lang gemessen. Der Untergrund wurde hochgerechnet und dann vom Spektrum abgezogen. Wir erhalten das oben dargestellte Spektrum. Zur Auswertung fitten wir wieder Gaußkurven an die Spitzen und können dann mit der oben bestimmten Energie-Kanal-Abhängigkeit die Energie der einzelnen Peaks ausrechnen und dann interpretieren.
+
+Wir erhalten folgende Kanäle und daraus folgende Energien:
+
+\begin{center}
+\begin{tabular}{| c | r | r | c |} \hline
+Peak & Kanal & Energie E & $s_E$\\ \hline
+1 & 26.74 & 76.0 & 11.3\\
+2 & 46.30 & 147.6 & 11.3\\
+3 & 70.91 & 237.7 & 11.4\\
+4 & 78.67 & 266.1 & 11.4\\
+5 & 99.18 & 341.2 & 11.4\\
+6 & 117.04 & 406.6 & 11.4\\
+7 & 146.33 & 513.9 & 11.4\\
+8 & 166.23 & 586.8 & 11.5\\
+9 & 233.66 & 833.7 & 11.6\\ \hline
+\end{tabular}
+\end{center}
+
+Einen erwarteten 10. Peak von etwa 2.6 MeV konnten wir nicht sehen, da wir die Verstärkung so eingestellt haben, dass der Maximalwert für die Energie bei Kanal 512 nur 1.85 MeV war. Hier eine übersicht der gefitteten Peaks:
+
+\begin{figure}[H]
+\centering \includegraphics[width = \textwidth]{auswertung/Th1.png}
+\caption{Erster Teil des $^{228}Th$-Spektrums}
+\end{figure}
+
+\begin{figure}[H]
+\centering \includegraphics[width = \textwidth]{auswertung/Th2.png}
+\caption{Zweiter Teil des $^{228}Th$-Spektrums}
+\end{figure}
+
+\subsection{Interpretation der Peaks des Thorium-228-Spektrums}
+
+\begin{center}
+\begin{tabular}{| c | r | c | p{6cm} | c |} \hline
+Peak & E / keV & $E_{theo}$ / keV & Interpretation &St-Abw. \\ \hline
+1 & 76.0 $\pm$ 11.3  & 84.37 & $^{228}Th \rightarrow ^{224}Ra$, wahrscheinlichster Übergang & 1 \\
+2 & 147.6 $\pm$ 11.3 & 131.6 und 166.4 & $^{228}Th \rightarrow ^{224}Ra$, Überlagerung der beiden Peaks der theoretischen Energien & jeweils 2\\
+3 & 237.7 $\pm$ 11.4 & 216.0 & $^{228}Th \rightarrow ^{224}Ra$ & 2\\
+4 & 266.1 $\pm$ 11.4 & 241.0 und 238.6 & $^{224}Ra \rightarrow ^{220}Rn, \text{\ \ sowie \ \ } ^{212}Pb \rightarrow ^{212}Bi$, beide Peaks sind überlagert & jeweils 3\\
+5 & 341.2 $\pm$ 11.4 & 300.1 & $^{212}Pb \rightarrow ^{212}Bi$ & 4\\
+6 & 406.6 $\pm$ 11.4 & 453.0 & $^{212}Bi \rightarrow ^{208}Tl$ & 4\\
+7 & 513.9 $\pm$ 11.4 & 510.8 & $^{208}Tl \rightarrow ^{208}Pb$ & 1\\
+8 & 586.8 $\pm$ 11.5 & 583.2 & $^{208}Tl \rightarrow ^{208}Pb$ & 1\\
+9 & 833.7 $\pm$ 11.6 & 804.9 & $^{216}Po \rightarrow ^{212}Pb$ & 3\\ \hline
+\end{tabular}
+\end{center}
+
+\emph{St-Abw.} gibt die Anzahl der Standardabweichungen an, in denen der theoretische Wert der Energie von dem gemessenen liegt. Unsere Werte liegen also alle in einem guten Bereich, nahe genug an den erwarteten Werten. Angegeben bei der Interpretation ist immer der Zerfall des Mutterkerns in den Tochterkern, welcher dann ein $\gamma$-Quant der genannten Energie emittiert, um in den Grundzustand über zu gehen.
+
+
+\subsection{Interpretation der auftretenden intensiven Linie des Untergrunds}
+
+\begin{figure}[H]
+\centering \includegraphics[width = \textwidth]{auswertung/UG1.png}
+\caption{Der gemessene Untergrund (120 min)}
+\end{figure}
+
+Wir untersuchen den etwas intensiveren Peak bei Kanal 400. Nach einem Gauß-Fit erhalten wir einen Wert für den Kanal von 403.58. Für die Energie folgt somit:
+
+$$E = (1456.0 \pm 12.2) keV $$
+
+Wir interpretieren dies als ein Kalium-40-Peak ($E_{theo} = 1460.8$, 1 Standard-Abweichung), da der Gauß-Fit sehr dicht an dem Wert liegt, und da Kalium in der Umgebung vorkommt.
+
+\begin{figure}[H]
+\centering \includegraphics[width = \textwidth]{auswertung/UG2.png}
+\caption{Zoom auf Kanäle 350-450 des Untergrunds}
+\end{figure}
+
+\subsection{Winkelverteilung der $^{22}Na$ Vernichtungsphotonen}
+
+Bevor wir mit der Messung begonnen haben wir die Levels (upper und lower level) angepasst, so dass nur die $\gamma$-Quanten gemessen werden, die eine Energie von 511 keV haben. Außerdem mussten anhand des Delays beide Szintillatoren so eingestellt werden, dass sie zeitgleiche Signale herausgeben, damit die Koinzidenzen auch tatsächlich gemessen werden konnten.\\
+
+Zur Koinzidenzmessung haben wir dann den Plastikszintillator gegenüber vom NaI-Szintillator gedreht, und zwar um einen Winkel von 90$^\circ$ bis 200$^\circ$. Es wurden jedes mal 120 s gemessen. Nach den Messungen haben wir noch eine Messung ohne Probe gemacht, bei der wir 5 counts erhalten haben. Dieser Untergrund (zufällige Koinzidenzen) wurde von den ermittelten Werten abgezogen.\\
+
+Der Fehler auf die Counts (Fehlerbalken) berechnet sich durch $s_N = \sqrt{N}$. Den Fehler auf den Einzelwert haben wir mit $s_\alpha = 0.5^\circ$ abgeschätzt.
+
+\begin{figure}[H]
+\centering \includegraphics[width = \textwidth]{auswertung/Winkel.png}
+\caption{Winkelverteilung der Vernichtungsphotonen}
+\end{figure}
+
+Das Maximum liegt also bei
+$$\alpha = (181.48 \pm 0.40)^\circ$$
+Wir konnten somit die theoretische Vorhersage von 180$^\circ$ bestätigen. Dieser Wert liegt in der 4. Standardabweichung. Wir gehen bei der kleinen Abweichung eher von einem systematischen Fehler aus, welcher jedoch sehr klein ist.
+
+Messtabelle (mit Untergrundkorrektur)
+
+\begin{center}
+\begin{tabular}{c c c c c c c c}
+90$^\circ$ & 100$^\circ$ & 110$^\circ$ & 120$^\circ$ & 130$^\circ$ & 140$^\circ$ & 150$^\circ$ & 160$^\circ$\\ \hline
+7 & 4 & 8 & 12 & 17 & 15 & 12 & 7 \\
+& & & & & & & \\
+165$^\circ$ & 170$^\circ$ & 175$^\circ$ & 180$^\circ$ & 185$^\circ$ & 190$^\circ$ & 195$^\circ$ & 200$^\circ$\\ \hline
+11 & 15 & 92 & 161 & 160 & 38 & 16 & 14\\
+\end{tabular}
+\end{center}
 
 
 
