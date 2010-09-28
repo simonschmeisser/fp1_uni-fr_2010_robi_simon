@@ -12,7 +12,7 @@ Zusammengefasst erhielten wir folgende Signale:
 \begin{minipage}{0.4\textwidth}
 \centering \includegraphics[width = \textwidth]{messergebnisse/1.JPG}
 \end{minipage}
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.59\textwidth}
 Signal nach dem Vorverstärker.
 \centering \begin{tabular}{l l}
 Tiefe des Peaks & 5.8 mV\\
@@ -25,7 +25,7 @@ Breite des Peaks & 1.2 $\mu s$
 \begin{minipage}{0.4\textwidth}
 \centering \includegraphics[width = \textwidth]{messergebnisse/2.JPG}
 \end{minipage}
-\begin{minipage}{0.6\textwidth}
+\begin{minipage}{0.59\textwidth}
 Signal nach dem Verstärker (unipolarer Ausgang) mit einer Verstärkung von 12.6 und einer shaping time von 0.5 $\mu s$
 
 \centering \begin{tabular}{l l}
@@ -59,7 +59,7 @@ Zeit Peak to Peak & 1.3 $\mu s$
 
 Die Verstärkung hat also wie erwartet die Amplitude des Signals vergrößert, z.B. haben wir bei einer Einstellung der Vergrößerung von 500 das Signal bereits auf eine Amplitude von 0.6 V bringen können, wo es am Anfang gerade mal etwa 6 mV hatte (100-fache Verstärkung). 
 
-Der Einfluss der Shaping Time auf das Signal war schwer zu beobachten, da bei größerer Shaping Time das Signal immer instabiler wurde. Wir konnten jedoch sehen, dass das Signal breiter wurde. Bei einer eingestellten Shaping Time von 1 $\mu s$ konnten wir z.B. noch messen, dass die Distanz zwischen den beiden Peaks etwa 2.3 $\mu s$ betrug, im Gegensatz zu 1.3 $\mu s$ bei einer Shaping Time von 0.5 $\mu s$. Das Verstellen der Verstärkung hatte keinen sichtbaren Einfluss auf diese Distanz.
+Der Einfluss der Shaping Time auf das Signal war schwer zu beobachten, da bei größerer Shaping Time das Signal immer instabiler wurde, da teilweise über mehr als einen Signal integriert wurde. Wir konnten jedoch sehen, dass das Signal breiter wurde. Bei einer eingestellten Shaping Time von 1 $\mu s$ konnten wir z.B. noch messen, dass die Distanz zwischen den beiden Peaks etwa 2.3 $\mu s$ betrug, im Gegensatz zu 1.3 $\mu s$ bei einer Shaping Time von 0.5 $\mu s$. Das Verstellen der Verstärkung hatte keinen sichtbaren Einfluss auf diese Distanz.
 
 Danach haben wir das Signal des negativen Ausgangs des Einkanalanalysators untersucht und mit dem Signal aus dem Vorverstärker verglichen.
 
@@ -88,9 +88,9 @@ $\Delta t / \mu s$ & 2.25 & 2.6 & 3.0 & 3.2
 
 Die Erhöhung des Lower Levels hat dazu geführt, dass wir seltener ein Signal erhalten haben. Ist der Lower Level zu hoch, so erhält man kein Signal mehr. Ebenso erhält man kein Signal mehr, wenn man den Upper Level zu niedrig einstellt. Ist er zu hoch, so flackert das Signal.\\
 
-Der positive Ausgang des Einkanalanalysators hat anstatt eines negativen Peaks, wie beim negativen Ausgang, einen Kasten mit positiver Amplitude herausgegeben. Bei einer Verstärkung von 1000 und einer Shaping Time von 0.5 $\mu s$ hatte der Kasten eine Amplitude von 6 V und eine Breite von 0.5 $\mu s$. Die Einstellungen, wie z.B. Verstärkung, Delay und Shaping Time hatten den gleichen Einfluss auf das positive wie auf das negative Signal.\\
+Der positive Ausgang des Einkanalanalysators hat anstatt eines negativen Peaks, wie beim negativen Ausgang, einen Kasten mit positiver Amplitude herausgegeben. Bei einer Verstärkung von 1000 und einer Shaping Time von 0.5 $\mu s$ hatte der Kasten eine Amplitude von 6 V und eine Breite von 0.5 $\mu s$. Die Einstellungen, wie z.B. Delay und Shaping Time hatten den gleichen Einfluss auf das positive wie auf das negative Signal, jedoch blieb die Amplitude unabhängig von der Verstärkung konstant.\\ 
 
-Im Unterschied zum Plastikszintillator ist das Signal des NaI-Szintillators viel stärker. Die Shaping Time kann auch viel freier gewählt werden, ohne dass das Signal zu flackern beginnt. Z.B. haben wir bei einer Verstärkung von 30 und einer Shaping Time von 10 $\mu s$ ein Signal am unipolaren Ausgang mit einer Amplitude von etwa 7 V und einer Peak to Peak-Länge von 30$\mu s$ erhalten. Das Signal sieht anders aus als beim Plastikszintillator, nämlich hat man hauptsächlich einen großen, positiven Peak und dann noch einen kleinen negativen, der etwa 10 mal kleiner ist. Beim bipolaren Ausgang erhält man ein Signal mit 2 gleich großen Peaks und mit der oben genannten Einstellung erhielten wir die Peak to Peak-Amplitude von 12 V und eine Zeitdifferenz von 22 $\mu s$ zwischen den Peaks.
+Im Unterschied zum Plastikszintillator ist das Signal des NaI-Szintillators viel stärker, es hat eine größere Ampltitude, weniger Rauschen und fällt auch deutlich langsamer ab. Die Shaping Time kann somit also viel freier gewählt werden, ohne dass das Signal zu flackern beginnt. Z.B. haben wir bei einer Verstärkung von 30 und einer Shaping Time von 10 $\mu s$ ein Signal am unipolaren Ausgang mit einer Amplitude von etwa 7 V und einer Peak to Peak-Länge von 30$\mu s$ erhalten. Das Signal sieht anders aus als beim Plastikszintillator, nämlich hat man hauptsächlich einen großen, positiven Peak und dann noch einen kleinen negativen, der etwa 10 mal kleiner ist. Beim bipolaren Ausgang erhält man ein Signal mit 2 gleich großen Peaks und mit der oben genannten Einstellung erhielten wir die Peak to Peak-Amplitude von 12 V und eine Zeitdifferenz von 22 $\mu s$ zwischen den Peaks. Durch das langsame Abfallen, könnten es bei sehr schnellen Zerfällen Nachteile gegenüber dem Plastikszintillator haben, da die zeitliche Auflösung darunter unumgänglich leidet. 
 
 \subsection{Blockschaltbild des Versuchs}
 
@@ -114,7 +114,7 @@ $\chi^2$/ndf & 1.24 & 1.70 & 0.82 & 1.14 & 65.40 & 5.09\\ \hline
 \end{tabular}
 \end{center}
 
-Die theoretische Werte wurden aus der Staatsexamensarbeit entnommen. Den Fehler auf den Kanal schätzen wir 3. Auf den theoretischen Wert der Energie nehmen wir keinen Fehler an.
+Die theoretische Werte wurden aus der Staatsexamensarbeit entnommen. Den Fehler auf den Kanal schätzen wir 3. Auf den theoretischen Wert der Energie nehmen wir keinen Fehler an. % Warum ist der Fehler nicht die Halbwertsbreite aus dem Gaus-Fit
 
 \begin{figure}[H]
 \centering \includegraphics[width = 0.85\textwidth]{auswertung/Na22.png}
@@ -224,11 +224,11 @@ Wir interpretieren dies als ein Kalium-40-Peak ($E_{theo} = 1460.8$, 1 Standard-
 
 \subsection{Winkelverteilung der $^{22}Na$ Vernichtungsphotonen}
 
-Bevor wir mit der Messung begonnen haben wir die Levels (upper und lower level) angepasst, so dass nur die $\gamma$-Quanten gemessen werden, die eine Energie von 511 keV haben. Außerdem mussten anhand des Delays beide Szintillatoren so eingestellt werden, dass sie zeitgleiche Signale herausgeben, damit die Koinzidenzen auch tatsächlich gemessen werden konnten.\\
+Bevor wir mit der Messung begonnen haben, passten wir die Levels (upper und lower level) des SCA des NaI-Szintillators an, so dass nur die $\gamma$-Quanten gemessen werden, die eine Energie von ca. 511 keV haben. Diese Einschränkung gelang uns beim Plastikszintillator leider nicht, da die Energieauflösung nicht hinreichend groß war, um den 511 keV Peak vom anderen Haupt-Peak zu trennen. Außerdem mussten anhand des Delays beide Szintillatoren so eingestellt werden, dass sie zeitgleiche Signale herausgeben, damit die Koinzidenzen auch tatsächlich gemessen werden konnten.\\
 
-Zur Koinzidenzmessung haben wir dann den Plastikszintillator gegenüber vom NaI-Szintillator gedreht, und zwar um einen Winkel von 90$^\circ$ bis 200$^\circ$. Es wurden jedes mal 120 s gemessen. Nach den Messungen haben wir noch eine Messung ohne Probe gemacht, bei der wir 5 counts erhalten haben. Dieser Untergrund (zufällige Koinzidenzen) wurde von den ermittelten Werten abgezogen.\\
+Zur Koinzidenzmessung haben wir dann den Plastikszintillator gegenüber dem NaI-Szintillator gedreht, und zwar um einen Winkel von 90$^\circ$ bis 200$^\circ$. Es wurden jedes mal 120 s gemessen. Nach den Messungen haben wir noch eine Messung ohne Probe gemacht, bei der wir 5 counts erhalten haben. Dieser Untergrund (zufällige Koinzidenzen) wurde von den ermittelten Werten abgezogen.\\
 
-Der Fehler auf die Counts (Fehlerbalken) berechnet sich durch $s_N = \sqrt{N}$. Den Fehler auf den Einzelwert haben wir mit $s_\alpha = 0.5^\circ$ abgeschätzt.
+Der Fehler auf die Counts (Fehlerbalken) berechnet sich durch $s_N = \sqrt{N}$. Den Fehler auf den Winkel haben wir mit $s_\alpha = 0.5^\circ$ abgeschätzt.
 
 \begin{figure}[H]
 \centering \includegraphics[width = \textwidth]{auswertung/Winkel.png}
@@ -250,28 +250,4 @@ Messtabelle (mit Untergrundkorrektur)
 11 & 15 & 92 & 161 & 160 & 38 & 16 & 14\\
 \end{tabular}
 \end{center}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

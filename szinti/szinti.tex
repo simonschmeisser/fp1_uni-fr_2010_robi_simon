@@ -13,9 +13,9 @@
 
 \usepackage{booktabs}
 \usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage{wrapfig}
 \usepackage{float}
+\usepackage[unicode]{hyperref}
 
 \setkomafont{captionlabel}{\upshape\bfseries}
 \setkomafont{caption}{\itshape}
@@ -29,6 +29,13 @@
 \hypersetup{
 pdftitle={Szintillationszähler},
 pdfauthor={Robi Pedersen, Simon Schmeißer}}
+
+
+\pdfstringdefDisableCommands{%
+\let\alpha\textalpha
+\let\beta\textbeta
+\let\gamma\textgamma
+}
 
 \begin{document}
 \begin{titlepage}
