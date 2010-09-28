@@ -92,6 +92,13 @@ Der positive Ausgang des Einkanalanalysators hat anstatt eines negativen Peaks, 
 
 Im Unterschied zum Plastikszintillator ist das Signal des NaI-Szintillators viel stärker. Die Shaping Time kann auch viel freier gewählt werden, ohne dass das Signal zu flackern beginnt. Z.B. haben wir bei einer Verstärkung von 30 und einer Shaping Time von 10 $\mu s$ ein Signal am unipolaren Ausgang mit einer Amplitude von etwa 7 V und einer Peak to Peak-Länge von 30$\mu s$ erhalten. Das Signal sieht anders aus als beim Plastikszintillator, nämlich hat man hauptsächlich einen großen, positiven Peak und dann noch einen kleinen negativen, der etwa 10 mal kleiner ist. Beim bipolaren Ausgang erhält man ein Signal mit 2 gleich großen Peaks und mit der oben genannten Einstellung erhielten wir die Peak to Peak-Amplitude von 12 V und eine Zeitdifferenz von 22 $\mu s$ zwischen den Peaks.
 
+\subsection{Blockschaltbild des Versuchs}
+
+\begin{figure}[H]
+\centering \includegraphics[width = 0.6\textwidth]{Bilder/Schema.png}
+\caption{Blockschaltbild des Versuchs}
+\end{figure}
+
 \subsection{Energieeichung des MCA}
 
 Wir haben für die Messungen den NaI-Szintillator benutzt. Zur Energieeichung des Vielkanalanalysators haben wir die Spektren von 3 Proben aufgenommen, nämlich $^{22}Na$, $^{60}Co$ und $^{152}Eu$. Alle Messungen wurden mit der Verstärkung 20 und der Shaping Time 2 $\mu s$ aufgenommen.
@@ -109,7 +116,7 @@ $\chi^2$/ndf & 1.24 & 1.70 & 0.82 & 1.14 & 65.40 & 5.09\\ \hline
 
 Die theoretische Werte wurden aus der Staatsexamensarbeit entnommen. Den Fehler auf den Kanal schätzen wir 3. Auf den theoretischen Wert der Energie nehmen wir keinen Fehler an.
 
-\begin{figure}
+\begin{figure}[H]
 \centering \includegraphics[width = 0.85\textwidth]{auswertung/Na22.png}
 \caption{$^{22}Na$}
 \end{figure}
@@ -138,8 +145,6 @@ Somit ist die Umrechnung vom Kanal K in Energie E:
 $$ \boxed{E = bK + a = 3.662\cdot K - 21.91} $$ 
 mit dem Fehler
 $$ s_E = \sqrt{K^2s_b^2 + b^2s_k^2 + s_a^2} = \sqrt{0.000114\cdot K^2 + 128.30} $$
-
-\clearpage %-----------------------------------------------
 
 \subsection{Auswertung des Thoriums}
 
