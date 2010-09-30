@@ -1,4 +1,4 @@
-all: plots/U238.png plots/Sm147_plateau.png
+all: plots/U238.png plots/Sm147_plateau.png plots/K40_plateau.png plots/K40_plateau2.png
 
  
 plots/U238.png : U238_Pattern.txt U238_Pattern.plot
@@ -7,3 +7,8 @@ plots/U238.png : U238_Pattern.txt U238_Pattern.plot
 plots/Sm147_plateau.png: Sm147_plateau.txt Sm147_plateau.plot
 	gnuplot Sm147_plateau.plot
 
+plots/K40_plateau.png: Kalium40/K40_plateau.txt K40_plateau.plot
+	gnuplot K40_plateau.plot
+
+plots/K40_plateau2.png: Kalium40/K40_plateau2.txt K40_plateau2.plot
+	gnuplot K40_plateau2.plot
