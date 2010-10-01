@@ -13,7 +13,7 @@ Es wird zuerst der gesamte Spannungsbereich vermessen, in dem wir nach der Uran-
 \begin{align}
  \frac{S_N}{N} \stackrel{!}{} 0.02 & \Leftrightarrow \frac{1}{\sqrt{N}} = \frac{1}{\sqrt{n \cdot t}} = 0.02 \\
 				   & \Leftrightarrow n \cdot t \cdot 0.0004 = 1 \\
-				   & \Leftrightarrow t = \frac{1}{0.0004 \cdot n}\\
+				   & \Leftrightarrow t = \frac{1}{0.0004 \cdot n} \label{zeitfuerkleinenfehler}
 \end{align}
 können wir berechnen, wie lange mindestens gemessen werden muss, damit der relative Fehler unter 2 \% sinkt. Entsprechend wird dann eine solche Messung bei $U_{\alpha}$ durchgeführt.
 
@@ -21,7 +21,10 @@ Mit den Gleichungen \ref{t12ln2lambda} und \ref{dNdtlambdaN} erhalten können wi
 \begin{align}
  A & = \lambda N \\
  A & = \frac{\ln 2}{t_{1/2}}N \\
- t_{1/2} & = \ln 2 \frac{N}{A} \\
+ t_{1/2} & = \ln 2 \frac{N}{A}
 \end{align}
 
-hierbei entspricht $N$ der Anzahl der Atome und $A$ der Aktivität, also der Anzahl der Zerfälle. Die Anzahl der Atome ist hier allerdings die Anzahl der Atome, deren Zerfallsprodukte auch tatsächlich registriert werden und nicht bereits in der Probe wieder eingefangen werden. Daher kann sie nicht einfach über Masse und Dichte berechnet werden, sondern wir verwenden
+hierbei entspricht $N$ der Anzahl der Atome und $A$ der Aktivität, also der Anzahl der Zerfälle. Die Anzahl der Atome ist hier allerdings die Anzahl der Atome, deren Zerfallsprodukte auch tatsächlich registriert werden und nicht bereits in der Probe wieder eingefangen werden. Daher kann sie nicht einfach über Masse und Dichte berechnet werden, sondern wir verwenden ...
+
+\subsection{Bestimmung der Halbwertszeit von \atom{40}{}{K} ($\beta$-Zerfall)}
+Zuerst wird der Spannungsbereich vermessen, in dem wir den Proportionalbereich für die Messung des $\beta$-Zerfalls vermuten. Die Spannung in der Mitte des Plateaus $U_{\beta}$ verwenden wir dann für die genaue Messung, deren Messzeit wir über die Zählrate $n$ abschätzen (vergl. Gl. \ref{zeitfuerkleinenfehler}).

@@ -15,7 +15,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{float}
-\usepackage{hyperref}
+\usepackage[unicode]{hyperref}
 
 \setkomafont{captionlabel}{\upshape\bfseries}
 \setkomafont{caption}{\itshape}
@@ -33,6 +33,14 @@ pdfauthor={Robi Pedersen, Simon Schmeißer}}
 
 \providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 \providecommand{\atom}[3]{\ensuremath{^{#1}_{#2}{#3}}}
+
+
+\pdfstringdefDisableCommands{%
+\let\alpha\textalpha
+\let\beta\textbeta
+\let\gamma\textgamma
+}
+
 
 \begin{document}
 \begin{titlepage}
