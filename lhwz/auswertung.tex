@@ -5,8 +5,13 @@
 Wir haben zur Messung das bereits vorhandene Messprogramm verwendet. Allerdings zeigte sich im Laufe der Messungen, dass die Qualität gesteigert werden kann, wenn zwischen den einzelnen Messungen die Hochspannung auf $0V$ heruntergefahren wird. Durch das Methan können dann verbleibende Ionen anscheinend besser herausgespült werden. Daher haben wir das Programm um diese "`Reinigungsphase"' erweitert.
 
 \subsection{Einstellen der Messelektronik}
+Nachdem wir eine \atom{238}{}{U}-Probe einsetzten, machten wir uns mit der Messelektronik vertraut, indem wir das Signal am Oszilloskop betrachten.
+\begin{itemize}
+ \item Nach dem Vorverstärker sehen wir ein hochfrequentes Signal mit aufmodulierten Pulsen
+ \item Nach dem Hauptverstärker sehen wir Peaks, deren Amplitude wir einstellen können indem wir den Verstärkungsfaktor verändern. Wir wählen eine 50-fache Verstärkung und eine Shaping-Zeit von $6\mu s$ und erhalten Peaks mit einer Amplitude $U = -8V$ und einer Abklingzeit von $t = 16\mu s$.
+ \item Am SCA (Single Channel Analyzer) haben wir die untere Diskriminatorschwelle auf $0.3$ eingestellt. Sie dient dazu, das Rauschen vom eigentlichen Signal zu trennen, so dass nur wirkliche Zerfälle gezählt werden. 
+\end{itemize}
 
-TODO!
 
 \subsection{Zählrohrcharakteristik}
 
@@ -49,8 +54,8 @@ Für die Messung der Halbwertszeit von \atom{40}{}{K} haben wir das $\beta$-Plat
  \label{k40plateau}
 \end{figure}
 
-Die Mitte des Plateaus liegt also wie in Abb \ref{k40plateau} sichtbar bei etwa $U = 3600V$, wobei die Zählrate dort etwa $n = 22 Bq$ beträgt. Daraus ergibt sich eine minimale Messdauer von $t_{0.02} = 113.6 s$. Wir haben also die bereits für die Plateaumessung verwendete Probe mit $m = 1.2158g$ nochmals für $t = 120s$ vermessen. Dabei erhielten wir in zwei Messungen Zählraten von $n_1 = 9620.017 Bq$ bzw. $n_2 = 31 202.083 Bq$. Diese unrealistischen Werte könnten z.B. durch Übergang in den Gasentladungsmodus, Verbleiben von Ionen im Zählrohr, eine zu niedrig eingestellte Diskriminatorschwelle oder Defekte der Messelektronik/Software entstehen. Bie einer dritten Messung, nach einem Reset der Spannung, gelang uns wieder eine vernünftige Messung mit einer Zählrate $n = 5.708 Bq$. Da diese jedoch der Plateaumessung deutlich widersprach, haben wir diese ebenfalls wiederholt. Dabei haben wir wieder $U = 2900V \cdots 4000V$ in $\Delta U = 100 V$-Schritten je $t=100s$ als Parameter verwendet. 
-
+Die Mitte des Plateaus liegt also wie in Abb \ref{k40plateau} sichtbar bei etwa $U = 3600V$, wobei die Zählrate dort etwa $n = 22 Bq$ beträgt. Daraus ergibt sich eine minimale Messdauer von $t_{0.02} = 113.6 s$. Wir haben also die bereits für die Plateaumessung verwendete Probe mit $m = 1.2158g$ nochmals für $t = 120s$ vermessen. Dabei erhielten wir in zwei Messungen Zählraten von $n_1 = 9620.017 Bq$ bzw. $n_2 = 31 202.083 Bq$. Diese unrealistischen Werte könnten z.B. durch Übergang in den Gasentladungsmodus, Verbleiben von Ionen im Zählrohr, eine zu niedrig eingestellte Diskriminatorschwelle oder Defekte der Messelektronik/Software entstehen. Bei einer dritten Messung, nach einem Reset der Spannung, gelang uns wieder eine vernünftige Messung mit einer Zählrate $n = 5.708 Bq$. Da diese jedoch der Plateaumessung deutlich widersprach, haben wir diese ebenfalls wiederholt. Dabei haben wir wieder $U = 2900V \cdots 4000V$ in $\Delta U = 100 V$-Schritten je $t=100s$ als Parameter verwendet. 
+Für die minimale Messdauer erhalten wir nun $t_{0.02} = 452.08 s$.
 
 \begin{figure}[H]
  \centering \includegraphics[width = 0.99\linewidth]{Messwerte/plots/K40_plateau2.png}
@@ -61,7 +66,7 @@ Die Mitte des Plateaus liegt also wie in Abb \ref{k40plateau} sichtbar bei etwa 
 Über das Wochenende haben wir eine ausführliche Untergrundmessung vorgenommen. Dazu haben wir das angepasste Messprogramm verwendet, und Messungen von $U = 0V \cdots 4000V$ mit $\Delta U = 50V$. Die Dauer der Einzelmessungen stellten wir auf $t=3000s$ mit einer Pause von $t_{Pause} = 60 s$ sowie einer gleichlangen Zeit für das Einstellen der Spannung.
 
 \begin{figure}[H]
- \centering \includegraphics[width = 0.99\linewidth]{Messwerte/plots/untergrund_we_bereinigt.png}
+ \centering %\includegraphics[width = 0.99\linewidth]{Messwerte/plots/untergrund_we_bereinigt.png}
  \caption{Untergrundmessung}
 \end{figure}
 
@@ -70,3 +75,11 @@ Am Montag mussten wir leider gleich mehrere Probleme feststellen. Erstens hatten
 
 
 \subsection{Halbwertszeit von \atom{40}{}{K} ($\beta$-Zerfall) - Teil 2}
+
+Am Freitag hatten wir bereits die minimale Messdauer auf $t_{0.02} = 452.08 s$ bestimmt. Für die Untersuchung der \atom{40}{}{K}-Aktivität in Abhängigkeit von der Masse verwendeten wir also eine Messdauer von $t = 460s$ bei der Plateauspannung $U = 3600V$.
+Nachdem die erste Messung erfolgreich war, bekammen wir bei weiteren nurnoch wesentlich zu hohe Zählraten. Daher haben wir die Diskriminatorschwelle am SCA von 0.3 auf 0.5 erhöht. Diese Veränderung reduziert natürlich die Vergleichbarkeit der Messergebnisse und erfordert eine erneute Messung des Untergrundes. Nach einigen erfolgreichen Messungen begannen die Probleme erneut,
+diesmal stellte sich die Zählrate auf einen Wert um $n = 60 Bq$ ein. Wir versuchten dieses Phänomen durch weitere Messungen zu untersuchen.
+Eine zu niedrige Diskriminatorschwelle können wir relativ sicher als Fehlerquelle ausschliessen, da die Zählraten kontinuirlich stiegen, selbst nachdem wir die Probe für eine Untergrundmessung entfernt haben. Als Ursachen kommen eher die üblichen Verdächtigen wie Verbleibende Ionen, Gasentladung sowie Defekte bei der Mess- und Steuerelektronik in Frage.
+Ein Zusammenhang der Zählrate mit der Netzfrequenz von $f = 50Hz$ erscheint auch möglich. Insbesondere da die Kühlmaschiene des benachbarten Versuches nach einer Leckage von Herr Stützler geöffnet wurde und ab diesem Moment ohne Abschirmung lief.
+Für eine genauere Untersuchung sowie eine erneute Messung verblieb leider keine Zeit, so dass wir die Auswertung basierend auf den sechs Messpunkten vor Auftreten der Probleme durchgeführt haben.
+
