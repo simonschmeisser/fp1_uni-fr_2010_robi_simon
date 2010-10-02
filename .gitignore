@@ -10,3 +10,5 @@
 *.py
 *.py*
 *.gz
+*.eps
+.directory
