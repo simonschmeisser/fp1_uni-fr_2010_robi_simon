@@ -34,7 +34,66 @@ We guess the error for the tension as well as for the frequency at 2\%. We used 
 
 $$ A = y_0 + \frac{2Aw/\pi}{4(x-x_c)^2 + w^2} $$
 
-In our case $y_0$ should be 0 or very close to 0. Also we have:
+In our case $y_0$ should be 0 or very close to 0. It is 1.12 V, which is close enough. The location of the maximum of the Lorentz distribution represents the resonance frequency of the system, which here is:
+
+$$\boxed{f_{res} = x_c = (256.05 \pm 1.14)\ Hz}$$
+
+The theoretical value lies within 12 errors of this value and deviates by 5\%.
+
+\subsubsection{Circuit 2}
+
+\begin{tabular}{l l l}
+Used components & $R_1 = (15.0 \pm 0.1)\ \Omega$ & \\
+ & $L=69.6\ mH$ & $R_L = (4.1 \pm 0.1)\ \Omega$\\
+ & $C=1\ \mu F$ & \\
+\end{tabular}
+
+$\Rightarrow R = (19.1 \pm 0.1)\ \Omega$
+
+$\Rightarrow f_{res,theo} = (603.03 \pm 0.01)\ Hz$
+
+Again did we measure the behavior of the amplitude by changing the frequency near $f_{res,theo}$. We used a Lorentz-Peak to fit the data: 
+
+\begin{figure}[H]
+\centering \includegraphics[width=0.9\textwidth]{Bilder/1b.png}
+\caption{Circuit 2}
+\end{figure}
+
+$y_0 = (0.24 \pm 1.44)\ V$, which we can consider as being zero. The resonance frequency resulting from the peak is: 
+
+$$\boxed{ f_{res} = x_c = (585.91 \pm 1.71)\ Hz}$$
+
+This theoretical value lies within 11 errors of this value and deviates by 3\%.
+
+
+\subsubsection{Circuit 3}
+
+\begin{tabular}{l l l}
+Used components & $R_1 = (51.0 \pm 0.1)\ \Omega$ & \\
+ & $L=20.1\ mH$ & $R_L = (1.2 \pm 0.1)\ \Omega$\\
+ & $C=10\ nF$ & \\
+\end{tabular}
+
+$\Rightarrow R = (52.2 \pm 0.1)\ \Omega$
+
+$\Rightarrow f_{res,theo} = (11224.02 \pm 0.01)\ Hz$
+
+The Lorentz-Fit of the data near the theoretical resonance frequency looks like this:
+
+\begin{figure}[H]
+\centering \includegraphics[width=0.9\textwidth]{Bilder/1c.png}
+\caption{Circuit 3}
+\end{figure}
+
+The Offset is as follows: $y_0 = (2.70 \pm 0.17)\ V$, which is quite far off from zero (16 standard-deviations). For the resonance frequency, we get:
+
+$$\boxed{ f_{res} = x_c = ( 11130.89 \pm 5.46)\ Hz}$$
+
+So, the calculated value for the resonance frequency lies within the 17th error of this value, and deviates by 0.8\%.
+
+\paragraph{Error Discussion}
+
+Even though our fitted values for the resonance frequencies lie very close to the calculated values, i.e. under 5\%, the theoretical frequencies all lie within the 11th or 12th standard deviation. We guess, that the error calculated by the fit is too small to be used as a factor to determine how good our measurements were. 
 
 \subsection{Nonlinear Oscillating Circuit}
 
