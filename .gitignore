@@ -1,4 +1,5 @@
 *.*~
+*~
 *.toc
 *.aux
 *.log
@@ -10,3 +11,5 @@
 *.py
 *.py*
 *.gz
+*.eps
+.directory
