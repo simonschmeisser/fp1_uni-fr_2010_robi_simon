@@ -2,7 +2,7 @@ all: plots\
      plots/U238.png plots/Sm147_plateau.png\
      plots/K40_plateau.png plots/K40_plateau2.png\
      plots/untergrund_we.png plots/untergrund_we_bereinigt.png\
-     plots/K40_massenabh.png
+     plots/K40_massenabh.png plots/K40_massenabh_bereinigt.png
 
  
 plots/U238.png : U238_Pattern.txt U238_Pattern.plot
@@ -25,6 +25,9 @@ plots/untergrund_we_bereinigt.png: untergrund_we_bereinigt.txt untergrund_we_ber
 
 plots/K40_massenabh.png: Kalium40/massenabh.txt K40_massenabh.plot
 	gnuplot K40_massenabh.plot
+
+plots/K40_massenabh_bereinigt.png: Kalium40/massenabh_bereinigt.txt K40_massenabh_bereinigt.plot
+	gnuplot K40_massenabh_bereinigt.plot
 
 plots:
 	mkdir plots
