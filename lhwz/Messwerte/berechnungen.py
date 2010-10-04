@@ -4,6 +4,8 @@ from math import *
 
 n = 0.611
 
+nuntergrund = 0.004
+
 t = 4200
 
 Sn = sqrt(n/t)
@@ -21,7 +23,7 @@ SF = pi/2*d*Sd
 print "F=", F
 print "SF=", SF
 
-T = 3.62e17*F / 100 /0.611 /60.0 /60.0 /24 /365
+T = 3.62e17*F / 100 /(0.611-nuntergrund) /60.0 /60.0 /24 /365
 
 ST = T * sqrt( (Sn/n)**2 + (SF/F)**2 )
 
