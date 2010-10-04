@@ -9,4 +9,4 @@ set ylabel "Aktivität [Bq]"
 set logscale y
 set grid
 set xlabel "Spannung U [V]"
-plot 'untergrund_we.txt' u 1:2:(sqrt($2**2/t)) w yerrorbars title "Untergrund", 'untergrund_we_bereinigt.txt' u 1:2:(sqrt($2**2/t)) w yerrorbars title "Untergrund-bereinigt"
+plot 'untergrund_we.txt' u 1:2:(sqrt($2/t)) w yerrorbars title "Untergrund", 'untergrund_we_bereinigt.txt' u 1:2:(sqrt($2**2/t)) w yerrorbars title "Untergrund-bereinigt"

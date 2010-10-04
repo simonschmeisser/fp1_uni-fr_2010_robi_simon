@@ -36,9 +36,7 @@ Wir haben für den im voherigen Versuchsabschnitt ermittelten $\alpha$-Plateaube
  \caption{Plateaubereich, gemessen mit \atom{147}{}{Sm}}
 \end{figure}
 
-TODO: Fehlerrechnung erläutern?
-
-Die Mitte des Plateaus liegt also bei etwa $U_{\alpha} = 2000\ V$. Bei dieser Spannung betrug die Zählrate $n = 0.745\ Bq$, die durchschnittliche Zählrate auf dem Plateau lag aber eher bei $\overline{n} = 0.6\ Bq$, so dass wir zur Abschätzung der benötigten Messzeit diesen Wert verwendet haben. Über die Gleichung \ref{zeitfuerkleinenfehler} ermitteln wir, dass unsere Messung mindestens $t_{0.02} = 4168\ s$ dauern sollte. Wir führen daher eine Messung mit $t = 4200\ s$ und $ U = 2000\ V$ durch. Dabei erhalten wir eine Zählrate von $n = 0.39\ Bq$. Diese Zählrate ist wesentlich niedriger als der von uns erwartete Wert und kann auch nur sehr schwer durch statistische Schwankungen begründet werden. Auch zwei kürzere ($t = 60s$) Kontrollmessungen ergeben wieder deutlich höhere Zählraten ($n_1 = 0.650\ Bq$ und $n_2 = 0.633\ Bq$). Als Hauptfehlerquellen stuffen wir die Gaszufuhr und die Hochspannung ein. Bei genauerem Betrachten der Gasableitung ist uns dann aufgefallen, dass sich im Schlauch das Gas in Form von Blasen fortbewegt. Also haben wir den Schlauch entfernt und festgestellt, dass er mit Öl (und \atom{40}{}{K}-Krümmeln) gefüllt war, welches vermutlich aus dem Bläschenzähler stammt, durch zu hohe Gaszufuhr mitgerissen wurde und sich im Schlauch wieder ablagerte. Nach Reinigung des Schlauches war der Abfluss des Gases nun wieder deutlich konstanter. Wir führten also erneut eine Messung mit $t=4200s$ durch und erhielten diesmal eine realistischere Zählrate von $n = 0,611 Bq$ (also $N = 2565$). 
+Die Mitte des Plateaus liegt also bei etwa $U_{\alpha} = 2000\ V$. Bei dieser Spannung betrug die Zählrate $n = 0.745\ Bq$, die durchschnittliche Zählrate auf dem Plateau lag aber eher bei $\overline{n} = 0.6\ Bq$, so dass wir zur Abschätzung der benötigten Messzeit diesen Wert verwendet haben. Über die Gleichung \ref{zeitfuerkleinenfehler} ermitteln wir, dass unsere Messung mindestens $t_{0.02} = 4168\ s$ dauern sollte. Wir führen daher eine Messung mit $t = 4200\ s$ und $ U = 2000\ V$ durch. Dabei erhalten wir eine Zählrate von $n = 0.39\ Bq$. Diese Zählrate ist wesentlich niedriger als der von uns erwartete Wert und kann auch nur sehr schwer durch statistische Schwankungen begründet werden. Auch zwei kürzere ($t = 60s$) Kontrollmessungen ergeben wieder deutlich höhere Zählraten ($n_1 = 0.650\ Bq$ und $n_2 = 0.633\ Bq$). Als Hauptfehlerquellen stuffen wir die Gaszufuhr und die Hochspannung ein. Bei genauerem Betrachten der Gasableitung ist uns dann aufgefallen, dass sich im Schlauch das Gas in Form von Blasen fortbewegt. Also haben wir den Schlauch entfernt und festgestellt, dass er mit Öl (und \atom{40}{}{K}-Krümmeln) gefüllt war, welches vermutlich aus dem Bläschenzähler stammt, durch zu hohe Gaszufuhr mitgerissen wurde und sich im Schlauch wieder ablagerte. Nach Reinigung des Schlauches war der Abfluss des Gases nun wieder deutlich konstanter. Wir führten also erneut eine Messung mit $t=4200s$ durch und erhielten diesmal eine realistischere Zählrate von $n = (0,611 \pm 0.012) Bq$ (also $N = 2565$). 
 
 Für die Berechnung der Halbwertszeit $t_{1/2}$ haben wir weiterhin den Innendurchmesser der Aluschale gemessen und $d = (29.125 \pm 0.125) mm$ erhalten. Die Oberfläche der Probe beträgt somit $F = \frac{\pi}{4} d^2 = (666.2 \pm 5.7) mm^2$.
 
@@ -46,13 +44,11 @@ Die Halbwertszeit können wir nun berechnen:
 
 \begin{align}
  T_{1/2} \left( \atom{147}{}{Sm} \right) &= \frac{\ln 2 \cdot R_{Sm_2O_3} \cdot \rho_{Sm_2O_3} \cdot N_A \cdot h_{rel} \cdot F}{2 \cdot n \cdot m_{rel,Sm_2O_3}} \\
- & = 3.62\cdot 10^{17} \cdot \frac{6.66}{0.611} \\
- & = 
+ & = 3.62\cdot 10^{17} \cdot \frac{6.66cm^2}{0.611 Bq} \\
+ & = (1.252 \pm 0.026) \cdot 10^11 a
 \end{align}
 
-
-
-Todo: T1/2 berechnen!
+Die Literaturangabe für die Halbwertszeit beträgt $T_{1/2 - lit} \left( \atom{147}{}{Sm} \right) = 1.06 \cdot 10^11 a$. Unser Ergebnis liegt also innerhalb von 8 Standardabweichungen über dem erwarteten. Dies deutet auf systematische Fehler hin, die wir eher nicht bei der Messung des Durchmessers vermuten. Die Ursache der Abweichung muss also in der Zählrate liegen, diese war anscheinend zu gering. Mögliche Ursachen hierfür sind eine zu hoch eingestellte Diskriminatorschwelle, ein zu starker Gasfluss, eine zu niedrige Spannung sowie bauartbedingte Einflüße, wie zB ein zu großer Abstand zwischen Probe und Draht. Letzteres war durch uns nicht beeinflussbar. Die gewählte Diskriminatorschwelle sowie der Gasfluss erschienen uns allerdings nötig, da die Zählrate wie bereits erwähnt oft in unrealistische Bereiche ging und ein Senken der Schwelle bzw eine Verringerung des Gasflusses diese Störeffekte nur noch weiter verstärkt hätte.  
 
 \subsection{Halbwertszeit von \atom{40}{}{K} ($\beta$-Zerfall) - Teil 1}
 

@@ -4,7 +4,12 @@ from math import *
 
 n = 0.611
 
-Sn = 0.02 #AUSRECHNEN!!!
+t = 4200
+
+Sn = sqrt(n/t)
+
+print "n = ", n
+print "Sn = ", Sn
 
 
 d = 29.125
@@ -23,3 +28,6 @@ ST = T * sqrt( (Sn/n)**2 + (SF/F)**2 )
 print "T1/2= ", T
 print "ST = ", ST
 
+Tlit = 1.06e11
+
+print (T-Tlit)/ST
