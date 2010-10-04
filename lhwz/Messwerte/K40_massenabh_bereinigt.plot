@@ -11,7 +11,7 @@ f(x) = a*(1-exp(-b*x))
 a = 5.44
 b = 1.7
 
-fit [0.3:]f(x) 'Kalium40/massenabh_bereinigt.txt' u ($1-mschale):($2-nuntergrund):(sqrt($2/t)) via a,b
+fit f(x) 'Kalium40/massenabh_bereinigt.txt' u ($1-mschale):($2-nuntergrund):(sqrt($2/t)) via a,b
 
 set grid
 set ylabel "Aktivität [Bq]"
