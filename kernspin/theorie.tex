@@ -1,1 +1,77 @@
 \section{Theoretische Grundlagen}
+
+\subsection{Kernspin}
+
+Neben den Elektronen, besitzen auch die Protonen und Neutronen einen Spin, einen intrinistischen, diskreten Drehimpuls $\vec I$. Dieser ist gegeben durch:
+
+$$ |\vec I| = \hbar \sqrt{I(I+1)} $$
+
+In z-Richtung (in unserem Fall auch die Richtung des Feldes des Permanentmagnetes) kann der Spin auch nur ganzzahlige Vielfache von $\hbar$ annehmen, nämlich
+
+$$I_z = \hbar\cdot m_I$$
+
+wobei $m_I$ die magnetische Spinquantenzahl ist und nur ganzzahlige Werte zwischen $-I$ und $I$ annehmen kann. Es gibt also $2I+1$ verschiedene Spinzustände. Bei Fermionen ist $I=1/2$ und daher $m_I = \pm\frac{1}{2}$, es gibt also zwei verschiedene Spineinstellungsmöglichkeiten für ein Energieniveau.
+
+\subsubsection{Magnetisches Moment}
+
+Da der Spin als Eigendrehimpuls eines Teilchens aufgefaßt werden kann, induziert ein Teilchen mit Spin und einer Ladung ein magnetisches Dipolmoment, welches durch das gyromagnetische Verhältnis $\gamma$ direkt mit dem Spin zusammenhängt. (Wir erläutern hier nur die spezifischen Formeln für den Kernspin der Protons).
+
+\begin{equation} \vec \mu_I = \gamma\cdot\vec I = \frac{g_K\cdot\mu_K}{\hbar}\vec I \end{equation}
+
+$\mu_K$ ist hier das Kernmagneton und ist eine Konstante:
+
+$$\mu_K = \frac{e\cdot \hbar}{2\cdot m_p} \approx 3.15\e{-8} eV/T$$
+
+und $m_p$ ist die Masse des Protons. In z-Richtung gilt somit für das magnetische Moment:
+
+\begin{equation} \mu_z = g_K \cdot \mu_K \cdot m_I \label{muz} \end{equation}
+
+\subsubsection{Spin im Magnetfeld}
+
+Die potentielle Energie eines magnetischen Moments in einem Magnetfeld $\vec B$ ist gegeben durch:
+
+$$ E_p = -\vec\mu\cdot\vec B $$
+
+Legt man das $\vec B$-Feld o.B.d.A in z-Richtung, so erhält man folgenden Zusammenhang:
+
+$$ E_p = -\mu_z\cdot B_z \stackrel{(\ref{muz})}{=} -g_K \cdot \mu_K \cdot m_I\cdot B_z $$
+
+Die Energie eines spinbesetzten Teilchens in einem $\vec B$-Feld hängt also von der Stärke des $\vec B$-Felds ab und von dessen magnetischen Spinquantenzahl, also seines Spin-Zustandes. Spin-up-Teilchen ($m_I = +1/2$) haben also eine andere Energie als Spin-down-Teilchen ($m_I = -1/2$). Dies bezeichnet man als Zeeman-Aufspaltung der Spinzustände. Der Energieunterschied zwischen eines Spin-up- und eines Spin-down-Teilchens ergibt sich also durch:
+
+\begin{equation} \Delta E = E_p(\uparrow) - E_p(\downarrow) =  g_K \cdot \mu_K \cdot B_z \label{de} \end{equation}
+
+Dies ist die Energie die man braucht, bzw. erhält, wenn ein Spin im Magnetfeld umklappt.
+
+\subsection{Resonanz}
+
+Die Energie aus (\ref{de}) kann man natürlich auch mit elektromagnetischer Strahlung erreichen. Hat die Strahlung genau die richtige Frequenz, die sogenannte Resonanzfrequenz $\nu_r$, so kann sie Spin-Übergänge induzieren. In diesem Fall gilt:
+
+$$ \Delta E = E_\nu \ \Leftrightarrow \ g_K \cdot \mu_K \cdot B_z = h\cdot \nu_r $$
+
+Die Resonanzfrequenz ist also gegeben durch:
+
+$$ \nu_r = \frac{g_K \cdot \mu_K \cdot B_z}{h} $$
+
+Man spricht in diesem Fall von Kernspinresonanz.
+
+
+
+%gyromagn. Verhältnis
+%Energieniveaus, Boltzmann-Verteilung
+
+\subsection{Kernspinresonanz}
+
+%klassisch
+%qm
+%Relaxation
+%Linienbreite
+%Sättigung
+%Empfindlichkeit
+%magnetische Dipol-Dipol-ww
+%Kernspinresonanzspektrometer
+
+\subsection{Hall-Effekt und Hall-Sonde}
+
+\subsection{Das Lock-In Verfahren}
+
+\subsection{Synchrondetektor}
