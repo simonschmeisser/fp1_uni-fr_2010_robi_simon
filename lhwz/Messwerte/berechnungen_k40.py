@@ -24,4 +24,4 @@ print "T12 = ", T /1e9, " e^9 a"
 
 print "ST12 = ", ST /1e9, " e^9 a"
 
-
+print (1.277e9 - T) / ST

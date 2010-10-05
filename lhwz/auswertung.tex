@@ -101,4 +101,25 @@ Für eine genauere Untersuchung sowie eine erneute Messung verblieb leider keine
 
 Da uns die Untergrundmessung auf Grund der geschilderten Probleme misslang und die lange Untergrundmessung über das Wochenende den Bereich des $\beta$-Plateaus nicht abdeckt, haben wir eine Extrapolation vorgenommen. Die Daten der Untergrundmessung stützen diese allerdings nur sehr begrenzt ( $\chi^2 = 578.182$). Durch die Extrapolation erhalten wir eine Untergrundzählrate von $ n_{Untergrund} = 0.502 Bq$ für die Messungen bei $U = 3600V$.
 
-Wir erhalten eine Halbwertszeit $T_{1/2} = ( 0.729835932254 \pm 0.150594919233 ) \cdot 10^9 a$
+Die massenabhängige Impulsrate ergibt sich aus
+\begin{equation}
+ n(m) = \frac{A_s \cdot F \cdot \rho}{\mu} \cdot \left( 1 - e^{-\frac{\mu \cdot m}{F \cdot \rho}} \right) = a \cdot \left( 1 - e^{-bm} \right)
+\end{equation}
+Da wir die Masse während der Messungen variert haben, können wir also diese Funktion an unsere bereinigten Messwerte fitten. Dabei erhalten wir die beiden Parameter
+$$ a = (10.6341 \pm 2.138) Bq $$
+$$ b = (1.54082 \pm  0.5996) $$
+
+Die beiden Parameter sind antikorreliert mit $\rho_{ab} = -0.954$. Der hohe Wert für $\chi^2/DoF = 102.8$ zeigt uns, dass die Hauptfehlerursache nicht in der statistischen Verteilung der Zerfälle liegt, sondern durch sonstige experimentelle Einflüße ausgelöst wird. Die Ermittlung der Fehlerbalken im Diagramm aus der Zählrate unterschätzt also den wahren Fehler. 
+
+Die Halbwertszeit können wir nun berechnen über
+\begin{equation}
+ T_{1/2}\left( \atom{40}{}{K} \right) = \frac{\ln 2}{1.13} \cdot \frac{f \cdot N_A \cdot h_{rel}}{2 \cdot a \cdot b \cdot m_{rel,KCl}}
+\end{equation}
+mit dem Fehler
+\begin{equation}
+ \left( \frac{S_{T_{1/2}}}{T_{1/2}} \right)^2 = \left( \frac{S_a}{a} \right)^2 + \left( \frac{S_b}{b} \right)^2 + 2 \cdot \rho_{ab} \cdot \frac{S_a}{a} \cdot \frac{S_b}{b}
+\end{equation}
+
+Somit erhalten wir $$T_{1/2} \left( \atom{40}{}{K} \right) = ( 0.730 \pm 0.151 ) \cdot 10^9 a$$
+
+Der Literaturwert für die Halbwertszeit beträgt $T_{1/2} \left( \atom{40}{}{K} \right) = 1.277 \cdot 10^9 a$. Unser Ergebnis liegt also innerhalb von vier Standardabweichungen zum Literaturwert, scheint also einen leichten systematischen Fehler zu haben. Insbesondere sind die Zählraten geringfügig zu hoch, was entweder an einer zu niedrigen Diskriminatorschwelle oder an einer Unterschätzung des Untergrundes liegen kann. Beides erscheint durchaus wahrscheinlich, wir haben zwar die Schwelle nachjustiert, allerdings war sie möglicherweise immernoch nicht ausreichend hoch. Die Unterschätzung des Untergrundes ist sicher, da wir den Wert grob extrapoliert haben und uns dabei eher an der unteren Grenze orientiert haben. 
