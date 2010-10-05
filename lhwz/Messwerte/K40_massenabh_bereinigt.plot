@@ -17,6 +17,6 @@ set grid
 set ylabel "Aktivität [Bq]"
 #set logscale y
 set xlabel "Masse K-40 [g]"
-plot 'Kalium40/massenabh_bereinigt.txt' u ($1-mschale):($2-nuntergrund):(sqrt($2/t)) w yerrorbars title "40-K", f(x) title "a(1-e^{bx})"
+plot 'Kalium40/massenabh_bereinigt.txt' u ($1-mschale):($2-nuntergrund):(sqrt($2/t)) w yerrorbars title "40-K", f(x) title "a(1-e^{-bx})"
 
 print a*b

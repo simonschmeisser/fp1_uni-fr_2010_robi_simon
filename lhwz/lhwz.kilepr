@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0.85
-lastDocument=versuchsbeschreibung.tex
+lastDocument=auswertung.tex
 masterDocument=
 name=lhwz
 pkg_extIsRegExp=false
@@ -94,10 +94,10 @@ order=1
 
 [item:auswertung.tex]
 archive=true
-column=0
+column=1274
 encoding=UTF-8
 highlight=LaTeX
-line=14
+line=37
 mode=LaTeX
 open=true
 order=4
@@ -134,10 +134,10 @@ order=3
 
 [item:versuchsbeschreibung.tex]
 archive=true
-column=114
+column=121
 encoding=UTF-8
 highlight=LaTeX
-line=87
+line=91
 mode=LaTeX
 open=true
 order=2
@@ -161,8 +161,8 @@ CursorColumn=21
 CursorLine=22
 
 [view-settings,view=0,item:auswertung.tex]
-CursorColumn=0
-CursorLine=14
+CursorColumn=1274
+CursorLine=37
 
 [view-settings,view=0,item:lhwz.tex]
 CursorColumn=0
@@ -173,8 +173,8 @@ CursorColumn=16
 CursorLine=76
 
 [view-settings,view=0,item:versuchsbeschreibung.tex]
-CursorColumn=114
-CursorLine=87
+CursorColumn=121
+CursorLine=91
 
 [view-settings,view=0,item:zusammenfassung.tex]
 CursorColumn=0
