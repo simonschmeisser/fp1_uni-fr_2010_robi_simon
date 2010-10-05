@@ -5,7 +5,7 @@ set output 'plots/K40_massenabh_bereinigt.png'
 t = 460
 mschale = 1.2918
 
-nuntergrund = 0.3313 # ermittelt aus extraplation
+nuntergrund = 0.502024897868746 # ermittelt aus extraplation
 
 f(x) = a*(1-exp(-b*x))
 a = 5.44
@@ -18,3 +18,5 @@ set ylabel "Aktivität [Bq]"
 #set logscale y
 set xlabel "Masse K-40 [g]"
 plot 'Kalium40/massenabh_bereinigt.txt' u ($1-mschale):($2-nuntergrund):(sqrt($2/t)) w yerrorbars title "40-K", f(x) title "a(1-e^{bx})"
+
+print a*b
