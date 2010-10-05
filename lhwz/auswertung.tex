@@ -12,7 +12,6 @@ Nachdem wir eine \atom{238}{}{U}-Probe einsetzten, machten wir uns mit der Messe
  \item Am SCA (Single Channel Analyzer) haben wir die untere Diskriminatorschwelle auf $0.3$ eingestellt. Sie dient dazu, das Rauschen vom eigentlichen Signal zu trennen, so dass nur wirkliche Zerfälle gezählt werden. 
 \end{itemize}
 
-
 \subsection{Zählrohrcharakteristik}
 
 Wir haben damit begonnen, die Zählrohrcharakteristik aufzunehmen. Dazu haben wir eine \atom{238}{}{U} Probe verwendet, die eine gute Zählrate zeigt.
@@ -21,7 +20,7 @@ Wir haben damit begonnen, die Zählrohrcharakteristik aufzunehmen. Dazu haben wi
  \centering \includegraphics[width=0.9\linewidth]{Messwerte/plots/U238.png}
  \caption{Zählrohrcharakteristik, gemessen mit \atom{238}{}{U}}
 \end{figure}
-Als Parameter haben wir dabei gesetzt: $U = 1kV \cdots 4kV$, $\Delta U = 100 V$, $t = 50s$ sowie $t_{Pause} = 10s$
+Als Parameter haben wir dabei gesetzt: $U = 1kV \cdots 4kV$, $\Delta U = 100 V$, $t = 50s$ sowie $t_{Pause} = 10s$. Die Fehler in diesem und allen weiteren Plots haben wir berechnet über $ S_n = \frac{\partial n}{\partial N} \cdot S_N = \frac{1}{t} \cdot \sqrt{N} = \sqrt{\frac{n}{t}}$.
 
 Der Graph zeigt den erwarteten Verlauf, abgesehen von einigen Ausreisern am Anfang des $\alpha$-Plateaus. \atom{238}{}{U} zerfällt durch $\alpha$-Zerfall in \atom{234}{}{Th} (Thorium). Dieses zerfällt mit einer Halbwertszeit $T_{1/2} = 24.10d$ durch einen $\beta^-$-Zerfall in \atom{234}{}{Pa} (Proactinium), welches ebenfalls durch $\beta^-$-Zerfall in \atom{234}{}{U} zerfällt. Deshalb sehen wir in der Zählrohrcharakteristik sowohl ein Plateaubereich, in dem haupsächlich $\alpha$-Strahlung detektiert wird bei ca. $U = 1100V$ bis $U = 2100V$ als auch einen Plateaubereich in dem $\alpha$- und $\beta$-Strahlung detektiert werden zwischen $3000V$ und $3700V$.
 
