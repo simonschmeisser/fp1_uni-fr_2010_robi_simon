@@ -1,4 +1,4 @@
-set terminal png
+set terminal png enhanced size 800, 600
 set output 'plots/Sm147_plateau.png'
 
 #Messzeit fuer einzelne Messungen

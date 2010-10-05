@@ -1,4 +1,4 @@
-set terminal png
+set terminal png enhanced size 800, 600
 set output 'plots/U238.png'
 
 #Zeit für Einzelmessung

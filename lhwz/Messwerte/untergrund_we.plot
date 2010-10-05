@@ -1,4 +1,4 @@
-set terminal png
+set terminal png enhanced size 800, 600
 set output 'plots/untergrund_we.png'
 
 #Zeit für Einzelmessung

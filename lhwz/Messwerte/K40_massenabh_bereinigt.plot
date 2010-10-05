@@ -1,4 +1,4 @@
-set terminal png enhanced
+set terminal png enhanced size 800, 600
 set output 'plots/K40_massenabh_bereinigt.png'
 
 #Messzeit fuer einzelne Messungen

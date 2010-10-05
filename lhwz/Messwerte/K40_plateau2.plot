@@ -1,4 +1,4 @@
-set terminal png
+set terminal png enhanced size 800, 600
 set output 'plots/K40_plateau2.png'
 
 #Messzeit fuer einzelne Messungen
