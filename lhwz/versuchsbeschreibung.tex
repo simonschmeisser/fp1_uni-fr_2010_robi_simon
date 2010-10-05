@@ -56,3 +56,39 @@ Es reicht also aus, die Zählrate $n$ sowie die Oberfläche $F$, die sich aus de
 
 \subsection{Bestimmung der Halbwertszeit von \atom{40}{}{K} ($\beta$-Zerfall)}
 Zuerst wird der Spannungsbereich vermessen, in dem wir den Proportionalbereich für die Messung des $\beta$-Zerfalls vermuten. Die Spannung in der Mitte des Plateaus $U_{\beta}$ verwenden wir dann für die genaue Messung, deren Messzeit wir über die Zählrate $n$ abschätzen (vergl. Gl. \ref{zeitfuerkleinenfehler}).
+
+\begin{align}
+ \frac{dn}{dx} & = A \cdot e^{- \mu \cdot x} \\
+               &  = A_s \cdot m \cdot  e^{- \mu \cdot x} \\
+               &  = A_s \cdot F \cdot \rho \cdot dx \cdot  e^{- \mu \cdot x}
+\end{align}
+Dies können wir nun integrieren für die gesamte Dicke der Probe $d$
+\begin{align}
+ n & = \int_0^d A_s \cdot F \cdot \rho \cdot e^{-\mu \cdot x} \cdot dx \\
+   & = \frac{A_s \cdot F \cdot \rho}{\mu} \left( 1 - e^{-\mu \cdot d \right)
+\end{align}
+Mittels $m = \rho \cdot V = \rho \cdot \F \cdot d$ können wir diese Gleichung in Abhängigkeit der Masse ausdrücken
+\begin{align}
+ n \left( m \right) & = \frac{A_s \cdot F \cdot \rho}{\mu} \left( 1 - e^{- \frac{\mu}{\rho \cdot F} \cdot m \right) \\
+		    & = a \left( 1 - e^{- b \cdot m \right) \label{betafitfunktion}
+\end{align}
+
+Wir führen also mehrere Messungen bei der Plateauspannung $U_{\beta}$ durch, bei denen wir die Masse des Präparats variieren. Durch Anpassung der Gleichung \ref{betafitfunktion} erhalten wir die Parameter $a$ und $b$ für die gilt:
+\begin{equation}
+ A_s = a \cdot b
+\end{equation}
+
+Um von dieser spezifischen Aktivität $A_s$ auf die tatsächliche Aktivität schließen zu können, müssen wir noch einige Korrekturen vornehmen. Da die Strahlung nur zur Hälfte nach oben, ins Zählgas, abgestrahlt wird, ist die tatsächliche Aktivität um einen Faktor 2 größer als die von uns gemessene. Ein Teil der dadurch "`verlorenen"' Strahlung wird allerdings an der Aluminiumschale reflektiert, dies wird durch einen Reflexionsfaktor $f = 1.29$ korrigiert. Somit erhalten wir die Aktivität aus
+\begin{equation}
+ A = \frac{2 \cdot a \cdot b}{f}
+\end{equation}
+
+Für die Halbwertszeit gilt nun
+\begin{equation}
+ T_{1/2} = \frac{\ln 2}{\lambda_{ges}} = \frac{\ln 2}{\lambda_{\beta^-} + \lambda_{EC}} = \frac{\ln 2}{1.13 \cdot \lambda_{\beta^-}}
+\end{equation}
+
+
+
+
+
