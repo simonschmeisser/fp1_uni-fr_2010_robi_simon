@@ -18,7 +18,7 @@ G = 9.7
 fit [2800:3200] f(x) 'untergrund_we_bereinigt.txt' u 1:2:(sqrt($2**2/t)) via a, b, c, d
 
 print f(3600)
-print sqrt
+print sqrt(f(3600)/t)
 
 set ylabel "Aktivität [Bq]"
 set logscale y
