@@ -52,66 +52,55 @@ Der Elektroneneinfang gewinnt mit größeren Kernzahlen an Bedeutung, da dann di
 Beim $\alpha$- und $\beta$-Zerfall gehen die Mutterkerne immer mit bestimmten Wahrscheinlichkeiten in verschiedene Energiezustände der Tochterkerne über. Letztere zerfallen innerhalb einer sehr kurzen Zeit ($\sim 10^-9 bis 10^-12 s$) in den Grundzustand. Dabei wird entweder ein Photon emittiert, genannt $\gamma$-Quant, oder es findet \paragraph{Innere Konversion} statt. Die Energie des Kerns geht an ein Hüllenelektron, welches dadurch das Atom mit der verbleibenden Energie als kinetische Energie verlässt. Diese Elektronenlücke wird durch ein Elektron aus einer höheren Schale ersetzt, welches seine überschüssige Energie durch ein Photon (bei schweren Elementen) oder den \paragraph{Auger-Effekt} (bei leichten Elementen) abgiebt.
 Dies bedeutet, dass die überschüssige Energie wiederum an ein Elektron abgegeben wird, welches dadurch das Atom verlässt und damit ein zweites Loch im Atom hinterlässt.
 
-\subsection{Wechselwirkung von geladenen Teilen und Strahlung mit Materie}
-\subsubsection{Wechselwirkung von geladenen Teilchen mit Materie}
+\subsection{Wechselwirkung von geladenen Teilen mit Materie}
 
 Geladene Teilchen zeigen elektromagnetische Wechselwirkung mit den Elektronen und Kernen der Materie. Sie können entweder abgelenkt werden, wodurch Bremsstrahlung entsteht oder es kommt zu inelastischer Streuung.
 
-\paragraph{Bremsstrahlung} tritt auf, wenn die Bahn eines Teilchens geändert wird. Bei geladenen Teilchen wird dies durch die Compton-Felder der Teilchen der Materie verursacht.
+\subsubsection{Bremsstrahlung}
+Bremsstrahlung tritt auf, wenn die Bahn eines Teilchens geändert wird. Bei geladenen Teilchen wird dies durch die Compton-Felder der Teilchen der Materie verursacht. Für die in Form von Photonen abgegebene Energie gilt
+\begin{equation}
+ - \frac{dE}{dx} \rvert_{Brems.} = \frac{E}{X_0}
+\end{equation}
+wobei $X_0$ die materialabhängige Strahlungslänge ist und angibt, nach welcher Schichtdicke die verbleibende Energie auf $1/e \cdot E_0$ reduziert wurde.
 
-\subsubsection{Wechselwirkung von Photonen mit Materie}
+\subsubsection{Ionisation und Anregung}
+Durchqueren geladene Teilchen Materie, so können sie dort Atome und Moleküle anregen und je nach Energie auch Ionisieren. Dabei kann an ein Elektron der Materie maximal die Energie
+\begin{equation}
+ E_{kin}^{max} = 2 m_e v^2 \gamma^2
+\end{equation}
+abgegeben werden. (Wobei $v$ die Geschwindigkeit des Teilchens und $\gamma = E / m_0 c^2$ der Lorentzfaktor ist.)
 
-\subsubsection{Das Absorptionsgesetz}
+Der mittlere Energieverlust $dE$ pro Wegstrecke $dx$ kann nach Bethe und Bloch berechnet werden und lautet für $\alpha$-Teilchen
+\begin{equation}
+ - \frac{dE}{dx} \rvert_{Ionisation} = 4 \cdot \pi \cdot \rho \cdot N_A \cdot \frac{Z}{A} \cdot \frac{z^2e^4}{m_e v^2} \cdot \ln \left[ \left( \frac{2m_ev^2}{I} \right) - \ln \left( 1- \beta^2 \right) - \beta^2 \right]
+\end{equation}
+mit der Ladung des Teilchens $z = 2$ und $I \sim 13.5 eV \cdot Z$ dem mittleren Ionisationspotential.
 
-Ein Photonenstrahl der einfallenden Intensität $I_0$ nimmt exponentiell mit der Dicke x einer durchquerten Materieschicht an Intensität ab. Es gilt also:
+Für die Elektronen und Positronen des $\beta$-Zerfalls müssen noch weitere Effekte berücksichtigt werden und es ergibt sich für $ E < 0.5 MeV$
+\begin{equation}
+ - \frac{dE}{dx} \rvert_{Ionisation} = 4 \cdot \pi \cdot \rho \cdot N_A \cdot \frac{Z}{A} \cdot \frac{z^2e^4}{m_e v^2} \cdot \ln \left( \frac{1.66 \cdot m_ev^2}{2 \cdot I} \right)
+\end{equation}
 
-$$ I = I_0\cdot e^{-\mu x} $$
+sowie für $ E >> 0.5 MeV$, da diese relativistisch betrachtet werden müssen
+\begin{equation}
+ - \frac{dE}{dx} \rvert_{Ionisation} = 4 \cdot \pi \cdot \rho \cdot N_A \cdot \frac{Z}{A} \cdot \frac{z^2e^4}{m_e v^2} \cdot  \left[ \ln \left( \frac{E}{2 \cdot m_e \cdot c^2 \cdot I} \right) + \frac{1}{8} \right]
+\end{equation}
 
-wobei $\mu$ der mediumabhängige (und photonenenergieabhängige) Absorptionkoeffizient ist. $\mu$ lässt sich als Summe der Absorptionskoeffizienten aller möglichen Wechselwirkungen von Photonen mit Materie schreiben, nämlich des Photoeffekts, des Compton-Effekts und der Paarbildung.
+\subsubsection{Totaler Energieverlust und Reichweite}
 
-$$\mu = \mu_{Ph.} + \mu_{C} + \mu_{PB} $$
+Summiert die Energieverluste durch die einzelnen Prozesse so erhält man den totalen Energieverlust
+\begin{equation}
+ - \frac{dE}{dx} \rvert_{Total} = - \frac{dE}{dx} \rvert_{Ionisation} - \frac{dE}{dx} \rvert_{Brems.} - \frac{dE}{dx} \rvert_{Cherenkov}
+\end{equation}
+Dieser ergibt sich bei niedrigen Energien hauptsächlich aus der Ionisation, bei hohen Energien hingegen haupsächlich aus der Bremsstrahlung.
 
-\subsubsection{Der Photoeffekt}
+Aus diesem totalen Energieverlust kann man die Reichweite eines Teilchens berechnen, also die Strecke nach der es seine komplette Energie verloren hat
+\begin{equation}
+ R = \int_E^0 - \frac{dE}{dE/dx}
+\end{equation}.
 
-\begin{figure}[H]
-	\begin{minipage}{0.59\textwidth}
-	\centering% \includegraphics[width=\textwidth]{Bilder/Photoeffekt.png}
-	\caption{Photoeffekt}
-	\end{minipage}
-	\begin{minipage}{0.4\textwidth}
-	Wenn ein $\gamma$-Quant ein Elektron aus der Atomhülle herausschlägt, spricht man vom Photoeffekt. Dieser Effekt tritt nur an gebundenen Elek\-tro\-nen auf. Die Energie des Photons geht zum größten Teil auf das Elektron, ein Teil wird jedoch als Rückstoßenergie vom Atom aufgenommen. Die Ab\-sorp\-tions\-wahrscheinlichkeit ist am größten in der K-Schale, also näher beim Kern. Der Photoeffekt dominiert gegenüber den anderen Effekten vor allem bei großen Atomen und Energien unter 100keV des Photons. Die entstandene Lücke wird dann durch ein weniger stark gebundenes oder freies Elektron aufgefüllt, wobei die Differenz der Bindungsenergien als Photon emittiert wird.
-	\end{minipage}
-\end{figure}
+Diese Reichweite ist für $alpha$-Teilchen extrem gering, wodurch die Selbstabsorbtion in der Probe sehr wichtig wird. Die Reichweite von $\beta$-Strahlung ist hingegen deutlich größer.  
 
-\subsubsection{Der Compton-Effekt}
-
-\begin{figure}[H]
-	\begin{minipage}{0.4\textwidth}
-	Trifft ein Photon auf ein leicht gebundenes oder freies Elektron, so wird das Photon nicht ganz absorbiert, sondern gibt einen Teil seiner Energie an das Elektron ab und wird selbst gestreut. Durch die Streuung verliert das Photon somit an Energie, d.h. die Frequenz des gestreuten Quants ist kleiner. Der Compton-Effekt dominiert bei Energien zwischen 100 keV und einigen MeV.
-	\end{minipage}
-	\begin{minipage}{0.59\textwidth}
-	\centering %\includegraphics[width=\textwidth]{Bilder/Comptoneffekt.png}
-	\caption{Comptoneffekt}
-	\end{minipage}
-
-\end{figure}
-
-\subsubsection{Die Paarbildung}
-
-\begin{figure}[H]
-	\begin{minipage}{0.49\textwidth}
-	\centering %\includegraphics[width=\textwidth]{Bilder/Paarbildung.jpg}
-	\caption{Paarbildung}
-	\end{minipage}
-	\begin{minipage}{0.5\textwidth}
-	Hat der $\gamma$-Quant mindestens die doppelte Ruheenergie eines Elektrons, also 1.022 MeV, so kann dieses im Feld eines Atomkerns (Stoßpartner für die Energie-Impuls-Erhaltung) ein Elektron-Positron-Paar erzeugen. Das Positron kann in Anwesenhait von Materie nicht frei existieren und wird abgebremst und annihiliert mit einem Elektron zu 2 bis 3 $\gamma$-Quanten. Im wahrscheinlicheren Fall zweier Quanten, erhalten diese jeweils eine Energie von 511 keV und bewegen sich in einem Winkel von 180$^\circ$ relativ zueinander (wegen Impulserhaltung).
-	\end{minipage}
-\end{figure}
-
-\subsubsection{Wechselwirkung von Elektronen mit Materie}
-
-\subsection{Absorption und Reichweite radioaktiver Strahlung}
- --> z.T. in Szinti
 
 \subsection{Durchflusszählrohr}
 \begin{figure}[H]
@@ -122,7 +111,7 @@ $$\mu = \mu_{Ph.} + \mu_{C} + \mu_{PB} $$
 Ein Durchflusszählrohr (siehe Abbildung \ref{durchflusszaehlrohr}) besteht aus einer Zählkammer, die einem normalen Zählrohr ähnelt. Sie besteht also aus einem leitfähigen Kasten und einem Zählring, zwischen denen eine Spannung anliegt. Durch eine Drehvorrichtung kann die Probe direkt in diese Kammer eingebracht werden, wodurch Abschirmungsverluste vermieden werden. Die $alpha$-Teilchen bzw. Elektronen und Positronen des Zerfalls erzeugen nun einen Strompuls am Ring, der detektiert werden kann. In Abhängigkeit von der Spannung gibt es dabei unterschiedliches Verhalten:
 \begin{figure}[H]
  \centering \includegraphics[width=0.9\linewidth]{Bilder/zaehlrohrcharakteristik.png}
- \caption{Typische Zählrohrcharakteristik ( nach ???)}
+ \caption{Typische Zählrohrcharakteristik}
 \end{figure}
 \paragraph{Bereich I} Die erzeugten Ionenpaare gelangen nur teilweise bis zum Draht, es kommt meist bereits vorher zur Rekombination. Der gemessene Strom ist hier hauptsächlich von der Spannung abhängig.
 \paragraph{Bereich II - Ionisationskammer} Es werden sämtliche Ionenpaare, die durch die Primärionisation entstanden sind, registriert. Man verwendet diesen Spannungsbereich als Ionisationskammer.
@@ -132,29 +121,5 @@ Ein Durchflusszählrohr (siehe Abbildung \ref{durchflusszaehlrohr}) besteht aus 
 \paragraph{Bereich VI - Gasentladung} Der Stromfluss bricht in diesem Bereich nicht mehr von selbst ab, ein Zählen der Ereignisse ist somit nichtmehr möglich.
 
 Beim Durchflusszählrohr strömt möglichst konstant ein Gas durch die Kammer, dieses beseitigt verbleibende Ionen vom vorherigen Zählvorgang und verbessert somit die Genauigkeit durch Verringerung der Totzeit und Vermeidung von Fehlzählungen.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
