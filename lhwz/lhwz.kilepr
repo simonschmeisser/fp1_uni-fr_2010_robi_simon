@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0.85
-lastDocument=theorie.tex
+lastDocument=auswertung.tex
 masterDocument=
 name=lhwz
 pkg_extIsRegExp=false
@@ -84,20 +84,20 @@ order=6
 
 [item:aufgabenstellung.tex]
 archive=true
-column=21
+column=145
 encoding=UTF-8
 highlight=LaTeX
-line=22
+line=35
 mode=LaTeX
 open=true
 order=1
 
 [item:auswertung.tex]
 archive=true
-column=49
+column=861
 encoding=UTF-8
 highlight=LaTeX
-line=66
+line=41
 mode=LaTeX
 open=true
 order=4
@@ -114,30 +114,30 @@ order=-1
 
 [item:lhwz.tex]
 archive=true
-column=0
+column=10
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=56
 mode=LaTeX
 open=true
 order=0
 
 [item:theorie.tex]
 archive=true
-column=41
+column=626
 encoding=UTF-8
 highlight=LaTeX
-line=113
+line=107
 mode=LaTeX
 open=true
 order=3
 
 [item:versuchsbeschreibung.tex]
 archive=true
-column=121
+column=105
 encoding=UTF-8
 highlight=LaTeX
-line=91
+line=94
 mode=LaTeX
 open=true
 order=2
@@ -157,24 +157,24 @@ CursorColumn=34
 CursorLine=7
 
 [view-settings,view=0,item:aufgabenstellung.tex]
-CursorColumn=21
-CursorLine=22
+CursorColumn=145
+CursorLine=35
 
 [view-settings,view=0,item:auswertung.tex]
-CursorColumn=49
-CursorLine=66
+CursorColumn=861
+CursorLine=41
 
 [view-settings,view=0,item:lhwz.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=10
+CursorLine=56
 
 [view-settings,view=0,item:theorie.tex]
-CursorColumn=41
-CursorLine=113
+CursorColumn=626
+CursorLine=107
 
 [view-settings,view=0,item:versuchsbeschreibung.tex]
-CursorColumn=121
-CursorLine=91
+CursorColumn=105
+CursorLine=94
 
 [view-settings,view=0,item:zusammenfassung.tex]
 CursorColumn=0

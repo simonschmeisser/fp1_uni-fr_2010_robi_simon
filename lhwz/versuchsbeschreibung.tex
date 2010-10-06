@@ -26,12 +26,16 @@ Mit den Gleichungen \ref{t12ln2lambda} und \ref{dNdtlambdaN} erhalten können wi
 
 hierbei entspricht $N$ der Anzahl der Atome und $A$ der Aktivität, also der Anzahl der Zerfälle pro Sekunde. Die Anzahl der Atome ist hier allerdings die Anzahl der Atome, deren Zerfallsprodukte auch tatsächlich registriert werden und nicht bereits in der Probe durch Selbstabsorbtion wieder eingefangen werden. Die von uns gemessene Zählrate $n$ ergibt also die effektive Aktivität, die wir korrigieren müssen, um zur tatsächlichen Aktivität zu gelangen.
 
-\begin{figure}
- \centering \includegraphics[width=0.5\linewidth]{Bilder/korrektur_alpha.png}
+\begin{figure}[h]
+\begin{minipage}{0.49\textwidth}
+Generell kann nur Strahlung registriert werden, für die der Weg bis zur Oberfläche $r$ geringer ist als die maximale Weglänge in Samarium $R_{Sm}$. Dies gilt, abhängig von der Tiefe $x$ in der Probe nur für einen bestimmten Raumwinkelanteil:
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+ \centering \includegraphics[width=0.9\linewidth]{Bilder/korrektur_alpha.png}
  \caption{Zur Selbstabsorption von $\alpha$-Teilchen in Sm}
+\end{minipage}
 \end{figure}
 
-Generell kann nur Strahlung registriert werden, für die der Weg bis zur Oberfläche $r$ geringer ist, als die maximale Weglänge in Samarium $R_{Sm}$. Dies gilt, abhängig von der Tiefe $x$ in der Probe nur für einen bestimmten Raumwinkelanteil:
 \begin{align}
  \Omega \left( x \right) &= \int_0^{2\pi}d\phi \int_0^{\theta_{max}(x)} \sin \left( \theta \right) d \theta \\
  & = 2 \pi \cdot \left( 1 - \frac{x}{R} \right)
@@ -51,12 +55,13 @@ Dies setzen wir jetzt in \ref{anfangt12alpha} ein und erhalten
          & = \ln 2 \frac{R_{Sm_2O_3} \cdot \rho_{Sm_2O_3} \cdot N_A \cdot h_{rel} \cdot F }{2 \cdot n \cdot m_{rel,Sm_2O_3}} \\
          & = const. \cdot \frac{F}{n}
 \end{align}
-Es reicht also aus, die Zählrate $n$ sowie die Oberfläche $F$, die sich aus dem Durchmesser ergibt, zu bestimmen.
+Es reicht also aus die Zählrate $n$ sowie die Oberfläche $F$, die sich aus dem Durchmesser ergibt, zu bestimmen.
 
 
 \subsection{Bestimmung der Halbwertszeit von \atom{40}{}{K} ($\beta$-Zerfall)}
 Zuerst wird der Spannungsbereich vermessen, in dem wir den Proportionalbereich für die Messung des $\beta$-Zerfalls vermuten. Die Spannung in der Mitte des Plateaus $U_{\beta}$ verwenden wir dann für die genaue Messung, deren Messzeit wir über die Zählrate $n$ abschätzen (vergl. Gl. \ref{zeitfuerkleinenfehler}).
 
+Für die Berechnung der Halbwertszeit verwenden wir nun eine Formel, die sich aus der Selbstabsorption im Kalium ergibt. Für ein Volumenelement in der Probe mit dem Abstand $x$ zur Oberfläche gilt:
 \begin{align}
  \frac{dn}{dx} & = A \cdot e^{- \mu \cdot x} \\
                &  = A_s \cdot m \cdot  e^{- \mu \cdot x} \\
