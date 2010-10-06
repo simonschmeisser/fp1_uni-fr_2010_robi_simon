@@ -2,7 +2,7 @@
 
 \subsection{Deterministic Chaos}
 
-A chaotic system is a dynamical system, which is highly sensitive to its initial conditions. Changing them even by a very small difference leads to a completely different behavior of the system. Thus, a long-term prediction of the behavior is impossible. Nonetheless chaotic systems can be deterministic, meaning that no random elements are involved, but they still have unpredictable behavior.
+A chaotic system is a dynamical system, which is highly sensitive to its initial conditions. Changing them even by a very small degree leads to a completely different behavior of the system. Thus, a long-term prediction of the behavior is impossible. Nonetheless chaotic systems can be deterministic, meaning that no random or stochastic elements are involved, but they still have unpredictable behavior.
 
 \subsubsection{Bifurcation}
 
@@ -47,11 +47,12 @@ $4 < r$ & the system is completely chaotic
 \begin{figure}[H]
 \centering \includegraphics[width=0.8\textwidth]{Bilder/logmap.png}
 \caption{Bifurcation-Diagram of the Logistic Map}
+\label{bifurcation-diagram-of-the-logistic-map}
 \end{figure}
 
-\subsubsection{Windows}
+\subsubsection{Periodic windows}
 
-It is possible in a chaotic system, that by changing the control parameter, at one point the system starts being periodic again with stable fixpoints. By even further increasing the control parameter, those \emph{windows} start bifurcating again until the system becomes chaotic again. For an example of a window, see fig. 3 of the logistic map, with r around 3.83.
+It is possible in a chaotic system, that by changing the control parameter, at one point the system starts being periodic again with stable fixpoints. By even further increasing the control parameter, those \emph{windows} start bifurcating again until the system becomes chaotic again. For an example of a window, see fig. \ref{bifurcation-diagram-of-the-logistic-map} of the logistic map, with $r$ around 3.83.
 
 
 \subsection{The linear oscillating circuit}
@@ -92,7 +93,7 @@ with  $A=\frac{U_0}{LC}$ ,  $B=\frac{1}{\sqrt{LC}}$ ,  $C=\frac{R}{L}$
 \caption{Diagram of a RLC-circuit}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-In order to make a nonlinear oscillating circuit, we use a diode instead of a capacitor. If in such a circuit, the amplitude of the driving tension is increased, the system bifurcates until its behavior is completely chaotic. With the conditions
+In order to build a nonlinear oscillating circuit, we use a diode instead of a capacitor. If in such a circuit, the amplitude of the driving voltage is increased, the system bifurcates until its behavior is completely chaotic. With the conditions
 $$U_{ext} = L\dot I + R\dot I + U_{diode}$$
 $$I_{ext}-I_{diode} = \dot Q = C(U)\dot U$$
 we get the differential equation for the circuit:

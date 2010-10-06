@@ -31,11 +31,11 @@ We then started by measuring the amplitude $A$ for different frequencies near th
 \caption{Circuit 1}
 \end{figure}
 
-We guess the error for the tension as well as for the frequency at 2\%. We used a Lorentz-Peak to fit the Data. It is defined by 
+We estimated a relative error of about 2\% for the driving voltage and frequency. We used a Lorentz-Peak to fit the data, which is defined by 
 
 $$ A = y_0 + \frac{2Aw/\pi}{4(x-x_c)^2 + w^2} $$
 
-In our case $y_0$ should be 0 or very close to 0. It is 1.12 V, which is close enough. The location of the maximum of the Lorentz distribution represents the resonance frequency of the system, which here is:
+In our case the constant offset $y_0$ should be $y_0 = 0V$ or very close to that. It is 1.12 V, which is close enough. From the location of the maximum of the Lorentz distribution we obtain the resonance frequency of the system:
 
 $$\boxed{f_{res} = x_c = (256.05 \pm 1.14)\ Hz}$$
 
@@ -64,7 +64,7 @@ $y_0 = (0.24 \pm 1.44)\ V$, which we can consider as being zero. The resonance f
 
 $$\boxed{ f_{res} = x_c = (585.91 \pm 1.71)\ Hz}$$
 
-This theoretical value lies within 11 errors of this value and deviates by 3\%.
+This theoretical value lies within 11 standard deviations of this value and deviates by 3\%.
 
 
 \subsubsection{Circuit 3}
@@ -86,7 +86,7 @@ The Lorentz-Fit of the data near the theoretical resonance frequency looks like 
 \caption{Circuit 3}
 \end{figure}
 
-The Offset is as follows: $y_0 = (2.70 \pm 0.17)\ V$, which is quite far off from zero (16 standard-deviations). For the resonance frequency, we get:
+The offset is as follows: $y_0 = (2.70 \pm 0.17)\ V$, which is quite far off from zero (16 standard deviations). For the resonance frequency, we get:
 
 $$\boxed{ f_{res} = x_c = ( 11130.89 \pm 5.46)\ Hz}$$
 
@@ -94,7 +94,7 @@ So, the calculated value for the resonance frequency lies within the 17th error 
 
 \paragraph{Error Discussion}
 
-Even though our fitted values for the resonance frequencies lie very close to the calculated values, i.e. under 5\%, the theoretical frequencies all lie within the 11th or 12th standard deviation. We guess, that the error calculated by the fit is too small to be used as a factor to determine how good our measurements were. 
+Even though our fitted values for the resonance frequencies lie very close to the calculated values, i.e. under 5\%, the theoretical frequencies all lie within the 11th or 12th standard deviation. We conclude therefore, that the error calculated by the fit is too small to be used as a factor to determine how good our measurements were.
 
 \subsection{Nonlinear Oscillating Circuit}
 
@@ -117,11 +117,11 @@ We gradually changed the amplitude of the frequency generator to analyze the beh
 
 \begin{figure}[H]
 \begin{minipage}{0.5\textwidth}
-\centering \includegraphics[width=\textwidth]{Fotos/01.jpg}
+\centering \includegraphics[width=\textwidth]{Fotos/01.JPG}
 \caption{First bifurcation}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-\centering \includegraphics[width=\textwidth]{Fotos/02.jpg}
+\centering \includegraphics[width=\textwidth]{Fotos/02.JPG}
 \caption{Greater time resolution}
 \label{aaa}
 \end{minipage}
@@ -130,28 +130,29 @@ We gradually changed the amplitude of the frequency generator to analyze the beh
 By continuing to turn up the amplitude, the sine-function started flickering, but we were sometimes able to see that more and more sine functions overlayed each other. After several tries, we succeeded to make a decent picture representing this muliple overlay:
 
 \begin{figure}[H]
-\centering \includegraphics[width=0.5\textwidth]{Fotos/03.jpg}
+\centering \includegraphics[width=0.5\textwidth]{Fotos/03.JPG}
 \caption{More overlaying sine-functions}
 \end{figure}
 
 Finally, we tried to set up the Feigenbaum-diagram of our chaotic system. In order to do this, we switched to x-y-diagram of the oscilloscope, where we plotted the frequency generator amplitude against the tension of the diode. We adjusted the frequency, until we could see the bifurcation diagram. We obtained the following picture:
 
 \begin{figure}[H]
-\centering \includegraphics[width= 0.7\textwidth]{Fotos/04.jpg}
+\centering \includegraphics[width= 0.7\textwidth]{Fotos/04.JPG}
 \caption{x-y-plot on oscilloscope}
 \end{figure}
 
-It was very hard to be able to read the amplitude of the third bifurcation, but since it was the only diode, for which we could find any resonance frequency at all, we tried to measure it. By changing the amplitude of the function generator's signal, we measured the resulting changes of the different tensions we saw on the x-y-plot on the oscilloscope. We then plotted the tension of the function generator against those on the diode and obtained a Feigenbaum-diagram, which unfortunately doesn't represent what we expected at all. It is possible to see the first bifurcation, but after that, we cannot use it to make any kind of statement considering the Feigenbaum-constants or the other bifurcations.
-So, we redid the whole measurements together with our fellow students\footnote{Christian Grumber and Yannick Linke} with the following parameters: $L = 9.5 mH$, $R_L=(0.8\pm 0.1)\Omega$, $R_1=(15.0 \pm 0.1) \Omega$ and with the Diode \emph{1N4007}. It follows, that $R = (15.8 \pm 0.1) \Omega$.
+It was very hard to be able to read the amplitude of the third bifurcation, but since it was the only diode, for which we could find any resonance frequency at all, we tried to measure it. By changing the amplitude of the function generator's signal, we measured the resulting changes of the different tensions we saw on the x-y-plot on the oscilloscope. We then plotted the tension of the function generator against those on the diode and obtained a Feigenbaum-diagram, which unfortunately doesn't represent what we expected at all. It is possible to see the first bifurcation, but after that, we cannot use it to make any kind of statement considering the Feigenbaum-constants or the other bifurcations. In retrospect we believe, that might have started our observations at an amplitude that was already driving the system into chaos. The bifurcations we observed would then correspond to bifurcations within periodic windows.
+
+So, we redid the whole measurements together with our fellow students\footnote{Christian Grumber and Yannick Linke} with the following parameters: $L = 9.5 mH$, $R_L=(0.8\pm 0.1)\Omega$, $R_1=(15.0 \pm 0.1) \Omega$ and with the diode \emph{1N4007}. It follows, that $R = (15.8 \pm 0.1) \Omega$.
 
 The x-y-plot looked like this:
 
 \begin{figure}[H]
-\centering \includegraphics[width= 0.6\textwidth]{Fotos2/01.jpg}
+\centering \includegraphics[width= 0.6\textwidth]{Fotos2/01.JPG}
 \caption{second x-y-plot on oscilloscope}
 \end{figure}
 
-By changing the amplitude and measuring the different tensions we were able to make a new bifurcation diagram, which looks like this:
+By changing the amplitude and measuring the resulting voltages we were able to make a new bifurcation diagram, which looks like this:
 
 \begin{figure}[H]
 \centering \includegraphics[width= 0.95\textwidth]{Bilder/bifdiag.png}
@@ -193,12 +194,12 @@ We measured: $D_1 \approx (3000 \pm 100) mV$ and $D_2 \approx (750\pm 100) mV$ a
 
 $$\boxed{\alpha = \frac{3000}{750} = 4.00 \pm 0.55}$$
 
-So the theoretical value of $\alpha = 2.503$ lies within the third error of our experimental value.
+So the theoretical value of $\alpha = 2.503$ lies within the third standard deviation of our experimental value.
 
-In the last part of the experiment, we modulated the amplitude of the incoming tension with a triangular function (as well as other functions) and were thus able to see bifurcation diagrams in the x-y-plot function of the oscilloscope. We took photos of these bifurcation diagrams:
+In the last part of the experiment, we modulated the amplitude of the driving voltage with a triangular function (as well as other functions) and were thus able to see bifurcation diagrams in the x-y-plot function of the oscilloscope. We took photos of these bifurcation diagrams:
 
 \begin{figure}[H]
-\centering \includegraphics[width= 0.85\textwidth]{Fotos2/16.jpg}
+\centering \includegraphics[width= 0.85\textwidth]{Fotos2/16.JPG}
 \caption{Bifurcation Diagram with a triangular function}
 \end{figure}
 
@@ -206,11 +207,11 @@ Other examples are:
 
 \begin{figure}[H]
 \begin{minipage}{0.5\textwidth}
-\centering \includegraphics[width=\textwidth]{Fotos2/13.jpg}
+\centering \includegraphics[width=\textwidth]{Fotos2/13.JPG}
 \caption{Sawtooth}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
-\centering \includegraphics[width=\textwidth]{Fotos2/15.jpg}
+\centering \includegraphics[width=\textwidth]{Fotos2/15.JPG}
 \caption{Reverse Sawtooth}
 \end{minipage}
 \end{figure}
@@ -218,28 +219,7 @@ Other examples are:
 Here it is even possible to see hysteresis effects near the second bifurcation. Also did we try to modulate the sine function from the frequency generator with another sine function with lower frequency:
 
 \begin{figure}[H]
-\centering \includegraphics[width= 0.85\textwidth]{Fotos2/19.jpg}
+\centering \includegraphics[width= 0.85\textwidth]{Fotos2/19.JPG}
 \caption{Sine-function}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
