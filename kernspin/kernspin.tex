@@ -30,6 +30,16 @@ pdftitle={Kernspinresonanz},
 pdfauthor={Robi Pedersen, Simon Schmeißer}}
 
 \providecommand{\e}[1]{\ensuremath{\cdot 10^{#1}}}
+\providecommand{\bildfreq}[3]{
+	\begin{figure}[H]
+	\begin{minipage}{0.65\textwidth}
+	\centering \includegraphics[width=\textwidth]{Bilder/res#1.png}
+	\end{minipage}
+	\begin{minipage}{0.35\textwidth}
+	\centering $$\boxed{\nu_{res}^{#1} = ( #2 \pm #3 )\ MHz}$$
+	\end{minipage}
+	\end{figure}
+	}
 
 \begin{document}
 \begin{titlepage}
