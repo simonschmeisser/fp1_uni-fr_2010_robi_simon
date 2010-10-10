@@ -16,7 +16,7 @@ wobei $m_I$ die magnetische Spinquantenzahl ist und nur ganzzahlige Werte zwisch
 
 Da der Spin als Eigendrehimpuls eines Teilchens aufgefaßt werden kann, induziert ein Teilchen mit Spin und einer Ladung ein magnetisches Dipolmoment, welches durch das gyromagnetische Verhältnis $\gamma$ direkt mit dem Spin zusammenhängt. (Wir erläutern hier nur die spezifischen Formeln für den Kernspin der Protons).
 
-\begin{equation} \vec \mu_I = \gamma\cdot\vec I = \frac{g_K\cdot\mu_K}{\hbar}\vec I \end{equation}
+\begin{equation} \vec \mu_I = \gamma\cdot\vec I = \frac{g_K\cdot\mu_K}{\hbar}\vec I \label{gyro}\end{equation}
 
 $\mu_K$ ist hier das Kernmagneton und ist eine Konstante:
 
@@ -42,7 +42,7 @@ Die Energie eines spinbesetzten Teilchens in einem $\vec B$-Feld hängt also von
 
 Dies ist die Energie die man braucht, bzw. erhält, wenn ein Spin im Magnetfeld umklappt.
 
-\subsection{Resonanz}
+\subsection{Kernspinresonanz}
 
 Die Energie aus (\ref{de}) kann man natürlich auch mit elektromagnetischer Strahlung erreichen. Hat die Strahlung genau die richtige Frequenz, die sogenannte Resonanzfrequenz $\nu_r$, so kann sie Spin-Übergänge induzieren. In diesem Fall gilt:
 
@@ -50,28 +50,47 @@ $$ \Delta E = E_\nu \ \Leftrightarrow \ g_K \cdot \mu_K \cdot B_z = h\cdot \nu_r
 
 Die Resonanzfrequenz ist also gegeben durch:
 
-$$ \nu_r = \frac{g_K \cdot \mu_K \cdot B_z}{h} $$
+\begin{equation} \nu_r = \frac{g_K \cdot \mu_K \cdot B_z}{h} \label{g} \end{equation}
 
-Man spricht in diesem Fall von Kernspinresonanz.
+Man spricht in diesem Fall von Kernspinresonanz. 
 
+\subsubsection{Zustandsbesetzung}
 
+Die induzierten Übergänge passieren anhand Absorption und stimulierter Emission der Photonen. Die Wahrscheinlichkeit für Absorption oder Emission ist abhängig von der Anzahl der Teilchen im tieferen ($N_{tief}$)bzw im höheren ($N_{hoch}$) energetischen Zustand. Dies bewirkt, dass die Teilchen im thermischen Gleichgewicht einer Boltzmann-Verteilung unterliegen:
 
-%gyromagn. Verhältnis
-%Energieniveaus, Boltzmann-Verteilung
+$$\frac{N_{hoch}}{N_{tief}} = \exp(-g_K\cdot\mu_K\cdot B_z/k_B\cdot T)$$
 
-\subsection{Kernspinresonanz}
+Würden wir die Zahlenwerte unseres Experiments einsetzen erhielten wir einen Besetzungsunterschied von etwa $3\e{-6}$, was etwa $10^{17}$ Teilchen entspricht. 
 
-%klassisch
-%qm
-%Relaxation
-%Linienbreite
-%Sättigung
-%Empfindlichkeit
-%magnetische Dipol-Dipol-ww
-%Kernspinresonanzspektrometer
+\subsubsection{Relaxation}
 
-\subsection{Hall-Effekt und Hall-Sonde}
+Das System würde also die erwartete resultierende Absorption zeigen, bis es sich in einem Gleichgewicht befinden würde. Jedoch spielen noch andere wesentliche Vorgänge eine Rolle, am wichtigsten die Spin-Gitter-Relaxation:
+Die Energie eines Spinübergangs kann nämlich auch strahlungslos erfolgen, indem sie an ein Phonon abgegeben wird und somit Gitterschwingungen anregt und Wärme verursacht, so dass die Verteilung entsprechend der Boltzmann-Statistik wiederhergestellt wird.
+Als anderen Relaxationsprozess gibt es noch gibt es noch die Spin-Spin-Relaxation, die den Effekt beschreibt, dass Spins miteinander wechselwirken und somit die Absorptionslinie verbreitern. 
+Durch Zusatz von paramagnetischen Ionen können diese Relaxationszeiten um Größenordnungen verkürzt werden. In unserem Fall handelt es sich dabei um $Mn(NO_3)_2 + 4 H_2O$
+Diese Relaxationsprozesse werden auch als transversale (Spin-Spin-WW) und longitudinale (Spin-Gitter-WW) Relaxation bezeichnet.
+
+\subsection{Hall-Sonde}
+
+Eine Hall-Sonde nutzt den Hall-Effekt zur Messung von magnetischen Feldstärken. Wird sie von Strom durchflossen und in ein Magnetfeld gebracht, so werden die Elektronen durch die Lorentz-Kraft senkrecht zu diesen beiden Feldern im Leiter bewegt. An einer Stelle im Leiter entsteht also ein Überschuss an Elektronen, während auf der anderen Seite ein Mangel entsteht. Diese Ladungsverteilung induziert ein elektrisches Feld, dessen Kraft der Lorentz-Kraft entgegenwirkt, bis Gleichgewicht eintritt. Diese Spannung wird nun gemessen und ist direkt proportional zum Magnetfeld, so dass sich dieses durch einen Umrechnungsfaktor bestimmen lässt.
 
 \subsection{Das Lock-In Verfahren}
 
-\subsection{Synchrondetektor}
+Das Lock-In-Verfahren ist ein Messverfahren, welches den Vorteil hat, dass ein Nutzsignal aus großen Störungen herausgefiltert werden kann. Dazu wird das Signal mit einer festen Frequenz getaktet, die auch an den Verstärker als Referenzsignal weitergegeben wird, so dass dieser nur empfindlich auf Signale genau dieser Frequenz ist.
+In unserem Fall modulieren wir das Magnetfeld mit einer Sägezahnfunktion, die wiederum von einem Sinus moduliert wird. In der Nähe der Resonanz wird diese im Sinustakt überstrichen und das Absorptionssignal dementsprechend getaktet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
