@@ -2,11 +2,11 @@
 
 \subsection{Kernspin}
 
-Neben den Elektronen, besitzen auch die Protonen und Neutronen einen Spin, einen intrinistischen, diskreten Drehimpuls $\vec I$. Dieser ist gegeben durch:
+Neben den Elektronen, besitzen auch die Protonen und Neutronen einen Spin, einen intrinsischen, diskreten Drehimpuls $\vec I$. Dieser ist gegeben durch:
 
 $$ |\vec I| = \hbar \sqrt{I(I+1)} $$
 
-In z-Richtung (in unserem Fall auch die Richtung des Feldes des Permanentmagnetes) kann der Spin auch nur ganzzahlige Vielfache von $\hbar$ annehmen, nämlich
+In z-Richtung (in unserem Fall auch die Richtung des Feldes des Permanentmagneten) kann der Spin auch nur ganzzahlige Vielfache von $\hbar$ annehmen, nämlich
 
 $$I_z = \hbar\cdot m_I$$
 
@@ -14,7 +14,7 @@ wobei $m_I$ die magnetische Spinquantenzahl ist und nur ganzzahlige Werte zwisch
 
 \subsubsection{Magnetisches Moment}
 
-Da der Spin als Eigendrehimpuls eines Teilchens aufgefaßt werden kann, induziert ein Teilchen mit Spin und einer Ladung ein magnetisches Dipolmoment, welches durch das gyromagnetische Verhältnis $\gamma$ direkt mit dem Spin zusammenhängt. (Wir erläutern hier nur die spezifischen Formeln für den Kernspin der Protonen).
+Da der Spin als Eigendrehimpuls eines Teilchens aufgefasst werden kann, induziert ein Teilchen mit Spin und einer Ladung ein magnetisches Dipolmoment, welches durch das gyromagnetische Verhältnis $\gamma$ direkt mit dem Spin zusammenhängt. (Wir erläutern hier nur die spezifischen Formeln für den Kernspin des Protons).
 
 \begin{equation} \vec \mu_I = \gamma\cdot\vec I = \frac{g_K\cdot\mu_K}{\hbar}\vec I \label{gyro}\end{equation}
 
@@ -36,11 +36,11 @@ Legt man das $\vec B$-Feld o.B.d.A in z-Richtung, so erhält man folgenden Zusam
 
 $$ E_p = -\mu_z\cdot B_z \stackrel{(\ref{muz})}{=} -g_K \cdot \mu_K \cdot m_I\cdot B_z $$
 
-Die Energie eines spinbesetzten Teilchens in einem $\vec B$-Feld hängt also von der Stärke des $\vec B$-Felds ab und von dessen magnetischen Spinquantenzahl, also seines Spin-Zustandes. Spin-up-Teilchen ($m_I = +1/2$) haben also eine andere Energie als Spin-down-Teilchen ($m_I = -1/2$). Dies bezeichnet man als Zeeman-Aufspaltung der Spinzustände. Der Energieunterschied zwischen eines Spin-up- und eines Spin-down-Teilchens ergibt sich also durch:
+Die Energie eines spinbesetzten Teilchens in einem $\vec B$-Feld hängt also von der Stärke des $\vec B$-Felds ab und von dessen magnetischen Spinquantenzahl, also seinem Spin-Zustand. Spin-up-Teilchen ($m_I = +1/2$) haben also eine andere Energie als Spin-down-Teilchen ($m_I = -1/2$). Dies bezeichnet man als Zeeman-Aufspaltung der Spinzustände. Der Energieunterschied zwischen eines Spin-up- und eines Spin-down-Teilchens ergibt sich also durch:
 
 \begin{equation} \Delta E = E_p(\uparrow) - E_p(\downarrow) =  g_K \cdot \mu_K \cdot B_z \label{de} \end{equation}
 
-Dies ist die Energie die man braucht, bzw. erhält, wenn ein Spin im Magnetfeld umklappt.
+Diese Energie muss aufgebracht werden um einen Spin-down in einem Magnetfeld in ein Spin-up "`umzuklappen"'. Sie führt ebenfalls zur stimulierten Emission und somit zum Übergang eines Spin-up in ein Spin-down.
 
 \subsection{Kernspinresonanz}
 
@@ -56,41 +56,27 @@ Man spricht in diesem Fall von Kernspinresonanz.
 
 \subsubsection{Zustandsbesetzung}
 
-Die induzierten Übergänge passieren anhand Absorption und stimulierter Emission der Photonen. Die Wahrscheinlichkeit für Absorption oder Emission ist abhängig von der Anzahl der Teilchen im tieferen ($N_{tief}$)bzw im höheren ($N_{hoch}$) energetischen Zustand. Dies bewirkt, dass die Teilchen im thermischen Gleichgewicht einer Boltzmann-Verteilung unterliegen:
+Die induzierten Übergänge passieren anhand von Absorption und stimulierter Emission der Photonen. Die Wahrscheinlichkeit für Absorption oder Emission ist abhängig von der Anzahl der Teilchen im tieferen ($N_{tief}$)bzw. im höheren ($N_{hoch}$) energetischen Zustand. Im thermischen Gleichgewicht unterliegen die Teilchen einer Boltzmann-Verteilung:
 
 $$\frac{N_{hoch}}{N_{tief}} = \exp(-g_K\cdot\mu_K\cdot B_z/k_B\cdot T)$$
 
-Würden wir die Zahlenwerte unseres Experiments einsetzen erhielten wir einen Besetzungsunterschied von etwa $3\e{-6}$, was etwa $10^{17}$ Teilchen entspricht. 
+Würden wir die Zahlenwerte unseres Experiments einsetzen erhielten wir einen Besetzungsunterschied von etwa $3\e{-6}$, was etwa $10^{17}$ Teilchen entspricht.
+
+Durch resonante Anregung ergäbe sich ein neues dynamisches Gleichgewicht, bei dem das Verhältnis der Zustände gerade so eingestellt ist, dass die Übergangswahrscheinlichkeiten gleich groß sind. 
 
 \subsubsection{Relaxation}
 
 Das System würde also die erwartete resultierende Absorption zeigen, bis es sich in einem Gleichgewicht befinden würde. Jedoch spielen noch andere wesentliche Vorgänge eine Rolle, am wichtigsten die Spin-Gitter-Relaxation:
 Die Energie eines Spinübergangs kann nämlich auch strahlungslos erfolgen, indem sie an ein Phonon abgegeben wird und somit Gitterschwingungen anregt und Wärme verursacht, so dass die Verteilung entsprechend der Boltzmann-Statistik wiederhergestellt wird.
-Als anderen Relaxationsprozess gibt es noch gibt es noch die Spin-Spin-Relaxation, die den Effekt beschreibt, dass Spins miteinander wechselwirken und somit die Absorptionslinie verbreitern. 
+Als anderen Relaxationsprozess gibt es noch die Spin-Spin-Relaxation, die den Effekt beschreibt, dass Spins miteinander wechselwirken und somit die Absorptionslinie verbreitern. 
 Durch Zusatz von paramagnetischen Ionen können diese Relaxationszeiten um Größenordnungen verkürzt werden. In unserem Fall handelt es sich dabei um $Mn(NO_3)_2 + 4 H_2O$
 Diese Relaxationsprozesse werden auch als transversale (Spin-Spin-WW) und longitudinale (Spin-Gitter-WW) Relaxation bezeichnet.
 
 \subsection{Hall-Sonde}
 
-Eine Hall-Sonde nutzt den Hall-Effekt zur Messung von magnetischen Feldstärken. Wird sie von Strom durchflossen und in ein Magnetfeld gebracht, so werden die Elektronen durch die Lorentz-Kraft senkrecht zu diesen beiden Feldern im Leiter bewegt. An einer Stelle im Leiter entsteht also ein Überschuss an Elektronen, während auf der anderen Seite ein Mangel entsteht. Diese Ladungsverteilung induziert ein elektrisches Feld, dessen Kraft der Lorentz-Kraft entgegenwirkt, bis Gleichgewicht eintritt. Diese Spannung wird nun gemessen und ist direkt proportional zum Magnetfeld, so dass sich dieses durch einen Umrechnungsfaktor bestimmen lässt.
+Eine Hall-Sonde nutzt den Hall-Effekt zur Messung von magnetischen Feldstärken. Wird sie von Strom durchflossen und in ein Magnetfeld gebracht, so werden die Elektronen durch die Lorentz-Kraft senkrecht zu diesen beiden Feldern im Leiter bewegt. An einer Stelle im Leiter entsteht also ein Überschuss an Elektronen, während auf der anderen Seite ein Mangel entsteht. Diese Ladungsverteilung induziert ein elektrisches Feld, dessen Kraft der Lorentz-Kraft entgegenwirkt, bis ein Gleichgewicht eintritt. Diese Spannung wird nun gemessen und ist direkt proportional zum Magnetfeld, so dass sich dieses durch einen Umrechnungsfaktor bestimmen lässt.
 
 \subsection{Das Lock-In Verfahren}
 
-Das Lock-In-Verfahren ist ein Messverfahren, welches den Vorteil hat, dass ein Nutzsignal aus großen Störungen herausgefiltert werden kann. Dazu wird das Signal mit einer festen Frequenz getaktet, die auch an den Verstärker als Referenzsignal weitergegeben wird, so dass dieser nur empfindlich auf Signale genau dieser Frequenz ist.
+Das Lock-In-Verfahren ist ein Messverfahren, welches den Vorteil hat, dass ein Nutzsignal aus großen Störungen heraus gefiltert werden kann. Dazu wird das Signal mit einer festen Frequenz getaktet, die auch an den Verstärker als Referenzsignal weitergegeben wird, so dass dieser nur empfindlich auf Signale genau dieser Frequenz ist.
 In unserem Fall modulieren wir das Magnetfeld mit einer Sägezahnfunktion, die wiederum von einem Sinus moduliert wird. In der Nähe der Resonanz wird diese im Sinustakt überstrichen und das Absorptionssignal dementsprechend getaktet.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
