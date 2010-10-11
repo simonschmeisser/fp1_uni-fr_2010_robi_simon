@@ -91,12 +91,12 @@ Man kann eine leichte Linearität erkennen. Die Fehler auf die Frequenz wurden m
 \subsubsection{Vergleich beider Magnetfeldmessungen}
 
 \begin{figure}[H]
-\centering \includegraphics[width=0.65\textwidth]{Bilder/VGLx.png}
+\centering %\includegraphics[width=0.65\textwidth]{Bilder/VGLx.png}
 \caption{Horizontale Messung}
 \end{figure}
 
 \begin{figure}[H]
-\centering \includegraphics[width=0.65\textwidth]{Bilder/VGLy.png}
+\centering %\includegraphics[width=0.65\textwidth]{Bilder/VGLy.png}
 \caption{Vertikale Messung}
 \end{figure}
 
@@ -137,11 +137,20 @@ $$ g = \frac{h\cdot\nu_r}{\mu_K\cdot B} \pm g_K\sqrt{\frac{s_\nu^2}{\nu^2} + \fr
 welcher in der 2. Standardabweichung des Literaturwerts liegt.
 
 
+Die Messung mit der Lock-In-Methode wurde bei $x=13.8cm$ und $y=15.45cm$ durchgeführt. Wir haben wiederum die Wasserstoffprobe benutzt. Das Magnetfeld wurde mit einem Sägezahn moduliert, der selber mit einem hochfrequenten Sinus moduliert wurde. Zur Messung der Resonanzfrequenz haben wir verschiedene Frequenzen der Spule an der Probe eingestellt. Dann haben wir ermittelt, bei welchem Wert der Sägezahnspannung wir eine Resonanz erhalten.
 
+\begin{figure}[H]
+\centering \includegraphics[width=0.99\textwidth]{Bilder/lockin.png}
+\caption{Linearer Fit der Messung mit dem Lock-In-Verfahren}
+\end{figure}
 
+Die eingestellten Frequenzen haben wir gegen die gemessenen Spannungen aufgetragen. Dabei haben wir einen Fehler von $S_\nu = 0.002 MHz$ auf die Frequenz und einen Fehler von $S_U = 0.01 V$ auf die Spannung abgeschätzt. Den hohen Fehler auf die Spannung vermuten wir, da wir die Lock-in-Verstärkung nicht wirklich sauber einstellen konnten und das Signal somit relativ breit ist.
 
+Anschliessend haben wir die lineare Funktion $f\left( x \right) = a \cdot x + b$ an die Frequenzen gefittet und erhalten
+$$ a =   (0.775 \pm 0.023) MHz/V $$
+$$ \boxed{b = \nu_{r0} = (18.1893 \pm 0.0019) MHz} $$
 
-
+Der Achsenabschnitt $b$ gibt die Resonanzfrequenz des unmodulierten Magnetfeldes, also des Magnetfeldes des Permanentmagneten an.
 
 
 
