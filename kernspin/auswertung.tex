@@ -91,51 +91,18 @@ Man kann eine leichte Linearität erkennen. Die Fehler auf die Frequenz wurden m
 \subsubsection{Vergleich beider Magnetfeldmessungen}
 
 \begin{figure}[H]
-\centering %\includegraphics[width=0.65\textwidth]{Bilder/VGLx.png}
+\centering \includegraphics[width=0.65\textwidth]{Bilder/VGLx.png}
 \caption{Horizontale Messung}
 \end{figure}
 
 \begin{figure}[H]
-\centering %\includegraphics[width=0.65\textwidth]{Bilder/VGLy.png}
+\centering \includegraphics[width=0.65\textwidth]{Bilder/VGLy.png}
 \caption{Vertikale Messung}
 \end{figure}
 
 Das mit der Glykolprobe gemessene Magnetfeld ist also systematisch kleiner als das mit der Hallsonde und dem Teslameter ermittelte. %..........blabla ;) Ich weiss nicht genau was!
 
 \subsection{Resonanzfrequenzbestimmung mit der Lock-In-Methode}
-
-Die Messung mit der Lock-In-Methode wurde bei $x=13.8cm$ und $y=15.45cm$ durchgeführt. Wir haben wiederum die Wasserstoffprobe benutzt. Das Magnetfeld wurde mit einem Sägezahn moduliert, der selber mit einem hochfrequenten Sinus moduliert wurde. Zur Messung der Resonanzfrequenz haben wir verschiedene Frequenzen eingestellt und dann die Distanz des Resonanzpunktes zum Sägezahnanfang gemessen. Die Sägezahnbreite betrug $b = (10.810 \pm 0.010)s$. 
-
-Da wir den Nullpunkt des Sägezahns nicht kennen, haben wir aus den gemessenen Abständen zu dessen Anfang und der Länge des Sägezahns die Distanz des Signals zum Ende berechnen können. Wir haben beide Distanzen in ein Diagramm geplottet und linear gefittet. Der Schnittpunkt der Geraden ist genau der Nulldurchgang und dessen Ordinate entspricht dann der Resonanzfrequenz der Wasserstoffprobe.
-
-Den Fehler auf den Abstand zum Anfang beträgt $s_{AA}=0.010$ und zum Ende $s_{AE}=0.014$, wegen dem Fehler auf die Sägezahnbreite. Den Fehler auf die Frequenz schätzen wir mit $s_\nu$ = 0.002 MHz.
-
-\begin{figure}[H]
-\centering \includegraphics[width=0.99\textwidth]{Bilder/linreg.png}
-\caption{Linearer Fit der Messung mit dem Lock-In-Verfahren}
-\end{figure}
-
-Wir erhalten folgende Geradengleichungen
-
-$$ y_{AA} = (0.021 \pm 0.001)x + (18.074 \pm 0.006) $$
-$$ y_{AE} = -(0.021 \pm 0.001)x + (18.305 \pm 0.005) $$
-
-Der Schnittpunkt der Geraden, die Resonanzfrequenz, ist also einfach der Mittelwert zwischen den Achsenabschnitten:
-
-$$ \boxed{\nu_r = \frac{18.074 + 18.305}{2} = 18.190 MHz} $$
-
-Mit dem Fehler:
-
-$$s_{\nu_r} = \frac{1}{2}\sqrt{0.006^2 + 0.005^2} = 0.004$$
-
-Als Vergleich mit dem Wert aus der Messung in 4.2. haben wir eine Abweichung von 0.055\% und einen Unterschied von 3 Standardabweichungen.
-
-Hieraus können wir auch wiederum den Wert für g berechnen und erhalten:
-
-$$ g = \frac{h\cdot\nu_r}{\mu_K\cdot B} \pm g_K\sqrt{\frac{s_\nu^2}{\nu^2} + \frac{s_B^2}{B^2}} = 5.497 \pm 0.057 $$ 
-
-welcher in der 2. Standardabweichung des Literaturwerts liegt.
-
 
 Die Messung mit der Lock-In-Methode wurde bei $x=13.8cm$ und $y=15.45cm$ durchgeführt. Wir haben wiederum die Wasserstoffprobe benutzt. Das Magnetfeld wurde mit einem Sägezahn moduliert, der selber mit einem hochfrequenten Sinus moduliert wurde. Zur Messung der Resonanzfrequenz haben wir verschiedene Frequenzen der Spule an der Probe eingestellt. Dann haben wir ermittelt, bei welchem Wert der Sägezahnspannung wir eine Resonanz erhalten.
 
@@ -150,7 +117,13 @@ Anschliessend haben wir die lineare Funktion $f\left( x \right) = a \cdot x + b$
 $$ a =   (0.775 \pm 0.023) MHz/V $$
 $$ \boxed{b = \nu_{r0} = (18.1893 \pm 0.0019) MHz} $$
 
-Der Achsenabschnitt $b$ gibt die Resonanzfrequenz des unmodulierten Magnetfeldes, also des Magnetfeldes des Permanentmagneten an.
+Der Achsenabschnitt $b$ gibt die Resonanzfrequenz des unmodulierten Magnetfeldes, also des Magnetfeldes des Permanentmagneten an. Im Vergleich mit dem Wert aus Teil 4.2 beträgt der Unterschied also $0.051\%$ und der vorherige Wert liegt in der 5. Standartabweichung.
+
+Hieraus können wir auch wiederum den Wert für g berechnen und erhalten:
+
+$$ g = \frac{h\cdot\nu_r}{\mu_K\cdot B} \pm g_K\sqrt{\frac{s_\nu^2}{\nu^2} + \frac{s_B^2}{B^2}} = 5.497 \pm 0.057 $$ 
+
+welcher in der 2. Standardabweichung des Literaturwerts $g_{lit,H} = 5.5856$ liegt.
 
 
 
